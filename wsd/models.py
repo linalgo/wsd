@@ -111,5 +111,8 @@ class ClusterByMeaningModel:
 
 
 class DummyComparator:
+    def __init__(self, probability=1):
+        self.probability = probability
+    
     def invoke(self, X):
-        return BinaryWSD(probability=1)
+        return BinaryWSD(probability=self.probability)
