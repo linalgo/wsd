@@ -16,14 +16,15 @@ chat_template = ChatPromptTemplate.from_messages(
     [
         SystemMessage(
             content=(
-                "You are a linguist working on word sense disambiguation in "
-                "Japanese. Compare the two words provided and return the "
-                "probability that they have the same meaning."
+                "You are a linguist working on word sense disambiguation.\n"
+                "Compare the two words provided and return the probability "
+                "that they have the same meaning."
             )
         ),
         HumanMessagePromptTemplate.from_template(
-            "word_1: {word1}; context_1: {context1}\n"
-            "word_2: {word2}; context_2: {context2}"
+            "Do the two words below have the same semantic meaning in their respective contexts?\n"
+            "word: {word1}; lemma: {lemma1}; context: {context1}\n"
+            "word: {word2}; lemma: {lemma2}; context: {context2}"
         ),
     ]
 )
@@ -91,8 +92,10 @@ class ClusterByMeaningModel:
                 ref = senses[sid][0]
                 messages = chat_template.format_messages(
                     word1=ref.text,
-                    word2=ref.text,
-                    context1=candidate.context,
+                    lemma1=ref.lemma,
+                    context1=ref.context,
+                    word2=candidate.text,
+                    lemma2=candidate.lemma,
                     context2=candidate.context,
                 )
                 pred = self.comparator.invoke(messages)
