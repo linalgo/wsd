@@ -1,0 +1,457 @@
+pos,text,lemma,lemma_meaning,example,context,y_pred,pred,process
+NOUN,objectifs,objectif,0,Depuis combien de temps avez -vous revu les objectifs de votre programme de prestations et de services ?,Depuis combien de temps avez -vous revu les objectifs de votre programme de prestations et de services ?,5102476123390680176,1.0,reference word
+VERB,permis,permettre,0,"L' avez -vous permis de devenir un programme de dons plutôt qu' un programme qui a pour objectif d' améliorer le moral de employés et , par conséquent , d' accroître la productivité ?","L' avez -vous permis de devenir un programme de dons plutôt qu' un programme qui a pour objectif d' améliorer le moral de employés et , par conséquent , d' accroître la productivité ?",406374946543254636,1.0,reference word
+VERB,évaluer,évaluer,0,Quels efforts faites -vous pour évaluer les résultats de votre programme ?,Quels efforts faites -vous pour évaluer les résultats de votre programme ?,5618535175286815265,1.0,lone candidate
+NOUN,absentéisme,absentéisme,0,"Mesurez -vous son rapport à la réduction de l' absentéisme , de chiffre d' affaires , des accidents et des griefs , ainsi qu' à l' amélioration de la qualité et de la production ?","Mesurez -vous son rapport à la réduction de l' absentéisme , de chiffre d' affaires , des accidents et des griefs , ainsi qu' à l' amélioration de la qualité et de la production ?",1405293146753055483,1.0,lone candidate
+NOUN,objectifs,objectif,0,Avez -vous fixé des objectifs spécifiques pour votre publication d' employés ?,Avez -vous fixé des objectifs spécifiques pour votre publication d' employés ?,5102476123390680176,0.95,"The word ""objectifs"" in both contexts refers to goals or targets that are set for a program or publication. Since the meaning of ""objectifs"" remains consistent in both contexts, I would assess the probability that they have the same meaning as high.
+
+Probability that they have the same meaning: 0.95"
+NOUN,objectifs,objectif,0,Atteindre ces objectifs ?,Atteindre ces objectifs ?,5102476123390680176,0.95,"The words ""objectifs"" in both contexts refer to goals or targets that are intended to be achieved. In the first context, it discusses reviewing the objectives of a program, while in the second context, it is about reaching those objectives. Since both usages pertain to the same concept of goals or aims, I would assess the probability that they have the same meaning as high.
+
+Probability: 0.95"
+VERB,Utilisez,utiliser,0,"Utilisez -vous les méthodes d' impression les plus économiques , papier , etc.","Utilisez -vous les méthodes d' impression les plus économiques , papier , etc.",352536264044310162,1.0,reference word
+ADJ,autres,autre,0,Y a -t -il d' autres techniques de communication moins coûteuses qui pourraient être remplacées ?,Y a -t -il d' autres techniques de communication moins coûteuses qui pourraient être remplacées ?,-633111492522486507,1.0,reference word
+NOUN,attitude,attitude,0,"Votre attitude à l ' égard de avantages sociaux a -t -elle encouragé un excès de travail "" gouvernemental "" gratuit dans votre usine ?","Votre attitude à l ' égard de avantages sociaux a -t -elle encouragé un excès de travail "" gouvernemental "" gratuit dans votre usine ?",5237293101211510948,1.0,lone candidate
+ADV,trop,trop,0,Votre agent d' achat offre -t -il un service d' achat trop gratuit pour les employés ?,Votre agent d' achat offre -t -il un service d' achat trop gratuit pour les employés ?,1178289337099408429,1.0,reference word
+NOUN,éclairage,éclairage,0,"Lorsque de améliorations sont recommandées dans les conditions de travail - comme l' éclairage , les salles de repos , les restaurants , la climatisation - essayez -vous de déterminer leur efficacité sur la productivité ?","Lorsque de améliorations sont recommandées dans les conditions de travail - comme l' éclairage , les salles de repos , les restaurants , la climatisation - essayez -vous de déterminer leur efficacité sur la productivité ?",4288406594724954457,1.0,lone candidate
+NOUN,syndicat,syndicat,0,"Lors de la négociation avec votre syndicat , assurez -vous que les employés ont le choix entre de nouveaux avantages et leur coût horaire en salaires .","Lors de la négociation avec votre syndicat , assurez -vous que les employés ont le choix entre de nouveaux avantages et leur coût horaire en salaires .",-3438093857577677533,1.0,reference word
+VERB,payés,payer,0,"Pouvez -vous envisager de limiter les avantages sociaux supplémentaires à ceux payés par partage de bénéfices , comme cela a été fait dans le contrat syndical récemment signé par American Motors Corporation ?","Pouvez -vous envisager de limiter les avantages sociaux supplémentaires à ceux payés par partage de bénéfices , comme cela a été fait dans le contrat syndical récemment signé par American Motors Corporation ?",6235152224786645072,1.0,reference word
+VERB,comprennent,comprendre,0,Vos employés comprennent -ils tous les avantages à votre assurance leur donne droit ?,Vos employés comprennent -ils tous les avantages à votre assurance leur donne droit ?,-6340359820970515792,1.0,lone candidate
+VERB,encouragés,encourager,0,Sont -ils encouragés à tirer pleinement profit juridique de ces avantages ?,Sont -ils encouragés à tirer pleinement profit juridique de ces avantages ?,-4677964395073686001,1.0,lone candidate
+NOUN,valeur,valeur,0,Avez -vous annoncé la valeur de centimes par heure de la part de l' entreprise dans les primes d' assurance ?,Avez -vous annoncé la valeur de centimes par heure de la part de l' entreprise dans les primes d' assurance ?,-8846820805064827337,1.0,lone candidate
+VERB,comparé,comparer,0,Quand avez -vous comparé pour la dernière fois vos coûts de primes actuels avec les coûts d' assurance d' autres sources ?,Quand avez -vous comparé pour la dernière fois vos coûts de primes actuels avec les coûts d' assurance d' autres sources ?,-1045833392183381210,1.0,lone candidate
+VERB,aider,aider,0,Votre compagnie d' assurances peut -elle vous aider à réduire les coûts administratifs ?,Votre compagnie d' assurances peut -elle vous aider à réduire les coûts administratifs ?,-4568756868564844277,1.0,lone candidate
+VERB,Essayez,essayer,0,Essayez -vous de maintenir le principe de programmes de contribution de employés ( par opposition à programmes entièrement payés par l' entreprise ) ?,Essayez -vous de maintenir le principe de programmes de contribution de employés ( par opposition à programmes entièrement payés par l' entreprise ) ?,3061542257306218214,1.0,reference word
+VERB,Protégez,protéger,0,Protégez -vous vos privilèges de vacances avec une exigence de présence avant et après le jour férié ?,Protégez -vous vos privilèges de vacances avec une exigence de présence avant et après le jour férié ?,-185157518457590393,1.0,lone candidate
+NOUN,vacances,vacances,0,Prévoyez -vous de limiter les vacances supplémentaires à la zone et / ou les modèles industriels ?,Prévoyez -vous de limiter les vacances supplémentaires à la zone et / ou les modèles industriels ?,279961264637329955,1.0,reference word
+VERB,déplacer,déplacer,0,Avez -vous étudié la possibilité de déplacer les vacances en milieu de semaine vers le lundi ou le vendredi afin d' avoir une semaine de travail ininterrompue ?,Avez -vous étudié la possibilité de déplacer les vacances en milieu de semaine vers le lundi ou le vendredi afin d' avoir une semaine de travail ininterrompue ?,8060552260835097887,1.0,lone candidate
+ADV,soigneusement,soigneusement,0,Êtes -vous soigneusement policier temps de lavage et périodes de repos pour être sûr que tout autre temps est productif ?,Êtes -vous soigneusement policier temps de lavage et périodes de repos pour être sûr que tout autre temps est productif ?,-2750788994548372771,1.0,lone candidate
+VERB,Observez,observer,0,"Observez - vous les horaires de travail de opérateurs de chaudières , des gardes et d' autres opérations de 24 heures par jour , de 7 jours par semaine afin de réduire à minimum les heures supplémentaires ?","Observez - vous les horaires de travail de opérateurs de chaudières , des gardes et d' autres opérations de 24 heures par jour , de 7 jours par semaine afin de réduire à minimum les heures supplémentaires ?",-1763815003302549461,1.0,lone candidate
+NOUN,nombre,nombre,0,Faites -vous attention à limiter le nombre de personnes en congé en même temps afin que votre obligation d' emploi totale soit réduite à minimum ?,Faites -vous attention à limiter le nombre de personnes en congé en même temps afin que votre obligation d' emploi totale soit réduite à minimum ?,-8090342310684965866,1.0,reference word
+VERB,utiliser,utiliser,0,Avez -vous envisagé d' utiliser de matériel de distribution pour remplacer ou réduire le nombre d' employés de cafétéria ?,Avez -vous envisagé d' utiliser de matériel de distribution pour remplacer ou réduire le nombre d' employés de cafétéria ?,352536264044310162,0.95,"To compare the words ""Utilisez"" and ""utiliser,"" we need to analyze their meanings in the provided contexts.
+
+1. **Word Analysis**:
+   - ""Utilisez"" is the second person plural form of the verb ""utiliser"" in the present tense, meaning ""to use.""
+   - ""utiliser"" is the infinitive form of the same verb, meaning ""to use.""
+
+2. **Context Analysis**:
+   - In context_1, ""Utilisez"" refers to the action of using the most economical printing methods.
+   - In context_2, ""utiliser"" refers to the consideration of using distribution materials to replace or reduce cafeteria staff.
+
+3. **Meaning Comparison**:
+   - Both words convey the same core action of using something. The contexts provided do not change the fundamental meaning of the verb.
+
+Given that both words are forms of the same verb and convey the same action of using something, we can conclude that they have the same meaning.
+
+**Probability of having the same meaning**: 0.95 (or 95%)"
+NOUN,cafétéria,cafétéria,0,Quelles sont les possibilités de faire fonctionner votre cafétéria pour un seul quart de travail et de compter sur des distributeurs automatiques ou des sandwichs préemballés pour les deuxième et troisième quarts de travail ?,Quelles sont les possibilités de faire fonctionner votre cafétéria pour un seul quart de travail et de compter sur des distributeurs automatiques ou des sandwichs préemballés pour les deuxième et troisième quarts de travail ?,8774157631368855903,1.0,reference word
+NOUN,cafétéria,cafétéria,0,Avez -vous vérifié le coût de la sous-traitance de votre cafétéria afin d' économiser les coûts administratifs ?,Avez -vous vérifié le coût de la sous-traitance de votre cafétéria afin d' économiser les coûts administratifs ?,8774157631368855903,0.95,"The words ""cafétéria"" in both contexts refer to the same concept of a cafeteria, which is a place where food is served, typically in a self-service manner. The contexts provided discuss operational aspects of a cafeteria, such as staffing and cost management. 
+
+Given that both instances of ""cafétéria"" refer to the same type of establishment and are used in similar contexts related to its operation, I would assign a high probability that they have the same meaning.
+
+Probability: 0.95"
+NOUN,cafétéria,cafétéria,0,Y a -t -il des possibilités d' avoir une cafétéria qui aide à travailler à temps partiel à des postes de garde ou autres ?,Y a -t -il des possibilités d' avoir une cafétéria qui aide à travailler à temps partiel à des postes de garde ou autres ?,8774157631368855903,0.95,"The words ""cafétéria"" in both contexts refer to the same concept of a cafeteria, which is a place where food is served, typically in a self-service manner. The contexts provided discuss the operation and possibilities of a cafeteria in relation to work schedules. 
+
+Given that both instances of ""cafétéria"" are used in similar contexts and refer to the same type of establishment, I would assign a high probability that they have the same meaning.
+
+Probability: 0.95"
+NOUN,périodes,période,0,Les périodes de repas décalées peuvent -elles soulager la pression de capacité sur vos installations d' alimentation ?,Les périodes de repas décalées peuvent -elles soulager la pression de capacité sur vos installations d' alimentation ?,4799079897206870478,1.0,reference word
+ADJ,possible,possible,0,Serait -il possible de limiter le menu afin de réduire les coûts d' alimentation ?,Serait -il possible de limiter le menu afin de réduire les coûts d' alimentation ?,-1989995860981154541,1.0,lone candidate
+ADJ,progressif,progressif,0,Avez -vous envisagé le retrait progressif de subventions à vos activités d' alimentation de plantes ?,Avez -vous envisagé le retrait progressif de subventions à vos activités d' alimentation de plantes ?,4396903245792998500,1.0,lone candidate
+VERB,Utilisez,utiliser,0,Utilisez -vous l' espace cafétéria pour des réunions d' entreprise ou des discussions ?,Utilisez -vous l' espace cafétéria pour des réunions d' entreprise ou des discussions ?,352536264044310162,0.85,"The word ""Utilisez"" in both contexts translates to ""Use"" in English. In the first context, it refers to using economical printing methods, while in the second context, it refers to using the cafeteria space for meetings or discussions. 
+
+Both instances of ""Utilisez"" convey the general meaning of employing or making use of something. Therefore, despite the different objects of use, the core meaning remains consistent.
+
+Given this analysis, I would assign a high probability that the two instances of ""Utilisez"" have the same meaning in a dictionary context.
+
+Probability: 0.85"
+NOUN,domaine,domaine,0,Vos dépenses dans ce domaine sont -elles proportionnelles à nombre d' employés qui bénéficient de votre programme ?,Vos dépenses dans ce domaine sont -elles proportionnelles à nombre d' employés qui bénéficient de votre programme ?,-8511492441953768938,1.0,lone candidate
+NOUN,programme,programme,0,Avez -vous vérifié votre programme récemment pour éliminer les phases qui attirent le moins de participation ?,Avez -vous vérifié votre programme récemment pour éliminer les phases qui attirent le moins de participation ?,1994213874758650300,1.0,reference word
+NOUN,argent,argent,0,Les employés versent -ils leur part d' argent à installations récréatives ?,Les employés versent -ils leur part d' argent à installations récréatives ?,4125707817384821083,1.0,reference word
+NOUN,responsabilité,responsabilité,0,Avez -vous envisagé de déléguer la responsabilité opérationnelle à votre association d' employés et de limiter soigneusement la contribution financière de votre usine ?,Avez -vous envisagé de déléguer la responsabilité opérationnelle à votre association d' employés et de limiter soigneusement la contribution financière de votre usine ?,-4823361384897199435,1.0,lone candidate
+NOUN,club,club,0,Le club de jardinage d' un employé pourrait -il prendre en charge partiellement le terrain végétal ?,Le club de jardinage d' un employé pourrait -il prendre en charge partiellement le terrain végétal ?,-8243231240044452284,1.0,reference word
+NOUN,club,club,1,Un camera club serait -il utile pour prendre des photos pertinentes à la sécurité de installations ?,Un camera club serait -il utile pour prendre des photos pertinentes à la sécurité de installations ?,-1735590483942453859,0.3,"To determine the probability that the two instances of the word ""club"" have the same meaning in the provided contexts, we need to analyze the meanings based on their usage.
+
+In context_1, ""club"" refers to a gardening club, which is a group of people who come together to engage in gardening activities. This implies a social or recreational aspect focused on gardening.
+
+In context_2, ""club"" refers to a camera club, which is a group of individuals who share an interest in photography. This also implies a social or recreational aspect, but it is focused on photography.
+
+Both instances of ""club"" refer to organizations or groups formed around a shared interest or activity. However, the specific activities and interests of the clubs are different (gardening vs. photography).
+
+Given this analysis, while both words share a common meaning related to a group or organization, they refer to different types of clubs with distinct focuses.
+
+Therefore, I would estimate the probability that these two instances of ""club"" have the same meaning in a dictionary to be relatively low, around 30%."
+ADV,trop,trop,0,Est -ce que vous dépensez trop d' argent en uniformes d' équipe qui ne profitent qu' à quelques employés ?,Est -ce que vous dépensez trop d' argent en uniformes d' équipe qui ne profitent qu' à quelques employés ?,1178289337099408429,0.85,"The word ""trop"" in both contexts is used as an adverb meaning ""too"" or ""excessively."" In context_1, it modifies ""gratuit"" (free), suggesting that the service is excessively free, while in context_2, it modifies ""d'argent"" (money), indicating that the spending is excessive. 
+
+Given that both usages convey the idea of excessiveness, I would assess the probability that they have the same meaning in a dictionary as high. 
+
+Probability: 0.85"
+NOUN,équipe,équipe,0,Êtes -vous en train de souscrire des voyages d' équipe coûteux ?,Êtes -vous en train de souscrire des voyages d' équipe coûteux ?,8014815508023276150,1.0,lone candidate
+VERB,Utilisez,utiliser,0,Utilisez -vous le produit de distributeur automatique pour aider à payer votre programme ?,Utilisez -vous le produit de distributeur automatique pour aider à payer votre programme ?,352536264044310162,0.85,"The word ""Utilisez"" in both contexts translates to ""Use"" in English. In the first context, it refers to using economical printing methods, while in the second context, it refers to using a vending machine product to help pay for a program. 
+
+Both instances of ""Utilisez"" convey the action of employing or utilizing something, but the specific objects and purposes differ. However, the core meaning of the verb remains consistent across both contexts.
+
+Given this analysis, I would assign a high probability that the two instances of ""Utilisez"" have the same meaning in a dictionary context.
+
+Probability: 0.85"
+NOUN,coût,coût,0,Connaissez -vous la tendance de votre coût d' entretien de routes d' accès et des parkings ?,Connaissez -vous la tendance de votre coût d' entretien de routes d' accès et des parkings ?,-9084010777046016504,1.0,lone candidate
+VERB,utilisez,utiliser,0,"Si vous utilisez des agents de stationnement , peuvent -ils être remplacés par des portes de stationnement automatiques ?","Si vous utilisez des agents de stationnement , peuvent -ils être remplacés par des portes de stationnement automatiques ?",352536264044310162,0.7,"To determine the probability that the words ""Utilisez"" in context_1 and ""utilisez"" in context_2 have the same meaning, we need to analyze the contexts provided.
+
+In context_1, ""Utilisez"" is used in the context of discussing methods of printing, suggesting a focus on the application of techniques or tools related to printing.
+
+In context_2, ""utilisez"" refers to the use of parking agents and their potential replacement with automatic parking doors, indicating a discussion about the use of personnel or systems in a parking context.
+
+Both instances of ""utilisez"" refer to the act of using something, but they pertain to different subjects (printing methods vs. parking agents). The core meaning of the verb ""utiliser"" (to use) remains the same, but the specific applications differ significantly.
+
+Given this analysis, I would assign a probability of 0.7 that the two instances of ""utilisez"" have the same meaning in a dictionary context, as they share the fundamental meaning of ""to use,"" but are applied in different contexts."
+VERB,fournissez,fournir,0,"Si vous fournissez des transports inter-usines , peut -on remplacer cela par les transports publics disponibles ?","Si vous fournissez des transports inter-usines , peut -on remplacer cela par les transports publics disponibles ?",3380227814939646842,1.0,lone candidate
+VERB,utilisez,utiliser,0,"Si vous utilisez le transport d' entreprise pour rencontrer des trains ou pour transporter des visiteurs , les taxis seraient -ils moins chers ?","Si vous utilisez le transport d' entreprise pour rencontrer des trains ou pour transporter des visiteurs , les taxis seraient -ils moins chers ?",352536264044310162,0.85,"To determine the probability that the words ""Utilisez"" and ""utilisez"" have the same meaning in the provided contexts, we need to analyze the meanings of the verb ""utiliser"" (to use) in both instances.
+
+In context_1, ""Utilisez"" refers to the act of employing or applying the most economical printing methods. Here, the focus is on the usage of specific methods related to printing.
+
+In context_2, ""utilisez"" refers to the use of company transport for meeting trains or transporting visitors. This context emphasizes the application of transport services.
+
+Both contexts involve the general meaning of ""to use,"" but they apply it to different domains (printing methods vs. transport services). However, the core meaning of the verb remains consistent across both contexts.
+
+Given this analysis, I would assign a high probability that the two instances of ""utilisez"" have the same meaning, as they both convey the action of using something, albeit in different contexts.
+
+Probability: 0.85"
+NOUN,véhicules,véhicule,0,Quelle est l' efficacité et la nécessité de vos véhicules intra-entreprises ?,Quelle est l' efficacité et la nécessité de vos véhicules intra-entreprises ?,-9202306420213972,1.0,lone candidate
+NOUN,conducteurs,conducteur,0,Les conducteurs à temps partiel peuvent -ils être affectés à d' autres travaux productifs ?,Les conducteurs à temps partiel peuvent -ils être affectés à d' autres travaux productifs ?,-3882316127730761927,1.0,lone candidate
+ADV,plus,plus,0,Quel est le plus économique pour votre usine - une fermeture de vacances ou des vacances espacées qui nécessitent des employés supplémentaires pour les remplissages de vacances ?,Quel est le plus économique pour votre usine - une fermeture de vacances ou des vacances espacées qui nécessitent des employés supplémentaires pour les remplissages de vacances ?,2267137018133749379,1.0,lone candidate
+NOUN,vacances,vacances,0,Les vacances peuvent -elles être espacées tout à long de 12 mois pour réduire à minimum le nombre d' employés à remplir ?,Les vacances peuvent -elles être espacées tout à long de 12 mois pour réduire à minimum le nombre d' employés à remplir ?,279961264637329955,0.95,"The word ""vacances"" in both contexts refers to the concept of ""vacation"" or ""leave."" In the first context, it discusses limiting additional vacations in a specific area or for industrial models, while in the second context, it addresses the spacing of vacations over a year to minimize the number of employees needed at a time. 
+
+Since both contexts pertain to the same general concept of time off from work or school, I would assess the probability that they have the same meaning as quite high.
+
+Probability: 0.95"
+VERB,Insistez,insister,0,Insistez -vous pour que les salariés inutiles prennent leurs vacances pendant les fermetures d' usines ?,Insistez -vous pour que les salariés inutiles prennent leurs vacances pendant les fermetures d' usines ?,-2476179864093287381,1.0,lone candidate
+NOUN,périodes,période,1,"Que peuvent faire vos services de vente et d' achat pour réduire les commandes , les expéditions et les reçus pendant les périodes d' arrêt de vacances ?","Que peuvent faire vos services de vente et d' achat pour réduire les commandes , les expéditions et les reçus pendant les périodes d' arrêt de vacances ?",-93994131765825888,0.2,"The word ""périodes"" in both contexts refers to distinct time frames or intervals. In context_1, it relates to meal times and their scheduling, while in context_2, it pertains to holiday breaks or downtime. Although both usages involve time, they refer to different types of periods (meal periods vs. holiday periods).
+
+Given this analysis, the probability that ""périodes"" has the same meaning in both contexts is low. 
+
+Probability: 0.2"
+NOUN,âge,âge,0,Un âge de retraite arbitraire de 65 ans coûte -t -il de l' argent à votre plante ?,Un âge de retraite arbitraire de 65 ans coûte -t -il de l' argent à votre plante ?,-8504056385047086210,1.0,reference word
+ADJ,âgés,âgé,0,Quel genre d' effort faites -vous pour vous assurer que les travailleurs âgés ou handicapés sont pleinement productifs ?,Quel genre d' effort faites -vous pour vous assurer que les travailleurs âgés ou handicapés sont pleinement productifs ?,-4000066554864488904,1.0,reference word
+ADJ,handicapés,handicapé,0,La retraite anticipée de employés non productifs et handicapés réduirait -elle le nombre d' emplois créés ?,La retraite anticipée de employés non productifs et handicapés réduirait -elle le nombre d' emplois créés ?,7517679047527629102,1.0,lone candidate
+NOUN,syndicat,syndicat,0,Votre syndicat acceptera -t -il des concessions d' ancienneté dans l' attribution de travail à employés âgés ou handicapés ?,Votre syndicat acceptera -t -il des concessions d' ancienneté dans l' attribution de travail à employés âgés ou handicapés ?,-3438093857577677533,0.95,"The two instances of the word ""syndicat"" in the provided contexts refer to the same concept, which is a labor union or workers' union. Both contexts discuss negotiations and concessions related to employee benefits and work assignments, which are typical topics associated with labor unions. 
+
+Given that both contexts use ""syndicat"" in a similar manner and refer to the same entity, I would assign a high probability that they have the same meaning in a dictionary.
+
+Probability: 0.95"
+NOUN,installations,installation,0,Pouvez -vous partager les installations médicales et le personnel avec les plantes voisines ?,Pouvez -vous partager les installations médicales et le personnel avec les plantes voisines ?,4712737509032110176,1.0,lone candidate
+VERB,sert,servir,0,"Si vous avez un médecin à temps plein maintenant , peut -il être remplacé par un médecin à temps partiel ou celui qui sert sur une base de frais par cas seulement ?","Si vous avez un médecin à temps plein maintenant , peut -il être remplacé par un médecin à temps partiel ou celui qui sert sur une base de frais par cas seulement ?",-2249507274773255557,1.0,lone candidate
+NOUN,infirmière,infirmier,0,Votre infirmière d' usine peut -elle être remplacée par un secouriste qualifié qui travaille à plein temps sur une autre mission ?,Votre infirmière d' usine peut -elle être remplacée par un secouriste qualifié qui travaille à plein temps sur une autre mission ?,227326150248123209,1.0,lone candidate
+VERB,traiter,traiter,0,Faites -vous une distinction rigide entre les problèmes de santé liés à travail et les problèmes de santé non liés à travail et évitez de traiter ces derniers ?,Faites -vous une distinction rigide entre les problèmes de santé liés à travail et les problèmes de santé non liés à travail et évitez de traiter ces derniers ?,-5790850066925328655,1.0,lone candidate
+ADJ,médicaux,médical,0,"Offrez -vous indifféremment des services médicaux inutiles - coups de grippe , traitements de la lampe solaire , etc ?","Offrez -vous indifféremment des services médicaux inutiles - coups de grippe , traitements de la lampe solaire , etc ?",-5816222671807271961,1.0,lone candidate
+NOUN,programme,programme,0,"Si vous avez un programme d' examen physique annuel ou régulier , est -ce que cela vaut ce qu' il vous coûte ?","Si vous avez un programme d' examen physique annuel ou régulier , est -ce que cela vaut ce qu' il vous coûte ?",1994213874758650300,0.95,"The two instances of the word ""programme"" in the provided contexts refer to the same concept of a structured plan or schedule of activities. In both contexts, ""programme"" relates to a set of organized events or tasks, whether it be for participation or for a physical examination.
+
+Given this analysis, I would assign a high probability that these two instances of ""programme"" have the same meaning in a dictionary context. 
+
+Probability: 0.95"
+VERB,permettre,permettre,0,Considérez ce que vous pouvez vous permettre de dépenser et quels sont vos objectifs avant d' établir ou de rénover votre programme d' avantages sociaux de employés .,Considérez ce que vous pouvez vous permettre de dépenser et quels sont vos objectifs avant d' établir ou de rénover votre programme d' avantages sociaux de employés .,406374946543254636,0.7,"The words ""permis"" and ""permettre"" are related in meaning, as they both derive from the same root and pertain to the concept of allowing or enabling something. However, ""permis"" is the past participle form of the verb ""permettre,"" which means ""to allow"" or ""to permit."" In the first context, ""permis"" refers to the act of having allowed someone to do something, while in the second context, ""permettre"" is used in a more general sense of being able to afford or allow oneself to do something.
+
+Given this analysis, while both words are connected and share a core meaning related to permission or allowance, they are used in different grammatical forms and contexts. Therefore, I would assign a probability of 0.7 that they have the same meaning in a dictionary, acknowledging their close relationship but also recognizing their distinct usages."
+VERB,acheter,acheter,0,Trop de responsables d' usine sont tous trop impatients d' acheter un programme de forfait d' une compagnie d' assurance simplement parce qu' il fonctionne pour une autre usine .,Trop de responsables d' usine sont tous trop impatients d' acheter un programme de forfait d' une compagnie d' assurance simplement parce qu' il fonctionne pour une autre usine .,8834601107163132285,1.0,lone candidate
+VERB,emploie,employer,0,"Mais même si cette autre usine emploie le même nombre de travailleurs et fait le même produit , il ya d' autres faits à considérer .","Mais même si cette autre usine emploie le même nombre de travailleurs et fait le même produit , il ya d' autres faits à considérer .",-7491185868152249137,1.0,lone candidate
+NOUN,pays,pays,0,Dans quelle partie de pays êtes -vous situé ?,Dans quelle partie de pays êtes -vous situé ?,6828927816828013152,1.0,lone candidate
+NOUN,programme,programme,0,Ces facteurs peuvent faire la différence entre le gaspillage et l' efficacité dans tout programme d' avantages .,Ces facteurs peuvent faire la différence entre le gaspillage et l' efficacité dans tout programme d' avantages .,1994213874758650300,0.85,"The two instances of the word ""programme"" in the provided contexts refer to similar concepts related to a structured plan or set of activities. In context_1, it pertains to a schedule or plan that may involve participation, while in context_2, it relates to a program of benefits, likely indicating a systematic approach to delivering advantages.
+
+Given that both contexts involve the idea of a ""programme"" as a planned set of actions or initiatives, I would assess the probability that they have the same meaning in a dictionary as relatively high.
+
+Probability: 85%"
+ADV,Surtout,surtout,0,"Surtout , ne pas mettre en place de avantages marginaux extravagants juste pour acheter la bonne volonté de employés .","Surtout , ne pas mettre en place de avantages marginaux extravagants juste pour acheter la bonne volonté de employés .",3090661643705014908,1.0,lone candidate
+NOUN,syndicats,syndicat,0,"Les syndicats insistent sur les avantages sociaux , mais le travailleur horaire individuel préfère l' argent à chaque fois .","Les syndicats insistent sur les avantages sociaux , mais le travailleur horaire individuel préfère l' argent à chaque fois .",-3438093857577677533,0.95,"The words ""syndicat"" and ""syndicats"" both refer to labor unions or associations that represent the interests of workers. The contexts provided indicate that both terms are used in relation to negotiations and the interests of employees regarding benefits and wages. 
+
+Since ""syndicat"" is the singular form and ""syndicats"" is the plural form of the same word, they share the same core meaning related to labor organizations. 
+
+Given this analysis, I would assign a high probability that they have the same meaning in a dictionary context.
+
+Probability: 0.95"
+VERB,équilibrer,équilibrer,0,Objectif d' équilibrer votre régime d' avantages sociaux de employés .,Objectif d' équilibrer votre régime d' avantages sociaux de employés .,3630141133558156520,1.0,lone candidate
+ADJ,libéral,libéral,0,Certaines plantes vont par-dessus bord sur un type de frange - disons un régime de retraite libéral - et se trouvent vulnérables ailleurs .,Certaines plantes vont par-dessus bord sur un type de frange - disons un régime de retraite libéral - et se trouvent vulnérables ailleurs .,8648399799562289277,1.0,lone candidate
+NOUN,programme,programme,0,"Si vous voulez de crédit pour votre programme de services à employés , faites savoir à vos travailleurs à quoi ils ont droit .","Si vous voulez de crédit pour votre programme de services à employés , faites savoir à vos travailleurs à quoi ils ont droit .",1994213874758650300,0.85,"The word ""programme"" in both contexts refers to a structured plan or set of activities. In context_1, it pertains to a program that may involve phases of participation, while in context_2, it relates to a program of services available to employees. Both usages imply a systematic arrangement of activities or services.
+
+Given this analysis, I would assign a high probability that these two instances of ""programme"" have the same meaning in a dictionary context.
+
+Probability: 0.85"
+NOUN,histoires,histoire,0,"Cela peut se faire par des histoires dans les organes de votre maison , des affiches , des publications spéciales , des lettres à maisons de travailleurs ainsi que par le bouche à oreille à travers votre chaîne de commandement .","Cela peut se faire par des histoires dans les organes de votre maison , des affiches , des publications spéciales , des lettres à maisons de travailleurs ainsi que par le bouche à oreille à travers votre chaîne de commandement .",-8844810312523576242,1.0,lone candidate
+NOUN,entreprises,entreprise,0,Certaines entreprises trouvent un peu d' imagination utile .,Certaines entreprises trouvent un peu d' imagination utile .,649478414595828950,1.0,lone candidate
+NOUN,jeu,jeu,0,"Hallmark Cards , Inc. , Kansas City , Mo. , a un jeu de quiz à faire soi-même appelé "" Bafflers de bénéfice "" , qu' il distribue à employés .","Hallmark Cards , Inc. , Kansas City , Mo. , a un jeu de quiz à faire soi-même appelé "" Bafflers de bénéfice "" , qu' il distribue à employés .",-5960725113946465190,1.0,lone candidate
+VERB,donne,donner,0,"M + R Dietetic Laboratories , Inc. , Columbus , donne à tous ses travailleurs un chéquier par télécopieur - chaque chèque indiquant le montant que l' entreprise dépense sur une frange particulière .","M + R Dietetic Laboratories , Inc. , Columbus , donne à tous ses travailleurs un chéquier par télécopieur - chaque chèque indiquant le montant que l' entreprise dépense sur une frange particulière .",266531162360003632,1.0,lone candidate
+NOUN,formulaire,formulaire,0,"U. S. Rubber Company , New York , publie un formulaire indiquant la valeur de prestations .","U. S. Rubber Company , New York , publie un formulaire indiquant la valeur de prestations .",3040859696207131528,1.0,lone candidate
+NOUN,assurance,assurance,0,"Le travailleur à col bleu connaît donc son forfait d' assurance , par exemple , coûte 227,72 $ .","Le travailleur à col bleu connaît donc son forfait d' assurance , par exemple , coûte 227,72 $ .",-3753236749260914602,1.0,reference word
+NOUN,service,service,0,Demandez à la compagnie d' assurance ou à votre propre service comptable de ventiler périodiquement le coût de votre forfait d' assurance .,Demandez à la compagnie d' assurance ou à votre propre service comptable de ventiler périodiquement le coût de votre forfait d' assurance .,8743435356831058977,1.0,lone candidate
+ADV,économiquement,économiquement,0,"Vous pouvez trouver certaines couvertures coûtant beaucoup plus que ce qui est économiquement faisable , vous avertissant ainsi des révisions souhaitables .","Vous pouvez trouver certaines couvertures coûtant beaucoup plus que ce qui est économiquement faisable , vous avertissant ainsi des révisions souhaitables .",-2329567410015044269,1.0,lone candidate
+NOUN,invalidité,invalidité,0,Vérifiez si certaines de vos prestations - comme l' indemnité d' invalidité en cours d' emploi - peuvent être versées directement plutôt qu' à titre d' épargne .,Vérifiez si certaines de vos prestations - comme l' indemnité d' invalidité en cours d' emploi - peuvent être versées directement plutôt qu' à titre d' épargne .,4944685229350607001,1.0,lone candidate
+VERB,Utiliser,utiliser,0,Utiliser une assurance déductible dans la mesure de possible .,Utiliser une assurance déductible dans la mesure de possible .,352536264044310162,0.95,"The words ""Utilisez"" and ""Utiliser"" are both forms of the verb ""utiliser,"" which means ""to use"" in French. ""Utilisez"" is the second person plural form (imperative) of the verb, while ""Utiliser"" is the infinitive form. 
+
+In the provided contexts, both words relate to the act of using something, whether it be methods of printing or insurance. 
+
+Given that both words derive from the same root and convey the same core meaning of ""to use,"" I would estimate the probability that they have the same meaning in a dictionary to be quite high.
+
+Probability: 0.95"
+NOUN,assurance,assurance,0,Il peut mettre fin à réclamations marginales qui font des ravages avec vos taux d' assurance .,Il peut mettre fin à réclamations marginales qui font des ravages avec vos taux d' assurance .,-3753236749260914602,0.85,"The word ""assurance"" in both contexts refers to a form of insurance or coverage, particularly in relation to financial protection against risks. In the first context, it discusses a specific insurance plan and its cost, while in the second context, it addresses the impact of claims on insurance rates. 
+
+Given that both usages pertain to the concept of insurance, I would estimate the probability that they have the same meaning in a dictionary to be high.
+
+Probability: 0.85"
+ADV,Aussi,aussi,0,"Aussi , méfiez -vous des politiques ouvertes , en particulier dans le domaine médical .","Aussi , méfiez -vous des politiques ouvertes , en particulier dans le domaine médical .",-3264313127433880015,1.0,reference word
+NOUN,fois,fois,0,"Cela signifiera que chaque fois qu' il ya une augmentation de taux d' hospitalisation , votre coût montera de la même manière .","Cela signifiera que chaque fois qu' il ya une augmentation de taux d' hospitalisation , votre coût montera de la même manière .",-907449236488448497,1.0,lone candidate
+NOUN,dollars,dollar,0,Inscrire une limite de dollars et de cents sur les prestations .,Inscrire une limite de dollars et de cents sur les prestations .,-4775475603289475065,1.0,lone candidate
+NOUN,assurance,assurance,0,N' allez pas trop loin sur l' assurance qui paie les prestations seulement à décès .,N' allez pas trop loin sur l' assurance qui paie les prestations seulement à décès .,-3753236749260914602,0.85,"The word ""assurance"" in both contexts refers to a form of insurance or a guarantee related to financial protection or benefits. In context_1, it pertains to a specific insurance plan or policy that a worker is aware of, while in context_2, it discusses insurance that provides benefits only upon death. 
+
+Given that both usages relate to the concept of insurance, I would estimate the probability that they have the same meaning in a dictionary to be quite high.
+
+Probability: 0.85"
+ADV,Généralement,généralement,0,"Généralement , votre employé appréciera grandement les avantages qui le protègent pendant sa vie professionnelle ou pendant sa retraite .","Généralement , votre employé appréciera grandement les avantages qui le protègent pendant sa vie professionnelle ou pendant sa retraite .",1650677534208141120,1.0,reference word
+NOUN,deuil,deuil,0,"Lors de l' octroi de congés de deuil , préciser la durée maximale de congés et indiquer la relation entre le travailleur et le défunt .","Lors de l' octroi de congés de deuil , préciser la durée maximale de congés et indiquer la relation entre le travailleur et le défunt .",-5292540461095453405,1.0,lone candidate
+ADV,Ainsi,ainsi,0,"Ainsi , vous évitez les maux de tête quand un employé veut partir pour les funérailles de son quatrième cousin .","Ainsi , vous évitez les maux de tête quand un employé veut partir pour les funérailles de son quatrième cousin .",5563947415860002228,1.0,lone candidate
+ADV,Aussi,aussi,0,"Aussi , réservez le droit d' exiger la preuve de la mort malgré le fait que vous ne l' utiliserez probablement jamais .","Aussi , réservez le droit d' exiger la preuve de la mort malgré le fait que vous ne l' utiliserez probablement jamais .",-3264313127433880015,0.95,"The word ""Aussi"" in both contexts is used as a conjunction meaning ""also"" or ""too."" In both sentences, it serves to introduce an additional point or consideration. Given that the meaning remains consistent across both contexts, I would assign a high probability that they have the same meaning in a dictionary.
+
+Probability: 0.95"
+VERB,soulager,soulager,0,Les distributeurs automatiques peuvent soulager la longue randonnée à la cafétéria pendant la pause avec la perte de temps de production qui en résulte .,Les distributeurs automatiques peuvent soulager la longue randonnée à la cafétéria pendant la pause avec la perte de temps de production qui en résulte .,-6778851950277184656,1.0,lone candidate
+NOUN,café,café,0,"Si le café est vendu à la cafétéria , laissez quelques travailleurs dans chaque département l' obtenir pour tout le groupe .","Si le café est vendu à la cafétéria , laissez quelques travailleurs dans chaque département l' obtenir pour tout le groupe .",8542564420889952412,1.0,lone candidate
+NOUN,lignes,ligne,0,Envisager d' installer des lignes de service supplémentaires dans les zones de production .,Envisager d' installer des lignes de service supplémentaires dans les zones de production .,-5203648128582546320,1.0,lone candidate
+NOUN,lait,lait,0,"Assurez -vous que le lait pour le café est placé dans des distributeurs plutôt que dans des contenants , si vous fournissez le café .","Assurez -vous que le lait pour le café est placé dans des distributeurs plutôt que dans des contenants , si vous fournissez le café .",-1235362824743800561,1.0,lone candidate
+NOUN,facture,facture,0,"Sinon , vous pouvez être selled avec une bonne facture de lait de bonne taille par les buveurs de lait .","Sinon , vous pouvez être selled avec une bonne facture de lait de bonne taille par les buveurs de lait .",-5475266201027264383,1.0,lone candidate
+NOUN,âge,âge,0,Maintenez l' âge de la retraite flexible afin que les artisans qualifiés tels que les outils et les fabricants peuvent être maintenus sur le travail pour la commodité de l' entreprise .,Maintenez l' âge de la retraite flexible afin que les artisans qualifiés tels que les outils et les fabricants peuvent être maintenus sur le travail pour la commodité de l' entreprise .,-8504056385047086210,0.95,"The word ""âge"" in both contexts refers to the concept of ""age"" in relation to retirement. In the first context, it discusses a specific retirement age of 65 years, while the second context talks about maintaining flexibility in retirement age for skilled workers. 
+
+Since both usages of ""âge"" pertain to the same concept of age in the context of retirement, I would assess the probability that they have the same meaning as high.
+
+Probability: 0.95"
+NOUN,âge,âge,1,Et ainsi les morts-vivants sur la paie peuvent être apaisés à l' âge le plus tôt possible .,Et ainsi les morts-vivants sur la paie peuvent être apaisés à l' âge le plus tôt possible .,5049613659689769040,0.3,"The word ""âge"" in both contexts refers to the concept of age, but the specific implications differ slightly. In context 1, it relates to a retirement age, which is a specific point in time associated with a person's life and work. In context 2, it refers to the age of the undead, which is more abstract and relates to a state of being rather than a specific point in time.
+
+Given these nuances, while both usages of ""âge"" pertain to the concept of age, they do not convey the same meaning in their respective contexts. Therefore, I would assign a low probability that they have the same meaning.
+
+Probability: 0.3"
+NOUN,âge,âge,0,Assurez -vous d' avoir un minimum d' âge et de temps sur les exigences professionnelles liées à votre régime de retraite .,Assurez -vous d' avoir un minimum d' âge et de temps sur les exigences professionnelles liées à votre régime de retraite .,-8504056385047086210,0.95,"The word ""âge"" in both contexts refers to the concept of age, specifically in relation to retirement. In context 1, it discusses an arbitrary retirement age of 65 years, while in context 2, it emphasizes the importance of having a minimum age related to professional requirements for retirement plans. 
+
+Given that both contexts deal with the same concept of age in relation to retirement, I would assess the probability that they have the same meaning as high.
+
+Probability: 0.95"
+ADJ,jeunes,jeune,0,Les jeunes hommes ne considèrent généralement pas les pensions comme un facteur important de prestations d' emploi et ils sont susceptibles de changer d' emploi plusieurs fois avant de s' installer .,Les jeunes hommes ne considèrent généralement pas les pensions comme un facteur important de prestations d' emploi et ils sont susceptibles de changer d' emploi plusieurs fois avant de s' installer .,-5124042861491855332,1.0,lone candidate
+VERB,Choisissez,choisir,0,Choisissez soigneusement entre les régimes de retraite contributifs ou non contributifs .,Choisissez soigneusement entre les régimes de retraite contributifs ou non contributifs .,-3166936214890130291,1.0,lone candidate
+ADV,généralement,généralement,0,Les travailleurs pensent généralement plus à un plan à ils contribuent .,Les travailleurs pensent généralement plus à un plan à ils contribuent .,1650677534208141120,0.95,"The words ""Généralement"" and ""généralement"" are the same word in different cases (capitalized and lowercase). They both mean ""generally"" in English, indicating a common or typical occurrence. 
+
+Given that they are the same word used in similar contexts, the probability that they have the same meaning is very high. 
+
+Probability: 0.95"
+NOUN,argent,argent,0,"Et ils peuvent à moins recueillir l' argent qu' ils mettent dans , plus les intérêts , quand ils quittent l' entreprise .","Et ils peuvent à moins recueillir l' argent qu' ils mettent dans , plus les intérêts , quand ils quittent l' entreprise .",4125707817384821083,0.95,"The word ""argent"" in both contexts refers to money or currency. In the first context, it is about employees contributing their share of money to recreational facilities, while in the second context, it discusses collecting money along with interest when leaving a company. 
+
+Given that both instances of ""argent"" clearly refer to the same concept of money, I would assign a high probability that they have the same meaning in a dictionary.
+
+Probability: 0.95"
+VERB,rester,rester,0,"Ainsi , il y a une incitation supplémentaire à rester à travail .","Ainsi , il y a une incitation supplémentaire à rester à travail .",7244573177494195331,1.0,lone candidate
+VERB,payer,payer,0,Assurez -vous de ne pas payer les jours fériés qui surviennent lorsqu' un employé ne travaillerait pas autrement .,Assurez -vous de ne pas payer les jours fériés qui surviennent lorsqu' un employé ne travaillerait pas autrement .,6235152224786645072,0.65,"To determine the probability that ""payés"" and ""payer"" have the same meaning, we need to analyze their meanings in the provided contexts.
+
+1. **""payés""**: This is the past participle form of the verb ""payer"" (to pay) in French, used here to refer to benefits that have been paid out or compensated. The context suggests a discussion about limiting additional social benefits that are already compensated through profit-sharing.
+
+2. **""payer""**: This is the infinitive form of the verb, meaning ""to pay."" The context discusses ensuring that holidays are not paid for when an employee would not otherwise be working.
+
+Both words are related to the act of payment, but they are used in different grammatical forms. ""Payés"" refers to something that has already been paid, while ""payer"" refers to the action of paying in general.
+
+Given that both words are derived from the same root and are related to the concept of payment, but are used in different contexts and grammatical forms, I would assign a moderate probability that they have the same meaning.
+
+**Probability**: 0.65"
+NOUN,maladies,maladie,0,"Feuilles d' absences , maladies , et mises à pied .","Feuilles d' absences , maladies , et mises à pied .",-7075437080403869731,1.0,lone candidate
+NOUN,système,système,0,Envisager d' adopter un système de congés dans lequel le temps de repos est accordé avec un oeil à un minimum d' inconvénients à l' exploitation de l' usine .,Envisager d' adopter un système de congés dans lequel le temps de repos est accordé avec un oeil à un minimum d' inconvénients à l' exploitation de l' usine .,8054950359411537292,1.0,lone candidate
+ADV,généralement,généralement,0,Il n' est généralement pas trop difficile de vendre des travailleurs sur cela car il leur donne des périodes de vacances plus longues .,Il n' est généralement pas trop difficile de vendre des travailleurs sur cela car il leur donne des périodes de vacances plus longues .,1650677534208141120,0.95,"The words ""Généralement"" and ""généralement"" are the same word in different cases (capitalized vs. lowercase) and have the same meaning in both contexts provided. They both translate to ""generally"" in English, indicating a common or typical situation. 
+
+Given that they are the same word used in similar contexts, I would assign a high probability that they have the same meaning.
+
+Probability: 0.95"
+NOUN,vendredi,vendredi,0,"Par exemple , le vendredi après Thanksgiving peut être substitué à l' anniversaire de Washington .","Par exemple , le vendredi après Thanksgiving peut être substitué à l' anniversaire de Washington .",-5307923369900964591,1.0,lone candidate
+NOUN,nombre,nombre,0,Cela réduit le nombre d' arrêts et de démarrages d' usines coûteux .,Cela réduit le nombre d' arrêts et de démarrages d' usines coûteux .,-8090342310684965866,0.95,"The word ""nombre"" in both contexts refers to a count or quantity of something. In context 1, it pertains to the number of people on leave, while in context 2, it refers to the number of stops and starts of costly factories. Despite the different subjects, the core meaning of ""nombre"" as a count remains consistent.
+
+Given this analysis, I would assign a high probability that the two instances of ""nombre"" have the same meaning in a dictionary context.
+
+Probability: 0.95"
+VERB,travaille,travailler,0,Exiger que chaque employé travaille son dernier quart avant et après le jour férié pour être admissible à la rémunération .,Exiger que chaque employé travaille son dernier quart avant et après le jour férié pour être admissible à la rémunération .,5107654445146104682,1.0,lone candidate
+VERB,utiliser,utiliser,0,Envisagez d' utiliser des distributeurs automatiques plutôt que des cafétérias subventionnées .,Envisagez d' utiliser des distributeurs automatiques plutôt que des cafétérias subventionnées .,352536264044310162,0.95,"The words ""Utilisez"" and ""utiliser"" are forms of the same verb in French. ""Utilisez"" is the second person plural form (imperative) of ""utiliser,"" which means ""to use."" In both contexts provided, the meaning revolves around the act of using something.
+
+Given that both words derive from the same root and convey the same fundamental action of using, I would assess the probability that they have the same meaning in a dictionary as very high.
+
+Probability: 0.95"
+NOUN,modèles,modèle,0,"Les derniers modèles servent des repas chauds à des prix raisonnables , et à un profit pour vous .","Les derniers modèles servent des repas chauds à des prix raisonnables , et à un profit pour vous .",-4597446048484440978,1.0,lone candidate
+NOUN,cafétéria,cafétéria,0,"Si un concessionnaire dirige la cafétéria , gardez un œil sur la qualité et le prix .","Si un concessionnaire dirige la cafétéria , gardez un œil sur la qualité et le prix .",8774157631368855903,0.95,"The words ""cafétéria"" in both contexts refer to the same concept of a cafeteria, which is a place where food is served, typically in a self-service manner. The contexts provided do not suggest any different meanings or nuances for the term. 
+
+Given this analysis, the probability that the two instances of ""cafétéria"" have the same meaning is very high.
+
+Probability: 0.95"
+NOUN,soupe,soupe,0,"Si la soupe goûte comme de l' eau de vaisselle , vos employés ne blâmeront pas le concessionnaire .","Si la soupe goûte comme de l' eau de vaisselle , vos employés ne blâmeront pas le concessionnaire .",-6309067024690202068,1.0,lone candidate
+NOUN,emplacement,emplacement,0,Vérifiez l' emplacement de votre cafétéria pour vous assurer qu' il est pratique pour la plupart de employés .,Vérifiez l' emplacement de votre cafétéria pour vous assurer qu' il est pratique pour la plupart de employés .,-6035292020658013464,1.0,lone candidate
+NOUN,minutes,minute,0,Vous pouvez économiser des minutes de production précieuses avec un changement .,Vous pouvez économiser des minutes de production précieuses avec un changement .,7028385008786907729,1.0,lone candidate
+NOUN,vacances,vacances,0,Répartir vos vacances sur la durée la plus large possible ou fermer l' usine pendant deux semaines .,Répartir vos vacances sur la durée la plus large possible ou fermer l' usine pendant deux semaines .,279961264637329955,0.95,"The word ""vacances"" in both contexts refers to the concept of ""holidays"" or ""vacation time."" In the first context, it discusses limiting additional holidays in a specific area or for industrial models, while in the second context, it talks about distributing vacation time or closing a factory for two weeks. 
+
+Since both contexts clearly relate to the same concept of taking time off or holidays, I would assign a high probability that they have the same meaning.
+
+Probability: 0.95"
+NOUN,vacances,vacances,0,Cela réduira les dépenses de remplacement des vacances .,Cela réduira les dépenses de remplacement des vacances .,279961264637329955,0.95,"The word ""vacances"" in both contexts refers to the concept of ""vacation"" or ""holidays."" In context_1, it discusses limiting additional vacations in a specific area or for industrial models, while in context_2, it refers to reducing replacement costs related to vacations. 
+
+Since both usages pertain to the same general concept of time off or holidays, I would assess the probability that they have the same meaning as high.
+
+Probability: 0.95"
+NOUN,méthode,méthode,0,Et avec la méthode de fermeture il n' y aura aucun argument quant à qui obtient les dates de vacances de choix .,Et avec la méthode de fermeture il n' y aura aucun argument quant à qui obtient les dates de vacances de choix .,4891489702256608124,1.0,lone candidate
+ADV,également,également,0,Assurez -vous également d' avoir des exigences raisonnables quant à heures travaillées avant qu' un employé de production ait droit à des vacances .,Assurez -vous également d' avoir des exigences raisonnables quant à heures travaillées avant qu' un employé de production ait droit à des vacances .,6765598852923442878,1.0,lone candidate
+VERB,essayer,essayer,0,"Vous pourriez essayer de fournir des congés annuels standard , mais rendre la paye de vacances dépend de nombre d' heures travaillées l' année précédente .","Vous pourriez essayer de fournir des congés annuels standard , mais rendre la paye de vacances dépend de nombre d' heures travaillées l' année précédente .",3061542257306218214,0.95,"To determine the probability that ""Essayez"" and ""essayer"" have the same meaning, we need to analyze their contexts and meanings.
+
+1. **Word Forms**: ""Essayez"" is the second person plural form of the verb ""essayer"" in French, which means ""to try."" In this case, ""Essayez"" translates to ""Try"" in English, addressing a group or formal context. ""Essayer"" is the infinitive form of the same verb.
+
+2. **Context Analysis**:
+   - In context_1, ""Essayez"" is used in a sentence discussing maintaining a principle related to employee contribution programs. The use of ""Essayez"" suggests an encouragement or suggestion to attempt to uphold this principle.
+   - In context_2, ""essayer"" is used in a context where someone is suggesting to attempt to provide standard annual leave while linking vacation pay to hours worked. Here, ""essayer"" also implies an attempt or effort to implement a suggestion.
+
+3. **Meaning Comparison**: Both words convey the idea of attempting or trying to do something. The contexts indicate that both are used to suggest making an effort towards a specific goal or action.
+
+Given this analysis, the two words are different forms of the same verb and share the same core meaning of ""to try"" or ""to attempt."" 
+
+**Probability Assessment**: Considering the shared meaning and the contexts in which they are used, I would assign a high probability that ""Essayez"" and ""essayer"" have the same meaning.
+
+**Probability**: 0.95 (or 95%)"
+NOUN,porte,porte,0,""" Par une porte déverrouillée "" , Madden complété .",""" Par une porte déverrouillée "" , Madden complété .",-441457570232693406,1.0,reference word
+NOUN,porte,porte,0,""" Cette foutue porte "" , a dit le chef de la police .",""" Cette foutue porte "" , a dit le chef de la police .",-441457570232693406,0.95,"The two instances of the word ""porte"" in the provided contexts refer to the same object, which is a door. In both contexts, ""porte"" is used to describe a physical entryway. 
+
+Given that both contexts involve the same noun and refer to the same concept of a door, I would assign a high probability that they have the same meaning in a dictionary.
+
+Probability: 0.95"
+NOUN,visage,visage,0,Le visage sombre de Madden portait un look méditatif .,Le visage sombre de Madden portait un look méditatif .,-3233875273991669748,1.0,lone candidate
+NOUN,collusion,collusion,0,""" S ' il y avait collusion entre un meurtrier extérieur et un membre de la famille , ce serait une précaution élémentaire de vérifier la porte plus tard .",""" S ' il y avait collusion entre un meurtrier extérieur et un membre de la famille , ce serait une précaution élémentaire de vérifier la porte plus tard .",1893930006746978662,1.0,reference word
+NOUN,fenêtre,fenêtre,0,"Beaucoup mieux pour briser une fenêtre de cave "" .","Beaucoup mieux pour briser une fenêtre de cave "" .",7028122294059775934,1.0,lone candidate
+VERB,oubliez,oublier,0,""" N' oubliez pas , il y avait l' espoir qu' il passerait pour une mort naturelle "" , Pauling lui a rappelé .",""" N' oubliez pas , il y avait l' espoir qu' il passerait pour une mort naturelle "" , Pauling lui a rappelé .",3731157838113256933,1.0,lone candidate
+NOUN,maison,maison,0,""" Eh bien , avec une maison aussi grande qu' il doit y avoir à moins une fenêtre de cave qui ne serait pas remarquée tout de suite à moins qu' il y ait eu une enquête de police "" .",""" Eh bien , avec une maison aussi grande qu' il doit y avoir à moins une fenêtre de cave qui ne serait pas remarquée tout de suite à moins qu' il y ait eu une enquête de police "" .",-9110384212014980638,1.0,lone candidate
+NOUN,vitre,vitre,0,"Et une vitre n' est pas difficile à ""","Et une vitre n' est pas difficile à """,2737410407462299965,1.0,lone candidate
+NOUN,téléphone,téléphone,0,Le téléphone l' a interrompu .,Le téléphone l' a interrompu .,-1240694945000820057,1.0,lone candidate
+VERB,dit,dire,0,"Il a pris le receveur et a dit , "" chef de la police "" , dans l' embout , et puis , "" Oh oui , M. Benson .","Il a pris le receveur et a dit , "" chef de la police "" , dans l' embout , et puis , "" Oh oui , M. Benson .",-4767583283252795385,1.0,reference word
+NOUN,main,main,0,"Avec sa main libre , il a tiré un tampon et un crayon vers lui et a commencé à faire des notes en écoutant , disant , "" Uh-huh "" et "" Je vois "" à intervalles réguliers .","Avec sa main libre , il a tiré un tampon et un crayon vers lui et a commencé à faire des notes en écoutant , disant , "" Uh-huh "" et "" Je vois "" à intervalles réguliers .",-3747001011385691193,1.0,lone candidate
+ADV,Enfin,enfin,0,"Enfin , il a dit , "" Eh bien , merci d' avoir appelé , M. Benson .","Enfin , il a dit , "" Eh bien , merci d' avoir appelé , M. Benson .",-243583825019556263,1.0,lone candidate
+NOUN,doute,doute,0,"Bien qu' il n' y ait aucun doute dans mon esprit et que nous l' ayons traité comme un que je suis heureux de l' avoir rendu officiel "" .","Bien qu' il n' y ait aucun doute dans mon esprit et que nous l' ayons traité comme un que je suis heureux de l' avoir rendu officiel "" .",-4911895707637530686,1.0,lone candidate
+NOUN,Coroner,coroner,0,""" Coroner "" , il a dit à Madden .",""" Coroner "" , il a dit à Madden .",5668851623742420884,1.0,lone candidate
+NOUN,pathologiste,pathologiste,0,""" Il vient d' entendre le pathologiste qui dit que Mme Meeker est apparemment morte d' étouffement "" .",""" Il vient d' entendre le pathologiste qui dit que Mme Meeker est apparemment morte d' étouffement "" .",-6469897489617960339,1.0,lone candidate
+VERB,regarda,regarder,0,Pauling regarda ses notes .,Pauling regarda ses notes .,-3088548677946689957,1.0,lone candidate
+NOUN,hémorragies,hémorragie,0,""" Beaucoup d' hémorragies minuscules dans les poumons ; des particules de peluche et de fil dans la bouche et les narines .",""" Beaucoup d' hémorragies minuscules dans les poumons ; des particules de peluche et de fil dans la bouche et les narines .",1422651450161541176,1.0,reference word
+NOUN,fil,fil,0,Séparations de linge de lit identiques à la peluche et à fil trouvés dans les cavités nasales et buccales .,Séparations de linge de lit identiques à la peluche et à fil trouvés dans les cavités nasales et buccales .,6331373481612268749,1.0,lone candidate
+ADJ,autre,autre,0,Aucune autre cause de décès apparente .,Aucune autre cause de décès apparente .,-633111492522486507,0.85,"The words ""autres"" and ""autre"" are both forms of the French word meaning ""other"" or ""another."" In the contexts provided, ""autres"" is the plural form, while ""autre"" is the singular form. 
+
+In the first context, ""autres techniques"" refers to multiple techniques, while in the second context, ""autre cause"" refers to a single cause. Despite the difference in number, both words convey the same underlying meaning of ""other"" or ""another.""
+
+Given this analysis, I would assign a high probability that these words have the same meaning in a dictionary context, specifically in terms of their semantic role. 
+
+Probability: 0.85"
+NOUN,Trachée,trachée,0,Trachée libre de mucus et d' objets étrangers .,Trachée libre de mucus et d' objets étrangers .,-6082627314126908367,1.0,lone candidate
+NOUN,Cerveau,cerveau,0,"Cerveau examiné pour une thrombose , un caillot ou une hémorragie .","Cerveau examiné pour une thrombose , un caillot ou une hémorragie .",3197396614458770490,1.0,lone candidate
+NOUN,hémorragie,hémorragie,0,"Aucun signe de ceux-ci , pas d' hémorragie grossière de poumons , de cœur , de cerveau ou de l' estomac "" .","Aucun signe de ceux-ci , pas d' hémorragie grossière de poumons , de cœur , de cerveau ou de l' estomac "" .",1422651450161541176,0.95,"The words ""hémorragies"" and ""hémorragie"" both refer to the same concept of bleeding, with ""hémorragies"" being the plural form of ""hémorragie."" Given that they are different forms of the same word, they share the same meaning. 
+
+Probability that they have the same meaning: 95%"
+NOUN,mort,mort,0,"Oh , l' heure de la mort .","Oh , l' heure de la mort .",2068507856398077217,1.0,lone candidate
+NOUN,durée,durée,0,"La durée de processus digestif varie , dit le pathologiste , mais l' estomac vide et les résultats dans le tube digestif supérieur indiquent que Mme Meeker est morte plusieurs heures après son dîner de sept heures .","La durée de processus digestif varie , dit le pathologiste , mais l' estomac vide et les résultats dans le tube digestif supérieur indiquent que Mme Meeker est morte plusieurs heures après son dîner de sept heures .",3137734723754315988,1.0,lone candidate
+ADV,Probablement,probablement,0,"Probablement vers minuit , donner ou prendre une heure dans les deux sens "" .","Probablement vers minuit , donner ou prendre une heure dans les deux sens "" .",-3223472612018382159,1.0,lone candidate
+ADV,encore,encore,0,Pauling s' est encore arrêté .,Pauling s' est encore arrêté .,-4214916214467192219,1.0,lone candidate
+VERB,dit,dire,0,""" Alors voilà "" , a -t -il dit .",""" Alors voilà "" , a -t -il dit .",-4767583283252795385,0.95,"The word ""dit"" in both contexts refers to the act of speaking or saying something. In the first context, it is used in a sentence where someone is quoting what was said, while in the second context, it is simply reporting that someone said something. 
+
+Since both instances of ""dit"" convey the same core meaning of expressing speech, I would assign a high probability that they have the same meaning in a dictionary.
+
+Probability: 0.95"
+NOUN,problème,problème,0,""" Pas votre problème , bien sûr , à moins que Johnston et le meurtrier ne soient un seul et même "" .",""" Pas votre problème , bien sûr , à moins que Johnston et le meurtrier ne soient un seul et même "" .",-5359032001573437798,1.0,lone candidate
+VERB,dit,dire,0,"Cependant probablement il était , Pauling dit , il ne pouvait pas se limiter à elle .","Cependant probablement il était , Pauling dit , il ne pouvait pas se limiter à elle .",-4767583283252795385,0.95,"The word ""dit"" in both contexts refers to the act of speaking or stating something. In the first context, it is used in a direct speech format where someone is quoting what was said. In the second context, it is used to indicate that Pauling is expressing an opinion or statement.
+
+Given that both instances of ""dit"" convey the meaning of ""to say"" or ""to state,"" we can conclude that they have the same meaning in this context.
+
+Probability that they have the same meaning: **0.95**"
+VERB,chercher,chercher,0,"Il a dû chercher d' autres perspectives , d' autres motifs jusqu' à ce que des preuves plus concluantes pointant vers Johnston soient révélées .","Il a dû chercher d' autres perspectives , d' autres motifs jusqu' à ce que des preuves plus concluantes pointant vers Johnston soient révélées .",-3041178716140895611,1.0,lone candidate
+NOUN,fraude,fraude,0,"Madden , avec son enquête centrée sur la fraude , a dit que demain il irait à la banque Bronx à travers laquelle les chèques de Mme Meeker à Johnston avait autorisé .","Madden , avec son enquête centrée sur la fraude , a dit que demain il irait à la banque Bronx à travers laquelle les chèques de Mme Meeker à Johnston avait autorisé .",5952244180767228809,1.0,reference word
+NOUN,collusion,collusion,0,Il aurait pu être en collusion avec Johnston sur la fraude ; il pourrait être le meurtrier de Mme Meeker ou avoir joué un rôle dans sa mort .,Il aurait pu être en collusion avec Johnston sur la fraude ; il pourrait être le meurtrier de Mme Meeker ou avoir joué un rôle dans sa mort .,1893930006746978662,0.95,"The two instances of the word ""collusion"" in the provided contexts refer to the same concept of secret or illegal cooperation or conspiracy, particularly in relation to wrongdoing. In both contexts, ""collusion"" implies a partnership in deceitful or criminal activities. 
+
+Given this analysis, the probability that the two instances of ""collusion"" have the same meaning is very high. 
+
+Probability: 0.95"
+NOUN,tête,tête,0,C' était la suggestion de Madden ; le chef de la police s' est secoué la tête dessus .,C' était la suggestion de Madden ; le chef de la police s' est secoué la tête dessus .,-8872760557433938587,1.0,lone candidate
+NOUN,fraude,fraude,0,"Si Arthur Williams était impliqué dans la fraude ou le meurtre , alors il avait aussi une autre identité .","Si Arthur Williams était impliqué dans la fraude ou le meurtre , alors il avait aussi une autre identité .",5952244180767228809,0.95,"The two instances of the word ""fraude"" in the provided contexts refer to the same concept of fraudulent activity or deception. In both contexts, ""fraude"" is used to describe illegal or unethical behavior involving deceit, whether it pertains to financial matters (as in the first context) or potentially more serious criminal implications (as in the second context).
+
+Given that both contexts discuss the same type of wrongdoing, I would assign a high probability that they have the same meaning in a dictionary.
+
+Probability: 0.95"
+NOUN,Personne,personne,0,Personne que la police de Medfield avait interrogé ne prétendait en savoir plus sur lui que sur Johnston .,Personne que la police de Medfield avait interrogé ne prétendait en savoir plus sur lui que sur Johnston .,836457269806773165,1.0,lone candidate
+NOUN,Demandeur,demandeur,0,Demandeur de bourses ?,Demandeur de bourses ?,-6344748456611083465,1.0,lone candidate
+VERB,semblait,sembler,0,Pauling semblait douteux .,Pauling semblait douteux .,8494702775897350935,1.0,lone candidate
+ADV,directement,directement,0,Madden a expliqué qu' il pensait à une demande envoyée directement à Mme Meeker .,Madden a expliqué qu' il pensait à une demande envoyée directement à Mme Meeker .,-2889955439093718810,1.0,lone candidate
+ADV,Puis,puis,0,"Puis il a demandé à utiliser le téléphone et appelé Brian Thayer , qui a dit qu' il partait juste pour garder une date de déjeuner , mais serait à la maison à deux heures .","Puis il a demandé à utiliser le téléphone et appelé Brian Thayer , qui a dit qu' il partait juste pour garder une date de déjeuner , mais serait à la maison à deux heures .",-6288814133983584212,1.0,lone candidate
+VERB,dit,dire,0,"Madden a dit qu' il le verrait à deux heures et a fait un autre appel , celui-ci à avocats de Mme Meeker .","Madden a dit qu' il le verrait à deux heures et a fait un autre appel , celui-ci à avocats de Mme Meeker .",-4767583283252795385,0.95,"The word ""dit"" in both contexts refers to the act of speaking or stating something. In the first context, it is used to indicate what someone said, while in the second context, it similarly indicates a statement made by Madden. Since both usages convey the same core meaning of expressing speech or communication, I would assess the probability that they have the same meaning as high.
+
+Probability: 0.95"
+ADJ,court,court,0,Le ton de secrétaire indiquait qu' une nomination à un tel court préavis était une concession pour laquelle Madden devrait être dûment reconnaissant .,Le ton de secrétaire indiquait qu' une nomination à un tel court préavis était une concession pour laquelle Madden devrait être dûment reconnaissant .,4863160713735256520,1.0,lone candidate
+NOUN,avocats,avocat,0,Il a déduit que Hohlbein et Garth étaient des avocats à prix élevé .,Il a déduit que Hohlbein et Garth étaient des avocats à prix élevé .,-4306275469914295072,1.0,lone candidate
+VERB,entré,entrer,0,Rapidement à une-trente il est entré Hohlbein et Garth 's élégant suite de bureaux dans Medfield 's nouveau bâtiment professionnel .,Rapidement à une-trente il est entré Hohlbein et Garth 's élégant suite de bureaux dans Medfield 's nouveau bâtiment professionnel .,-8289895892838842273,1.0,lone candidate
+NOUN,coupe,coupe,0,"Il n' aimait pas Garth à la vue , vêtements conservateurs et coupe de cheveux , sourire une ombre trop sérieusement boysish pour un homme qui doit être bien dans ses années trente , handclasp trop consciemment rapide et ferme .","Il n' aimait pas Garth à la vue , vêtements conservateurs et coupe de cheveux , sourire une ombre trop sérieusement boysish pour un homme qui doit être bien dans ses années trente , handclasp trop consciemment rapide et ferme .",-2390033082243177185,1.0,lone candidate
+NOUN,homme,homme,0,"Jeune homme sur la marque , Madden l' a étiqueté , et était prêt à deviner que dans une bonne , pas trop pousser la mode , le partenaire junior de l' entreprise avait des ambitions politiques , que Mme Garth serait impeccablement approprié en tant que femme d' un jeune avocat montant , qu' il y avait trois enfants , deux garçons et une fille , qu' elle était active dans le Club de la femme et lui à Lions , Rotary , et Jaycee , et finalement , que aucun d' eux n' avait eu une opinion peu orthodoxe depuis leur mariage .","Jeune homme sur la marque , Madden l' a étiqueté , et était prêt à deviner que dans une bonne , pas trop pousser la mode , le partenaire junior de l' entreprise avait des ambitions politiques , que Mme Garth serait impeccablement approprié en tant que femme d' un jeune avocat montant , qu' il y avait trois enfants , deux garçons et une fille , qu' elle était active dans le Club de la femme et lui à Lions , Rotary , et Jaycee , et finalement , que aucun d' eux n' avait eu une opinion peu orthodoxe depuis leur mariage .",7479850560081125966,1.0,lone candidate
+ADV,complètement,complètement,0,"Madden savait qu' il pouvait se tromper complètement à propos de tout cela , mais savait aussi qu' il continuerait à détester Garth .","Madden savait qu' il pouvait se tromper complètement à propos de tout cela , mais savait aussi qu' il continuerait à détester Garth .",8352893171963515696,1.0,lone candidate
+VERB,mentionné,mentionner,0,"Garth était prêt à être utile dans ce qu' il a mentionné avec le dégoût fastidieux comme cette malheureuse affaire Johnston , qui ne serait pas , dit -il plus d' une fois , jamais venu si Mme Meeker avait seulement jugé bon de consulter M. Hohlbein ou lui à ce sujet .","Garth était prêt à être utile dans ce qu' il a mentionné avec le dégoût fastidieux comme cette malheureuse affaire Johnston , qui ne serait pas , dit -il plus d' une fois , jamais venu si Mme Meeker avait seulement jugé bon de consulter M. Hohlbein ou lui à ce sujet .",-6548368415394032328,1.0,lone candidate
+ADJ,vraie,vrai,0,Madden a regretté de ne pas pouvoir trouver la faute avec une déclaration aussi vraie .,Madden a regretté de ne pas pouvoir trouver la faute avec une déclaration aussi vraie .,84537444074237868,1.0,lone candidate
+VERB,voir,voir,0,Il a demandé à voir une copie de testament de Mme Meeker .,Il a demandé à voir une copie de testament de Mme Meeker .,2846552436415678495,1.0,reference word
+NOUN,octobre,octobre,0,"La date , le 8 octobre 1957 , a immédiatement attiré l' attention de l' inspecteur .","La date , le 8 octobre 1957 , a immédiatement attiré l' attention de l' inspecteur .",-5243520086714329683,1.0,lone candidate
+ADV,Assez,assez,0,""" Assez récent "" , a -t -il fait remarquer .",""" Assez récent "" , a -t -il fait remarquer .",2971627176287880009,1.0,lone candidate
+ADJ,nouveaux,nouveau,0,""" Elle avait l' habitude de faire de nouveaux testaments "" ?",""" Elle avait l' habitude de faire de nouveaux testaments "" ?",-3731481398927814340,1.0,lone candidate
+VERB,changer,changer,0,Elle avait des raisons de changer celle qu' elle a faite juste après la mort de M. Meeker .,Elle avait des raisons de changer celle qu' elle a faite juste après la mort de M. Meeker .,-7076040598032924395,1.0,lone candidate
+ADV,considérablement,considérablement,0,Son domaine avait considérablement augmenté .,Son domaine avait considérablement augmenté .,-4082053433688345234,1.0,lone candidate
+VERB,voulait,vouloir,0,"Elle voulait en faire une répartition plus équitable entre les groupes qui bénéficieraient le plus , en particulier le fonds de bourses .","Elle voulait en faire une répartition plus équitable entre les groupes qui bénéficieraient le plus , en particulier le fonds de bourses .",2892509497512035908,1.0,lone candidate
+NOUN,testament,testament,0,"Au moment où le testament a été tiré M. Hohlbein m' a mentionné comment mentalement alerte elle semblait pour son âge , sachant exactement quels changements elle voulait faire et ainsi de suite "" .","Au moment où le testament a été tiré M. Hohlbein m' a mentionné comment mentalement alerte elle semblait pour son âge , sachant exactement quels changements elle voulait faire et ainsi de suite "" .",471189920795588189,1.0,reference word
+NOUN,année,année,0,"La plupart d' entre eux cette année , je dirais .","La plupart d' entre eux cette année , je dirais .",-783877299482458256,1.0,reference word
+NOUN,ans,an,0,"Même il y a deux ou trois ans , je doute qu' elle ait été impliquée dans cette malheureuse affaire Johnston .","Même il y a deux ou trois ans , je doute qu' elle ait été impliquée dans cette malheureuse affaire Johnston .",407891084445933266,1.0,lone candidate
+VERB,voyez,voir,0,"Elle nous aurait consultés , vous voyez .","Elle nous aurait consultés , vous voyez .",2846552436415678495,0.75,"To determine the probability that ""voir"" and ""voyez"" have the same meaning in the provided contexts, we need to analyze the meanings of the words and their usage in the sentences.
+
+1. **Word Analysis**:
+   - ""voir"" is the infinitive form of the verb meaning ""to see"" in French.
+   - ""voyez"" is the second person plural (vous) form of the verb ""voir,"" meaning ""you see.""
+
+2. **Context Analysis**:
+   - In context_1, ""voir"" is used in the sense of requesting to see or examine something (a copy of a will).
+   - In context_2, ""voyez"" is used in a conversational context, likely to emphasize understanding or to draw attention to something that has been stated.
+
+3. **Meaning Comparison**:
+   - Both words derive from the same root verb ""voir,"" and they share the core meaning of ""to see.""
+   - However, the contexts in which they are used differ slightly. ""voir"" in context_1 is about the act of seeing or examining something specific, while ""voyez"" in context_2 is more about acknowledging or understanding something in conversation.
+
+Given this analysis, while both words are related and share a common meaning, they are used in different contexts that slightly alter their implications.
+
+**Probability of Same Meaning**: 0.75 (75%)"
+ADV,toujours,toujours,0,Elle l ' a toujours fait auparavant et a fait preuve de la plus grande confiance dans tout ce que nous avons conseillé > > .,Elle l ' a toujours fait auparavant et a fait preuve de la plus grande confiance dans tout ce que nous avons conseillé > > .,-2632516615382955829,1.0,lone candidate
+NOUN,inspecteur,inspecteur,0,L' inspecteur a douté de cela .,L' inspecteur a douté de cela .,-7591042860177534913,1.0,lone candidate
+VERB,géré,gérer,0,Ce serait Hohlbein qui aurait géré ses affaires .,Ce serait Hohlbein qui aurait géré ses affaires .,4800014233855397403,1.0,lone candidate
+NOUN,testament,testament,0,Madden s' est réinstallé pour lire le testament .,Madden s' est réinstallé pour lire le testament .,471189920795588189,0.95,"The word ""testament"" in both contexts refers to a legal document that expresses a person's wishes regarding the distribution of their property after death. In context 1, it discusses the act of creating or modifying a testament, while in context 2, it refers to the reading of the testament. 
+
+Given that both usages pertain to the same legal concept of a testament, I would assign a high probability that they have the same meaning.
+
+Probability: 0.95"
+VERB,ajoutés,ajouter,0,"Deux millions ont été ajoutés à ce qui avait été réservé pour elle dans la vie de Mme Meeker , et la condition a fait que tant que Brian Thayer a continué à s' acquitter de ses fonctions d' administrateur de fonds à la satisfaction de conseil d' administration ( ci-après nommé par la banque administrant la succession ) il devait être maintenu en sa qualité actuelle à un salaire proportionnel à l' élargissement de responsabilités de fonds entraînerait .","Deux millions ont été ajoutés à ce qui avait été réservé pour elle dans la vie de Mme Meeker , et la condition a fait que tant que Brian Thayer a continué à s' acquitter de ses fonctions d' administrateur de fonds à la satisfaction de conseil d' administration ( ci-après nommé par la banque administrant la succession ) il devait être maintenu en sa qualité actuelle à un salaire proportionnel à l' élargissement de responsabilités de fonds entraînerait .",6160205852018508549,1.0,lone candidate
+ADJ,splendide,splendide,0,"Un vote de confiance splendide dans Thayer , Madden réfléchit .","Un vote de confiance splendide dans Thayer , Madden réfléchit .",-1067746831182881814,1.0,lone candidate
+ADV,aussi,aussi,0,"Tente , aussi .","Tente , aussi .",-3264313127433880015,0.95,"To compare the two instances of the word ""aussi,"" we need to analyze their meanings in the given contexts.
+
+1. In context_1, ""aussi"" is used to mean ""also"" or ""too,"" indicating an addition to a previous statement about being cautious of open policies, particularly in the medical field.
+2. In context_2, ""aussi"" is again used to mean ""also"" or ""too,"" but in a more imperative sense, suggesting that the action of ""tente"" (try) should also be considered.
+
+Both instances of ""aussi"" serve the same function of indicating addition or inclusion. Therefore, they share the same meaning.
+
+Based on this analysis, I would assign a high probability that the two instances of ""aussi"" have the same meaning in a dictionary context.
+
+Probability: 0.95"
+NOUN,legs,legs,0,"Il a poursuivi à des legs personnels , une liste de noms largement inconnus de lui .","Il a poursuivi à des legs personnels , une liste de noms largement inconnus de lui .",-7523424949597361495,1.0,lone candidate
+NOUN,Oregon,Oregon,0,"Vingt-cinq mille à chacune de grandes nièces de l' Oregon ( pas beaucoup à des parents de sang sur des millions ) dix mille à cet ami et que , cinq mille à un autre ; à Brian Thayer , la somme de dix mille dollars ; à Pecks , dix mille chacun ; à Joan Sheldon le legs conditionnel de dix mille à lui être payé à cas où elle était encore dans l' emploi de Mme Meeker à moment de la mort de ce dernier .","Vingt-cinq mille à chacune de grandes nièces de l' Oregon ( pas beaucoup à des parents de sang sur des millions ) dix mille à cet ami et que , cinq mille à un autre ; à Brian Thayer , la somme de dix mille dollars ; à Pecks , dix mille chacun ; à Joan Sheldon le legs conditionnel de dix mille à lui être payé à cas où elle était encore dans l' emploi de Mme Meeker à moment de la mort de ce dernier .",7411649819786345264,1.0,lone candidate
+NOUN,année,année,0,( Pas de cinq mille supplémentaires pour chaque année après le vingt et unième anniversaire de Joan ; Mme Meeker n' avait pas pu s' en occuper . ),( Pas de cinq mille supplémentaires pour chaque année après le vingt et unième anniversaire de Joan ; Mme Meeker n' avait pas pu s' en occuper . ),-783877299482458256,0.95,"The word ""année"" in both contexts refers to a year in the sense of a period of twelve months. Since the contexts do not provide any additional meanings or nuances that would suggest a different interpretation, we can conclude that they have the same meaning.
+
+Probability that they have the same meaning: 95%"
+VERB,pensait,penser,0,"Dommage , Madden pensait .","Dommage , Madden pensait .",2523279686557656770,1.0,lone candidate
+VERB,gagné,gagner,0,Joan Sheldon avait gagné le plus grand legs .,Joan Sheldon avait gagné le plus grand legs .,4699191198659087908,1.0,lone candidate
+NOUN,nom,nom,0,Il n' y avait aucun autre nom Madden reconnu .,Il n' y avait aucun autre nom Madden reconnu .,-7606830462912158187,1.0,lone candidate
+ADV,bien,bien,0,"Arthur Williams ' s pourrait bien avoir été inclus , il s' est senti .","Arthur Williams ' s pourrait bien avoir été inclus , il s' est senti .",-5067933901989450319,1.0,lone candidate
+VERB,dépensé,dépenser,0,"Mme Meeker avait dépensé une petite fortune dans une recherche pour lui , mais n' avait pris aucune disposition pour lui dans son testament s' il devait être trouvé après sa mort , et n' avait jamais mentionné son nom à ses avocats .","Mme Meeker avait dépensé une petite fortune dans une recherche pour lui , mais n' avait pris aucune disposition pour lui dans son testament s' il devait être trouvé après sa mort , et n' avait jamais mentionné son nom à ses avocats .",8824055571748430784,1.0,lone candidate
+ADJ,âgées,âgé,0,""" Les personnes âgées ont leurs idiosyncrasies "" .",""" Les personnes âgées ont leurs idiosyncrasies "" .",-4000066554864488904,0.95,"The words ""âgés"" and ""âgées"" are both forms of the adjective ""âgé,"" which means ""old"" or ""aged"" in French. The difference between them lies in their grammatical gender: ""âgés"" is the masculine plural form, while ""âgées"" is the feminine plural form. 
+
+In the provided contexts, both words refer to older individuals, with ""travailleurs âgés"" referring to older workers and ""personnes âgées"" referring to older people in general. 
+
+Given that both terms convey the same core meaning of being old or elderly, despite the difference in gender, I would assign a high probability that they have the same meaning in a dictionary context.
+
+Probability: 0.95"
+ADJ,haut,haut,0,""" Celui-ci est venu un peu haut à trente mille ou plus "" .",""" Celui-ci est venu un peu haut à trente mille ou plus "" .",-7803231068564348686,1.0,lone candidate
+NOUN,nombre,nombre,0,""" Eh bien , elle avait un certain nombre d' entre eux en ce qui concerne l' argent "" , dit Garth .",""" Eh bien , elle avait un certain nombre d' entre eux en ce qui concerne l' argent "" , dit Garth .",-8090342310684965866,0.95,"The word ""nombre"" in both contexts refers to a quantity or count of something. In context 1, it pertains to the number of people on leave, while in context 2, it refers to a certain number of them regarding money. Since both usages relate to the concept of quantity, I would assess the probability that they have the same meaning as high.
+
+Probability that they have the same meaning: 0.95"
+ADV,Parfois,parfois,0,""" Parfois , nous aurions de mal à la persuader de faire de contributions de bienfaisance exonérées d' impôt , et je l' ai connue pour se disputer avec un plombier à sujet d' un projet de loi pour la fixation d' un robinet ; le moment suivant elle avait mis un autre demi-million dans le fonds de bourses ou trente mille dans quelque chose d' aussi peu pratique que cette malheureuse affaire Johnston .",""" Parfois , nous aurions de mal à la persuader de faire de contributions de bienfaisance exonérées d' impôt , et je l' ai connue pour se disputer avec un plombier à sujet d' un projet de loi pour la fixation d' un robinet ; le moment suivant elle avait mis un autre demi-million dans le fonds de bourses ou trente mille dans quelque chose d' aussi peu pratique que cette malheureuse affaire Johnston .",3020471548750405941,1.0,lone candidate
