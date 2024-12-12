@@ -1,3 +1,4 @@
+import re
 from collections import defaultdict
 from dataclasses import asdict, dataclass, field
 import time
@@ -9,6 +10,8 @@ from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.messages import SystemMessage
 from langchain_core.prompts import HumanMessagePromptTemplate
 
+
+from linalgo.annotate.models import Annotator, Annotation, Document, Entity, Target
 from etl.models import Candidate
 
 
@@ -45,6 +48,7 @@ class Candidate:
     lemma_meaning: str = field(default='NA')
     example: str = field(default='NA')
     context: str = field(default='NA')
+    document: str | Document = field(default='NA')
 
 
 class ClusterByMeaningModel:
@@ -52,6 +56,7 @@ class ClusterByMeaningModel:
 
     def __init__(self, comparator):
         self.comparator = comparator
+        self.structured_comparator = comparator.with_structured_output(BinaryWSD)
 
     def predict(self, candidates: List[Candidate], verbose=False, sleep=0) -> List[int]:
         """Compares word meanings.
@@ -98,7 +103,7 @@ class ClusterByMeaningModel:
                     lemma2=candidate.lemma,
                     context2=candidate.context,
                 )
-                pred = self.comparator.invoke(messages)
+                pred = self.structured_comparator.invoke(messages)
                 if pred is None:
                     continue
                 if pred.probability > 0.5:
@@ -115,7 +120,64 @@ class ClusterByMeaningModel:
 
 class DummyComparator:
     def __init__(self, probability=1):
+        self.model_name = f'Dummy={probability}'
         self.probability = probability
-    
+
     def invoke(self, X):
         return BinaryWSD(probability=self.probability)
+
+    def with_structured_output(self, x):
+        return self
+
+
+def get_data(text):
+    contexts = re.findall((
+        "------Context------\n"
+        "(.+)\n"
+        "-------------------"""),
+        text
+    )
+    word = re.findall("Word: (.+)\n", text)[0]
+    return word, contexts
+
+
+class ClusterByMeaningAnnotator(ClusterByMeaningModel):
+
+    def __init__(self, comparator):
+        super().__init__(comparator)
+        self.annotator = Annotator(
+            id=hash(self.comparator.model_name),
+            name=self.comparator.model_name
+        )
+
+    def predict(self, docs, verbose=False, sleep=0):
+        candidates = []
+        for doc in docs:
+            word, contexts = get_data(doc.content)
+            for i, context in enumerate(contexts):
+                candidate = Candidate(
+                    text=word,
+                    lemma=word,
+                    context=context,
+                    example=context,
+                    document=doc
+                )
+                candidate.offset = i
+                candidates.append(candidate)
+
+        super().predict(candidates, verbose, sleep)
+        for candidate in candidates:
+            annotation = Annotation(
+                id=hash((self.comparator.model_name, candidate.text, candidate.context)),
+                annotator=self.annotator,
+                entity=Entity(id=candidate.lemma_meaning),
+                document=doc,
+                target=Target(source=candidate.document, selector=[{
+                    'startContainer': '/',
+                    'endContainer': '/',
+                    'startOffset': candidate.offset,
+                    'endOffset': 0
+                }])
+            )
+            candidate.document.annotations.add(annotation)
+        return docs
