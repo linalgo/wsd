@@ -1,0 +1,478 @@
+id,lang,pos,text,text_meaning,text_romaji,text_hiragana,lemma,lemma_meaning,lemma_romaji,lemma_hiragana,example,context,annotation,document,status,y_pred,pred,process
+b706ade7-3c61-4749-aa72-4daec43a24cc,fr,62,NA,NA,NA,NA,62,0,NA,NA,"J’ai eu si mal au ventre, tout d’un coup, que je me suis repliée sur moi-même.","J’ai eu si mal au ventre, tout d’un coup, que je me suis repliée sur moi-même.",NA,NA,pending,-868769232596360293,1.0,reference word
+6c9f66c2-1306-477a-8fb0-67c714b00f28,fr,62,NA,NA,NA,NA,62,1,NA,NA,"L'armée était en difficulté, il était préférable de se replier.","L'armée était en difficulté, il était préférable de se replier.",NA,NA,pending,1240514140521270004,0.1,"The word ""replier"" in French can have different meanings based on the context. In context_1, ""repliée sur moi-même"" suggests a physical or metaphorical action of curling up or withdrawing into oneself, often due to pain or discomfort. In context_2, ""se replier"" refers to a strategic military retreat or withdrawal.
+
+Given these contexts, the probability that ""replier"" has the same meaning in both contexts is low. In context_1, it is more about a personal or emotional reaction, while in context_2, it is about a tactical military maneuver. Therefore, the probability that they have the same meaning is around 10%."
+bbd69d6a-ecda-4cdf-9dc7-70318b837344,fr,61,NA,NA,NA,NA,61,0,NA,NA,"Mes parents se disputent tout le temps, c’est triste.","Mes parents se disputent tout le temps, c’est triste.",NA,NA,pending,-7415502767640161947,1.0,reference word
+495c7782-ddc3-46de-8c4e-f45467a88c1c,fr,61,NA,NA,NA,NA,61,0,NA,NA,"La mère se disputait avec son fils en public, c’était gênant.","La mère se disputait avec son fils en public, c’était gênant.",NA,NA,pending,-7415502767640161947,0.95,"The words in question are ""disputent"" in context_1 and ""disputait"" in context_2. Both words are forms of the French verb ""disputer,"" which can mean ""to argue"" or ""to quarrel."" 
+
+In context_1, ""Mes parents se disputent tout le temps, c’est triste,"" the verb ""disputent"" is used to describe parents arguing frequently, which is considered sad.
+
+In context_2, ""La mère se disputait avec son fils en public, c’était gênant,"" the verb ""disputait"" is used to describe a mother arguing with her son in public, which is considered embarrassing.
+
+Both contexts involve the act of arguing or quarreling, and the emotional reactions (sadness and embarrassment) are related to the social implications of arguing. Therefore, the probability that ""disputent"" and ""disputait"" have the same meaning in these contexts is very high.
+
+Probability: 95%"
+daed9485-0b06-4677-8843-316526c60dfc,fr,60,NA,NA,NA,NA,60,0,NA,NA,"Sa fille lui manquait. Elle s’est dit que ce weekend, elle ira la voir.","Sa fille lui manquait. Elle s’est dit que ce weekend, elle ira la voir.",NA,NA,pending,-8267463688239781265,1.0,reference word
+8efa00ac-05f7-47a1-b849-8a543f3ca898,fr,60,NA,NA,NA,NA,60,1,NA,NA,C'est mieux de tout se dire quand on veut bien s'entendre entre amis.,C'est mieux de tout se dire quand on veut bien s'entendre entre amis.,NA,NA,pending,-1759822932137782840,0.1,"To determine the probability that the words ""se dit"" in context_1 and ""se dire"" in context_2 have the same meaning, we need to analyze the contexts in which they are used.
+
+In context_1: ""Sa fille lui manquait. Elle s’est dit que ce weekend, elle ira la voir."" Here, ""s’est dit"" is used reflexively to mean ""she thought to herself"" or ""she decided.""
+
+In context_2: ""C'est mieux de tout se dire quand on veut bien s'entendre entre amis."" Here, ""se dire"" is used reflexively to mean ""to tell each other"" or ""to communicate.""
+
+The two uses of ""se dire"" have different meanings: one is about internal reflection or decision-making, and the other is about communication between people.
+
+Therefore, the probability that ""se dit"" in context_1 and ""se dire"" in context_2 have the same meaning is low.
+
+Probability: 10%"
+6712eb1c-e933-4e97-8b33-3e6cf82c111c,fr,59,NA,NA,NA,NA,59,0,NA,NA,Le syndicat s'oppose à la réduction des primes des travailleurs.,Le syndicat s'oppose à la réduction des primes des travailleurs.,NA,NA,pending,2497665688310024683,1.0,reference word
+8e6bf8d1-5088-402e-b89e-8cf9eace4f4b,fr,59,NA,NA,NA,NA,59,0,NA,NA,Le syndicat s'oppose à la réduction des primes des travailleurs.,Le syndicat s'oppose à la réduction des primes des travailleurs.,NA,NA,pending,2497665688310024683,1.0,"The probability that the words have the same meaning in a dictionary is 100%. The contexts provided are identical, which means the words in both contexts are the same and have the same meaning."
+9d9ea488-d161-410c-9675-6656ebd52a96,fr,58,NA,NA,NA,NA,58,0,NA,NA,Elle a réussi à réaliser son rêve de devenir médecin.,Elle a réussi à réaliser son rêve de devenir médecin.,NA,NA,pending,7966878856204700351,1.0,reference word
+b8e0d446-8eb1-4858-b1e4-d030259a2ceb,fr,58,NA,NA,NA,NA,58,1,NA,NA,Elle a réalisé sa plus belle invention en 1906.,Elle a réalisé sa plus belle invention en 1906.,NA,NA,pending,-3972224461402852840,0.2,"To determine the probability that the words in these contexts have the same meaning, let's analyze the contexts:
+
+1. Context_1: ""Elle a réussi à réaliser son rêve de devenir médecin.""
+   - Here, ""réaliser"" is used in the sense of ""achieving"" or ""fulfilling"" a dream or goal.
+
+2. Context_2: ""Elle a réalisé sa plus belle invention en 1906.""
+   - In this context, ""réaliser"" is used in the sense of ""creating"" or ""bringing into existence"" an invention.
+
+The word ""réaliser"" can have multiple meanings depending on the context. In the first context, it refers to achieving or fulfilling a dream, while in the second context, it refers to creating or making something tangible, like an invention.
+
+Given these differences in meaning, the probability that ""réaliser"" has the same meaning in both contexts is low. Therefore, I would estimate the probability to be around 20%."
+36f98dca-c967-448c-915e-5225ce16c565,fr,58,NA,NA,NA,NA,58,0,NA,NA,Il a réalisé son rêve de devenir médecin.,Il a réalisé son rêve de devenir médecin.,NA,NA,pending,7966878856204700351,1.0,"The words in both contexts are ""réaliser"" in French, which can mean ""to achieve"" or ""to fulfill"" in English. In both contexts, the phrase ""réaliser son rêve de devenir médecin"" is used, which translates to ""achieve/fulfill one's dream of becoming a doctor."" The meaning in both contexts is the same, as they both refer to the act of achieving or fulfilling a dream or goal.
+
+Therefore, the probability that the words have the same meaning in a dictionary is very high, close to 100%."
+3fcf9908-f100-40bc-83c5-eae6994bc418,fr,57,NA,NA,NA,NA,57,0,NA,NA,"Vous pouvez rayer mon nom de la liste d'attente, je n’ai plus de temps.","Vous pouvez rayer mon nom de la liste d'attente, je n’ai plus de temps.",NA,NA,pending,7173825833573082079,1.0,reference word
+a2150020-3427-444b-9f46-baadb58cf94e,fr,57,NA,NA,NA,NA,57,0,NA,NA,"Rayer, ça veut dire barrer. Il faut encercler la bonne réponse et rayer la mauvaise.","Rayer, ça veut dire barrer. Il faut encercler la bonne réponse et rayer la mauvaise.",NA,NA,pending,7173825833573082079,0.85,"To determine the probability that the words in the given contexts have the same meaning, let's analyze the contexts:
+
+1. **Context 1**: ""Vous pouvez rayer mon nom de la liste d'attente, je n’ai plus de temps.""  
+   - Here, ""rayer"" is used in the sense of removing or deleting a name from a list.
+
+2. **Context 2**: ""Rayer, ça veut dire barrer. Il faut encercler la bonne réponse et rayer la mauvaise.""  
+   - In this context, ""rayer"" is explained as ""barrer,"" which means to cross out or strike through something, such as an incorrect answer.
+
+Both contexts involve the action of marking something to indicate its removal or invalidation. In the first context, it's about removing a name from a list, and in the second, it's about marking an incorrect answer. The core meaning of ""rayer"" in both contexts is to eliminate or invalidate something by marking it.
+
+Given this analysis, the probability that ""rayer"" has the same meaning in both contexts is high. I would estimate the probability to be around 85%."
+13b49970-183b-4a90-aed9-fc63d3cb0832,fr,56,NA,NA,NA,NA,56,0,NA,NA,"Prends un parapluie, il va pleuvoir.","Prends un parapluie, il va pleuvoir.",NA,NA,pending,-2790758592842429976,1.0,reference word
+f022786e-a0d3-4576-b02b-8df42dbe49bd,fr,56,NA,NA,NA,NA,56,1,NA,NA,J'ai pris un café ce matin.,J'ai pris un café ce matin.,NA,NA,pending,-7683832621815126342,0.4,"The words in question are ""prends"" and ""pris,"" which are different forms of the French verb ""prendre."" In the given contexts, ""prends"" in ""Prends un parapluie, il va pleuvoir"" means ""take"" in the sense of ""take an umbrella,"" while ""pris"" in ""J'ai pris un café ce matin"" means ""had"" or ""took"" in the sense of ""had a coffee.""
+
+Although both words are forms of the verb ""prendre,"" they are used in different contexts with slightly different meanings. In the first context, ""prendre"" is used in the sense of taking or carrying something with you, while in the second context, it is used in the sense of consuming or having something.
+
+Given these differences, the probability that ""prends"" and ""pris"" have the same meaning in these contexts is relatively low. However, they do share a common root meaning related to taking or having, so they are not entirely unrelated.
+
+Probability: 40%"
+66dcfa92-7f13-4adc-b5d2-ca1ec12d5ef9,fr,55,NA,NA,NA,NA,55,0,NA,NA,Passez par ici pour entrer dans le bâtiment.,Passez par ici pour entrer dans le bâtiment.,NA,NA,pending,2060834310585347806,1.0,reference word
+74e1a0b3-4695-4624-a09a-308973e91ed0,fr,55,NA,NA,NA,NA,55,1,NA,NA,Je vais passer chez toi demain.,Je vais passer chez toi demain.,NA,NA,pending,4170117683702978103,0.2,"To determine the probability that the words ""passer"" in the given contexts have the same meaning, we need to analyze the contexts:
+
+1. Context_1: ""Passez par ici pour entrer dans le bâtiment."" - Here, ""passer"" is used in the sense of ""to go through"" or ""to pass by"" a location in order to enter a building.
+
+2. Context_2: ""Je vais passer chez toi demain."" - In this context, ""passer"" means ""to visit"" or ""to stop by"" someone's place.
+
+While both uses of ""passer"" involve movement, the specific meanings differ: one is about moving through a location, and the other is about visiting a place. Therefore, the probability that they have the same meaning is low.
+
+Probability: 20%"
+7e987e17-1fe1-400c-9b4b-5554a6effe30,fr,55,NA,NA,NA,NA,55,2,NA,NA,Il a passé l'examen avec succès.,Il a passé l'examen avec succès.,NA,NA,pending,-7768985633904575088,0.05,"To determine the probability that the words in these contexts have the same meaning, we need to analyze the usage of ""passer"" in each sentence.
+
+In context_1: ""Je vais passer chez toi demain,"" the word ""passer"" is used in the sense of ""to stop by"" or ""to visit"" someone. It implies going to someone's place.
+
+In context_2: ""Il a passé l'examen avec succès,"" the word ""passer"" is used in the sense of ""to take"" or ""to pass"" an exam. It refers to the act of completing an examination successfully.
+
+These two uses of ""passer"" have different meanings: one is about visiting a place, and the other is about completing an exam. Therefore, the probability that they have the same meaning in a dictionary is very low.
+
+Probability: 5%"
+ce37b000-ad74-46f9-b8da-9d3001927586,fr,55,NA,NA,NA,NA,55,0,NA,NA,Il passe devant la boulangerie tous les matins.,Il passe devant la boulangerie tous les matins.,NA,NA,pending,2060834310585347806,0.85,"To determine the probability that the words in the given contexts have the same meaning, let's analyze the contexts:
+
+1. Context 1: ""Passez par ici pour entrer dans le bâtiment."" - In this context, ""passez"" is used in the sense of ""to go through"" or ""to pass by"" a certain location to enter a building. It implies movement through a specific path or route.
+
+2. Context 2: ""Il passe devant la boulangerie tous les matins."" - Here, ""passe"" is used to describe a habitual action of moving past or by a location, in this case, the bakery, every morning. It also implies movement but in a habitual or routine manner.
+
+Both contexts involve the concept of moving past or through a location. The primary meaning in both cases is related to the action of passing by or through a place. Although the contexts differ slightly in terms of purpose (entering a building vs. habitual passing), the core meaning of ""passing by"" remains consistent.
+
+Given this analysis, the probability that the words in these contexts have the same meaning is high. I would estimate it to be around 85%."
+4e96b8ab-13ca-43f7-90ff-88c66976d898,fr,54,NA,NA,NA,NA,54,0,NA,NA,Tu parles très bien français.,Tu parles très bien français.,NA,NA,pending,-3330120023252312231,1.0,reference word
+f61e9702-6f35-4897-bdb7-2c2a9f79503c,fr,54,NA,NA,NA,NA,54,0,NA,NA,Je comprends le français mais je ne le parle pas couramment.,Je comprends le français mais je ne le parle pas couramment.,NA,NA,pending,-3330120023252312231,0.95,"The words in question are ""parles"" from context_1 and ""parle"" from context_2. Both words are forms of the verb ""parler"" in French, which means ""to speak"" or ""to talk."" In context_1, ""parles"" is the second person singular present tense form, meaning ""you speak."" In context_2, ""parle"" is the first person singular present tense form, meaning ""I speak.""
+
+Despite the difference in grammatical person, both words share the same core meaning of ""speaking"" or ""talking."" Therefore, the probability that they have the same meaning in a dictionary is very high.
+
+Probability: 95%"
+9e33be33-ff77-4f64-a847-d193df1d2eb7,fr,53,NA,NA,NA,NA,53,0,NA,NA,Il a monté les escaliers rapidement.,Il a monté les escaliers rapidement.,NA,NA,pending,-1293570189241427353,1.0,reference word
+c8ad59e7-0e1b-446c-9094-f197a60092d7,fr,53,NA,NA,NA,NA,53,0,NA,NA,"Il a monté quelques marches d’escaliers, puis s’est senti très mal et s’est assis.","Il a monté quelques marches d’escaliers, puis s’est senti très mal et s’est assis.",NA,NA,pending,-1293570189241427353,0.95,"The word ""monté"" in both contexts is used as a verb in French. In context_1, ""Il a monté les escaliers rapidement,"" it means ""He went up the stairs quickly."" In context_2, ""Il a monté quelques marches d’escaliers, puis s’est senti très mal et s’est assis,"" it means ""He went up a few steps of the stairs, then felt very bad and sat down.""
+
+In both contexts, ""monté"" refers to the action of ascending or going up stairs. The contexts describe similar actions involving moving upwards on stairs, with the primary difference being the speed and the subsequent feeling in context_2.
+
+Given that the core meaning of ""monté"" as ""to go up"" or ""to ascend"" is consistent in both contexts, the probability that they have the same meaning in a dictionary is very high.
+
+Probability: 95%"
+85db117f-f708-43cd-a6c0-666c59147fc7,fr,53,NA,NA,NA,NA,53,0,NA,NA,Il a décidé de monter les escaliers au lieu de prendre l'ascenseur.,Il a décidé de monter les escaliers au lieu de prendre l'ascenseur.,NA,NA,pending,-1293570189241427353,0.95,"The words in question are both forms of the verb ""monter"" in French. In both contexts, ""monter"" refers to the action of going up or ascending the stairs. The contexts provided do not suggest any different meanings or nuances that would differentiate the sense of ""monter"" in these sentences. Therefore, the probability that ""monter"" has the same meaning in both contexts is very high.
+
+Probability: 95%"
+ad2992af-e5b0-4cb8-8a68-61a4838dcf25,fr,52,NA,NA,NA,NA,52,0,NA,NA,Mettez les livres sur la table.,Mettez les livres sur la table.,NA,NA,pending,-8751690013492197084,1.0,reference word
+cb73b308-47d5-4b5e-8d8f-053933b401d9,fr,52,NA,NA,NA,NA,52,0,NA,NA,J'ai mis le livre sur la table.,J'ai mis le livre sur la table.,NA,NA,pending,-8751690013492197084,0.95,"The words in question are ""Mettez"" and ""mis,"" both of which are forms of the French verb ""mettre,"" meaning ""to put"" or ""to place."" In context_1, ""Mettez"" is the imperative form used to give a command or instruction, while in context_2, ""mis"" is the past participle used in the passé composé tense to indicate a completed action. Despite the difference in tense and grammatical form, both words share the same core meaning of placing or putting something somewhere.
+
+Given this analysis, the probability that ""Mettez"" and ""mis"" have the same meaning in a dictionary is very high, around 95%. The difference lies only in their grammatical usage, not in their fundamental meaning."
+a3569e2d-8877-4590-9c1b-e47f9a19e742,fr,51,NA,NA,NA,NA,51,0,NA,NA,Je préfère marcher que prendre les transports en commun.,Je préfère marcher que prendre les transports en commun.,NA,NA,pending,4759011081546961969,1.0,reference word
+4c94617c-bc76-44b5-8871-71ca265b10eb,fr,51,NA,NA,NA,NA,51,0,NA,NA,Elle marche dans le parc tous les matins.,Elle marche dans le parc tous les matins.,NA,NA,pending,4759011081546961969,0.95,"The word ""marcher"" in both contexts is used as a verb in French. In context_1, ""marcher"" means ""to walk"" as a preference over using public transportation. In context_2, ""marcher"" also means ""to walk,"" describing the action of walking in the park every morning.
+
+Given that both instances of ""marcher"" refer to the action of walking, the probability that they have the same meaning in a dictionary is very high.
+
+Probability: 95%"
+c2ecd779-77cb-44c1-aabd-5c8a6aa22743,fr,50,NA,NA,NA,NA,50,0,NA,NA,"Nous venons de franchir les 20 000 euros de vente ce mois-ci, c'est énorme!","Nous venons de franchir les 20 000 euros de vente ce mois-ci, c'est énorme!",NA,NA,pending,-7146616131783423701,1.0,reference word
+d91f6ef2-af7a-4843-9cbe-d638a41f90b3,fr,50,NA,NA,NA,NA,50,1,NA,NA,Tous les spectateurs ont crié de joie quand elle a franchi la barrière.,Tous les spectateurs ont crié de joie quand elle a franchi la barrière.,NA,NA,pending,6407053912953431549,0.2,"The word ""franchir"" in both contexts is used as a verb, but the meanings differ based on the context:
+
+1. In context_1, ""franchir"" is used in a metaphorical sense, meaning to surpass or exceed a certain amount (in this case, 20,000 euros in sales). It implies achieving or going beyond a target or limit.
+
+2. In context_2, ""franchir"" is used in a literal sense, meaning to physically cross or go over a barrier. It involves the action of moving past a physical obstacle.
+
+Given these contexts, the probability that ""franchir"" has the same meaning in both contexts is low. The word is used in different senses: one metaphorical and one literal.
+
+Probability: 20%"
+19c8dee5-59f2-4988-a57d-acf0f22ac556,fr,49,NA,NA,NA,NA,49,0,NA,NA,Faites vos devoirs avant de sortir.,Faites vos devoirs avant de sortir.,NA,NA,pending,-945473896764335054,1.0,reference word
+98fdc529-2a00-4cc6-a362-b677c3bacc10,fr,49,NA,NA,NA,NA,49,1,NA,NA,Je vais faire un gâteau pour l'anniversaire.,Je vais faire un gâteau pour l'anniversaire.,NA,NA,pending,5562166859337663371,0.2,"The word ""faire"" in French can have multiple meanings depending on the context. In context_1, ""Faites vos devoirs avant de sortir,"" ""faire"" means ""to do"" or ""to complete"" (as in doing homework). In context_2, ""Je vais faire un gâteau pour l'anniversaire,"" ""faire"" means ""to make"" or ""to prepare"" (as in making a cake).
+
+Given these contexts, the probability that ""faire"" has the same meaning in both contexts is low. The meanings are related in that they both involve performing an action, but they are distinct in terms of the specific action being described (doing vs. making).
+
+Probability: 20%"
+7c2e8b99-2001-4d69-a8b3-9ff24187a6df,fr,48,NA,NA,NA,NA,48,0,NA,NA,Il donne un cadeau à son ami.,Il donne un cadeau à son ami.,NA,NA,pending,-5734123397952264559,1.0,reference word
+f36129ac-6e8f-46da-a3c1-15041a409214,fr,48,NA,NA,NA,NA,48,0,NA,NA,"Gaston aime mon gilet. Je vais le lui donner, il peut l’avoir pour toujours.","Gaston aime mon gilet. Je vais le lui donner, il peut l’avoir pour toujours.",NA,NA,pending,-5734123397952264559,0.95,"To determine the probability that the words in the given contexts have the same meaning, we need to analyze the meaning of ""donne"" in context_1 and ""donner"" in context_2.
+
+In context_1, ""Il donne un cadeau à son ami,"" the word ""donne"" means ""to give"" in the sense of presenting or handing over a gift to someone.
+
+In context_2, ""Gaston aime mon gilet. Je vais le lui donner, il peut l’avoir pour toujours,"" the word ""donner"" also means ""to give"" in the sense of transferring ownership or possession of the vest to Gaston permanently.
+
+Both contexts involve the act of giving something to someone else. Therefore, the probability that ""donne"" in context_1 and ""donner"" in context_2 have the same meaning is very high.
+
+Probability: 95%"
+fb965254-a5fa-474d-9a55-b691e670a2f2,fr,48,NA,NA,NA,NA,48,0,NA,NA,Ils donnent des cadeaux à leurs amis.,Ils donnent des cadeaux à leurs amis.,NA,NA,pending,-5734123397952264559,1.0,"The words in question are ""donne"" and ""donnent,"" which are different conjugations of the French verb ""donner,"" meaning ""to give."" In both contexts, the verb is used to describe the act of giving a gift to a friend or friends. The difference in conjugation reflects the subject (singular vs. plural) but does not change the fundamental meaning of the verb itself.
+
+Given that the meaning of ""donner"" remains consistent across both contexts, the probability that ""donne"" and ""donnent"" have the same meaning in a dictionary is very high. Therefore, the probability is 100%."
+4048d535-f295-46f9-b4fb-f11fb177c268,fr,47,NA,NA,NA,NA,47,0,NA,NA,Elle n’aime pas le café. Je le sais parce qu’elle me l’a dit.,Elle n’aime pas le café. Je le sais parce qu’elle me l’a dit.,NA,NA,pending,-2734348107056765874,1.0,reference word
+8b0ad49a-597a-4093-8731-59113efd2228,fr,47,NA,NA,NA,NA,47,0,NA,NA,Je dis toujours la vérité.,Je dis toujours la vérité.,NA,NA,pending,-2734348107056765874,0.95,"To determine the probability that the words in these contexts have the same meaning, we need to identify the verb in each context and analyze their meanings.
+
+In context_1, the verb is ""dit"" (from ""dire""), which means ""said"" or ""told"" in English. The context suggests that someone communicated information about not liking coffee.
+
+In context_2, the verb is ""dis"" (also from ""dire""), which means ""say"" or ""tell"" in English. The context suggests that someone is stating that they always communicate the truth.
+
+Both verbs are forms of the verb ""dire,"" which means ""to say"" or ""to tell."" The core meaning of ""dire"" in both contexts is about communicating information verbally.
+
+Given that both contexts involve the act of verbal communication, the probability that the words have the same meaning is very high.
+
+Probability: 95%"
+2ff12da4-cf43-4cb7-a898-9925240fae5c,fr,46,NA,NA,NA,NA,46,0,NA,NA,"Tu dois finir ta soupe, parce que c’est bon pour ta santé.","Tu dois finir ta soupe, parce que c’est bon pour ta santé.",NA,NA,pending,1748190010363175499,1.0,reference word
+e905522d-c147-4496-a6af-070150164199,fr,46,NA,NA,NA,NA,46,0,NA,NA,Je dois finir mes devoirs avant de sortir.,Je dois finir mes devoirs avant de sortir.,NA,NA,pending,1748190010363175499,0.95,"The words in both contexts are ""finir,"" which is a verb in French meaning ""to finish"" or ""to complete."" In both contexts, the verb is used to indicate the completion of an action: finishing soup in the first context and finishing homework in the second context. The core meaning of ""finir"" as ""to complete"" or ""to bring to an end"" is consistent in both cases.
+
+Therefore, the probability that ""finir"" has the same meaning in both contexts is very high. I would estimate it at around 95%."
+8300e9f4-7efe-4fbb-aa18-858e69fc387a,fr,45,NA,NA,NA,NA,45,0,NA,NA,Je vais commander une pizza pour le dîner.,Je vais commander une pizza pour le dîner.,NA,NA,pending,-4952682599040839801,1.0,reference word
+f25fa3bb-ec4b-443a-9c8c-485d5d83574c,fr,45,NA,NA,NA,NA,45,0,NA,NA,J'ai commandé une pizza pour le dîner.,J'ai commandé une pizza pour le dîner.,NA,NA,pending,-4952682599040839801,0.95,"The words in question are ""commander"" in context_1 and ""commandé"" in context_2. Both words are forms of the verb ""commander"" in French, which means ""to order"" in English. The difference between them is the tense: ""commander"" is in the infinitive form, while ""commandé"" is in the past participle form. However, as instructed, we are focusing on the meaning rather than the tense.
+
+In both contexts, the verb is used in the sense of ordering food, specifically a pizza for dinner. Therefore, the probability that they have the same meaning in a dictionary is very high.
+
+Probability: 95%"
+8755b5c8-b405-4161-a9ca-4f2103b3394d,fr,44,NA,NA,NA,NA,44,0,NA,NA,Il a changé de travail récemment.,Il a changé de travail récemment.,NA,NA,pending,3347848704422462482,1.0,reference word
+5fadd1de-6962-4259-abec-1cdd3f92c7c0,fr,44,NA,NA,NA,NA,44,1,NA,NA,Gérard a changé ses vêtements parce qu’ils étaient sales.,Gérard a changé ses vêtements parce qu’ils étaient sales.,NA,NA,pending,-8591254613185090709,0.1,"The word ""changer"" in French can have different meanings based on the context. In the first context, ""Il a changé de travail récemment,"" ""changer"" means to switch or to change from one job to another. In the second context, ""Gérard a changé ses vêtements parce qu’ils étaient sales,"" ""changer"" means to replace or to put on different clothes.
+
+Given these contexts, the probability that ""changer"" has the same meaning in both sentences is low. In the first sentence, it refers to changing from one state or situation to another (job), while in the second sentence, it refers to replacing or substituting one item with another (clothes).
+
+Therefore, the probability that ""changer"" has the same meaning in both contexts is approximately 10%."
+78b15877-dc83-454d-9585-0614e045ba7c,fr,43,NA,NA,NA,NA,43,0,NA,NA,Allez à l'école tous les jours.,Allez à l'école tous les jours.,NA,NA,pending,-6087481727598273430,1.0,reference word
+6dcf438d-ae74-4c34-afe4-d1b3b1904621,fr,43,NA,NA,NA,NA,43,0,NA,NA,Allez à l'école tous les jours.,Allez à l'école tous les jours.,NA,NA,pending,-6087481727598273430,1.0,"The words provided are identical in both contexts: ""Allez à l'école tous les jours."" Since the words are exactly the same and used in the same context, the probability that they have the same meaning is 100%."
+10d1ab10-b39c-45e7-ae9d-f3f708a3ecdb,fr,43,NA,NA,NA,NA,43,0,NA,NA,Je vais à l'école tous les jours.,Je vais à l'école tous les jours.,NA,NA,pending,-6087481727598273430,0.95,"The words in question are ""Allez"" and ""vais,"" both of which are forms of the verb ""aller"" in French, meaning ""to go."" In the given contexts, both words are used to describe the action of going to school every day. ""Allez"" is the second person plural or formal singular form, while ""vais"" is the first person singular form. Despite the difference in grammatical person, the core meaning of the verb ""aller"" remains the same in both contexts.
+
+Therefore, the probability that ""Allez"" and ""vais"" have the same meaning in a dictionary, focusing on the verb ""aller,"" is very high. I would estimate it to be around 95%."
+90559850-47cd-474e-90c5-09765e49698d,fr,42,NA,NA,NA,NA,42,0,NA,NA,"Pour qu’un enfant soit heureux, il faut lui rappeler tous les jours qu’on l’aime.","Pour qu’un enfant soit heureux, il faut lui rappeler tous les jours qu’on l’aime.",NA,NA,pending,-7126630009010939275,1.0,reference word
+1d909857-2ee2-47dd-987f-aff7e3533966,fr,42,NA,NA,NA,NA,42,0,NA,NA,Il a toujours aimé les animaux.,Il a toujours aimé les animaux.,NA,NA,pending,-7126630009010939275,0.98,"The words in question are ""aime"" in context_1 and ""aimé"" in context_2. Both words are forms of the verb ""aimer"" in French, which generally means ""to love"" or ""to like."" 
+
+In context_1, ""aime"" is used in the sense of expressing love or affection towards a child, which aligns with the meaning of ""to love."" In context_2, ""aimé"" is used to express a fondness or affection for animals, which also aligns with the meaning of ""to love"" or ""to like.""
+
+Given that both contexts involve expressing affection or fondness, the probability that ""aime"" in context_1 and ""aimé"" in context_2 have the same meaning is very high. Therefore, the probability that they have the same meaning is approximately 95-100%."
+d22d8faf-6d37-4c82-8f3d-d9093c4200ca,fr,42,NA,NA,NA,NA,42,0,NA,NA,Elle aime les fleurs.,Elle aime les fleurs.,NA,NA,pending,-7126630009010939275,0.8,"The word in question is ""aime"" in both contexts, which is a form of the verb ""aimer"" in French. In context_1, ""aimer"" is used in the sense of expressing love or affection towards a child. In context_2, ""aimer"" is used to express a liking or fondness for flowers.
+
+While both contexts involve positive feelings, the specific sense of ""aimer"" differs slightly: one is about love or affection towards a person, and the other is about liking or enjoying something. However, in French, ""aimer"" is commonly used for both loving people and liking things, and the distinction is often made based on context rather than a change in the word itself.
+
+Given this, the probability that ""aime"" has the same meaning in both contexts is relatively high, as they both convey a sense of positive feeling or affection, albeit directed towards different objects (a person vs. an object). Therefore, the probability that they have the same meaning in a dictionary is around 80%."
+59834265-90c3-487a-8796-445b231bc3b6,fr,40,NA,NA,NA,NA,40,0,NA,NA,La voile est une activité qui se pratique dans un bateau à voile.,La voile est une activité qui se pratique dans un bateau à voile.,NA,NA,pending,6368762555419367543,1.0,reference word
+3d6442d8-0db5-4a83-9e36-112bea1beddf,fr,40,NA,NA,NA,NA,40,1,NA,NA,Le voile est un foulard porté sur la tête par des femmes musulmanes.,Le voile est un foulard porté sur la tête par des femmes musulmanes.,NA,NA,pending,8478045928536997840,0.01,"The probability that the words ""voile"" in context_1 and ""voile"" in context_2 have the same meaning is very low. 
+
+In context_1, ""voile"" refers to ""sailing"" or ""sail,"" which is related to the activity of sailing or the equipment used in sailing, specifically the sail of a boat. 
+
+In context_2, ""voile"" refers to a ""veil"" or ""headscarf,"" which is a piece of cloth worn over the head, often for cultural or religious reasons, such as by Muslim women.
+
+These are distinct meanings, so the probability that they have the same meaning is close to 0%."
+5db48173-9374-4617-87c9-aefff28d2418,fr,39,NA,NA,NA,NA,39,0,NA,NA,J'ai besoin d'une vis pour réparer la chaise.,J'ai besoin d'une vis pour réparer la chaise.,NA,NA,pending,1186275310644570100,1.0,reference word
+43c951e7-7b1e-40f7-89eb-a6058983a4dd,fr,39,NA,NA,NA,NA,39,0,NA,NA,Ma mère serre les vis des étagères avec un tournevis.,Ma mère serre les vis des étagères avec un tournevis.,NA,NA,pending,1186275310644570100,0.95,"The words in question are ""vis"" in both contexts. In context_1, ""vis"" refers to a screw needed to repair a chair. In context_2, ""vis"" refers to screws being tightened on shelves with a screwdriver. In both contexts, ""vis"" refers to the same object, a screw, which is a type of fastener. Therefore, the probability that ""vis"" has the same meaning in both contexts is very high.
+
+Probability: 95%"
+de6ddeb2-f044-496a-8cc7-ceb854e0c25c,fr,38,NA,NA,NA,NA,38,0,NA,NA,J'ai bu un verre d'eau.,J'ai bu un verre d'eau.,NA,NA,pending,-5949487063854881508,1.0,reference word
+4d0595c3-d302-46de-91fd-277eeb45d37b,fr,38,NA,NA,NA,NA,38,0,NA,NA,"Est-ce que tu peux me donner un verre, je veux me servir de l'eau.","Est-ce que tu peux me donner un verre, je veux me servir de l'eau.",NA,NA,pending,-5949487063854881508,0.95,"The word ""verre"" in both contexts refers to a drinking glass. In context_1, ""J'ai bu un verre d'eau"" translates to ""I drank a glass of water,"" where ""verre"" is used to indicate the container from which the water was consumed. In context_2, ""Est-ce que tu peux me donner un verre, je veux me servir de l'eau"" translates to ""Can you give me a glass, I want to pour myself some water,"" where ""verre"" again refers to the container intended for holding water.
+
+Given that both instances of ""verre"" refer to the same object—a drinking glass—the probability that they have the same meaning in a dictionary is very high.
+
+Probability: 95%"
+83c4c2fa-5975-43b3-ad42-f5069ba18298,fr,37,NA,NA,NA,NA,37,0,NA,NA,Je n'ai pas beaucoup de temps aujourd'hui.,Je n'ai pas beaucoup de temps aujourd'hui.,NA,NA,pending,8031413802276116543,1.0,reference word
+da6d71f8-33ea-468e-9f92-35b05eb1d8b4,fr,37,NA,NA,NA,NA,37,0,NA,NA,Il est important de gérer son temps efficacement.,Il est important de gérer son temps efficacement.,NA,NA,pending,8031413802276116543,0.95,"The word ""temps"" in both contexts is used in French. In context_1, ""temps"" refers to ""time"" in the sense of having a limited amount of it available. In context_2, ""temps"" also refers to ""time,"" but in the sense of managing it effectively. Both contexts use ""temps"" to refer to the concept of time as a measurable period during which actions or processes occur. Therefore, the probability that ""temps"" has the same meaning in both contexts is very high.
+
+Probability: 95%"
+a7e83949-713b-4b10-90af-2ecc4533e694,fr,37,NA,NA,NA,NA,37,0,NA,NA,"Un humain passe presque 8 heures de son temps à dormir, par jour.","Un humain passe presque 8 heures de son temps à dormir, par jour.",NA,NA,pending,8031413802276116543,0.95,"The word ""temps"" in both contexts is used in French. In context_1, ""temps"" refers to ""time"" in the sense of available time or duration (""I don't have much time today""). In context_2, ""temps"" also refers to ""time"" but in the sense of a period or duration of time spent doing something (""A human spends almost 8 hours of their time sleeping per day"").
+
+In both contexts, ""temps"" is used to denote the concept of time, specifically as a measurable duration. Therefore, the probability that ""temps"" has the same meaning in both contexts is very high.
+
+Probability: 95%"
+e3d53ce3-30d2-40d9-b1db-22e081ef1f19,fr,36,NA,NA,NA,NA,36,0,NA,NA,Le siège est efficace pour affaiblir l'ennemi en le coupant du monde.,Le siège est efficace pour affaiblir l'ennemi en le coupant du monde.,NA,NA,pending,3856600456581028270,1.0,reference word
+0fcc7b52-8c1c-42f8-b42f-f36d21c435f5,fr,36,NA,NA,NA,NA,36,1,NA,NA,"Le siège avant est très confortable, ceux de derrière sont plus durs.","Le siège avant est très confortable, ceux de derrière sont plus durs.",NA,NA,pending,-1036473572391668096,0.05,"The probability that the words ""siège"" in the given contexts have the same meaning is very low. 
+
+In context_1, ""siège"" refers to a military term meaning a prolonged military assault and blockade of a city or fortress with the intent of conquering by force or attrition. 
+
+In context_2, ""siège"" refers to a seat, specifically a car seat, indicating a piece of furniture designed for sitting.
+
+These are distinct meanings, so the probability that they have the same meaning is close to 0%."
+7c508bae-e0aa-4deb-9cb4-5dc6b3e47b8f,fr,35,NA,NA,NA,NA,35,0,NA,NA,"Je suis secrétaire, je m'occupe de toutes les tâches administratives du bureau.","Je suis secrétaire, je m'occupe de toutes les tâches administratives du bureau.",NA,NA,pending,6829972426782873806,1.0,reference word
+b83f27ec-e649-4003-ba8d-c27710b440e9,fr,35,NA,NA,NA,NA,35,1,NA,NA,Le secrétaire est le meuble sur lequel on écrit son courrier.,Le secrétaire est le meuble sur lequel on écrit son courrier.,NA,NA,pending,-5109130890824679385,0.05,"The probability that the words in the given contexts have the same meaning is very low. In context_1, ""secrétaire"" refers to a person who performs administrative tasks, while in context_2, ""secrétaire"" refers to a piece of furniture, specifically a type of desk. These are distinct meanings: one is an occupation, and the other is an object. Therefore, the probability that they have the same meaning is close to 0%."
+886163b7-2078-4b2b-95a9-e24ab7ad1bd9,fr,34,NA,NA,NA,NA,34,0,NA,NA,Le rayon est un segment relie le centre du cercle à un point du cercle.,Le rayon est un segment relie le centre du cercle à un point du cercle.,NA,NA,pending,4309515263582988749,1.0,reference word
+ea2ffa94-f953-43bc-b0e2-b05ba2d9a134,fr,34,NA,NA,NA,NA,34,1,NA,NA,Les rayons de soleil sont mauvais pour la peau si on ne met pas de crème.,Les rayons de soleil sont mauvais pour la peau si on ne met pas de crème.,NA,NA,pending,6418798636700619046,0.05,"The words in question are ""rayon"" in French, which can have multiple meanings depending on the context. In context_1, ""rayon"" refers to the radius of a circle, which is a mathematical term. In context_2, ""rayons"" refers to rays of sunlight, which is a natural phenomenon.
+
+Given these contexts, the probability that ""rayon"" in context_1 and ""rayons"" in context_2 have the same meaning is very low. They represent different concepts: one is a geometric term, and the other is related to light. Therefore, the probability that they have the same meaning is close to 0%."
+cff58679-841f-4b54-ae86-d58ca4315961,fr,33,NA,NA,NA,NA,33,0,NA,NA,Le plâtre est un matériau de construction isolant qu'on peut utiliser pour enduire.,Le plâtre est un matériau de construction isolant qu'on peut utiliser pour enduire.,NA,NA,pending,-7063596966446769922,1.0,reference word
+716ff251-ee40-461a-871c-3c4b6a73e892,fr,33,NA,NA,NA,NA,33,1,NA,NA,On lui a mis un plâtre pour maintenir son bras fracturé immobile.,On lui a mis un plâtre pour maintenir son bras fracturé immobile.,NA,NA,pending,-4954313593329139625,0.2,"The probability that the words in the given contexts have the same meaning is low.
+
+In context_1, ""plâtre"" refers to plaster as a construction material used for coating walls and ceilings. In context_2, ""plâtre"" refers to a cast, which is a medical application of plaster used to immobilize a fractured limb. While both meanings involve the use of plaster, they are distinct in their applications and purposes. Therefore, the probability that they have the same meaning is low, around 20%."
+73b5604d-6716-4150-b2c8-c55e6a951c3f,fr,32,NA,NA,NA,NA,32,0,NA,NA,On ne doit pas bouger de sa place pendant le décollage et l'atterrissage.,On ne doit pas bouger de sa place pendant le décollage et l'atterrissage.,NA,NA,pending,-8093854297281587519,1.0,reference word
+01c57403-6661-4506-ad45-33e59ec57b41,fr,32,NA,NA,NA,NA,32,1,NA,NA,La place du village est très animée le dimanche.,La place du village est très animée le dimanche.,NA,NA,pending,5459815747455267731,0.05,"The word ""place"" in French can have multiple meanings depending on the context. In context_1, ""place"" refers to a ""seat"" or ""position"" that one should not leave during takeoff and landing. In context_2, ""place"" refers to a ""square"" or ""plaza,"" specifically the village square that is lively on Sundays.
+
+Given these contexts, the probability that ""place"" has the same meaning in both contexts is very low. The meanings are distinct: one is about a physical seat or position, and the other is about a public open space. Therefore, the probability that they have the same meaning is close to 0%."
+0431854f-57eb-466e-8318-eec043655271,fr,32,NA,NA,NA,NA,32,1,NA,NA,Dans le centre du village il y a une petite place où se tient le marché tous les matins.,Dans le centre du village il y a une petite place où se tient le marché tous les matins.,NA,NA,pending,5459815747455267731,0.95,"The word ""place"" in both contexts refers to a public square or open area in a village. In context_1, ""La place du village est très animée le dimanche,"" it describes a lively village square on Sundays. In context_2, ""Dans le centre du village il y a une petite place où se tient le marché tous les matins,"" it refers to a small square in the village center where a market is held every morning. Both contexts describe a similar concept of a public space within a village setting.
+
+Probability that they have the same meaning: 95%."
+f65647fe-dff5-4c4c-919d-cfea02f70e61,fr,31,NA,NA,NA,NA,31,0,NA,NA,Les animaux du cirque ont fait le tour de la piste en musique avec leurs dompteurs.,Les animaux du cirque ont fait le tour de la piste en musique avec leurs dompteurs.,NA,NA,pending,4616476210701351370,1.0,reference word
+be2a9e5f-8557-4fcb-b5a1-61d3c18246c1,fr,31,NA,NA,NA,NA,31,1,NA,NA,La piste est un espace étroit autour d’un terrain sur lequel on peut courir.,La piste est un espace étroit autour d’un terrain sur lequel on peut courir.,NA,NA,pending,6725759583818981667,0.1,"The word ""piste"" in both contexts is used in French, but it has different meanings. In context_1, ""piste"" refers to the circular area in a circus where performances take place, often called the ""ring"" in English. In context_2, ""piste"" refers to a track or path, typically used for running or racing, which is more akin to an ""athletic track"" or ""running track"" in English.
+
+Given these distinct meanings, the probability that ""piste"" has the same meaning in both contexts is low. Therefore, the probability that they have the same meaning is approximately 10%."
+cc71a6de-6346-4545-920e-7617f0c15582,fr,30,NA,NA,NA,NA,30,0,NA,NA,Il a un nez très pointu.,Il a un nez très pointu.,NA,NA,pending,9106643614453820806,1.0,reference word
+9161f98a-4013-4be8-9bda-99ab640f5ba1,fr,30,NA,NA,NA,NA,30,0,NA,NA,Je respire avec mon nez. Il me permet aussi de sentir les odeurs.,Je respire avec mon nez. Il me permet aussi de sentir les odeurs.,NA,NA,pending,9106643614453820806,0.99,"The word ""nez"" in both contexts refers to the anatomical feature on the face. In context_1, ""nez"" is described as being ""très pointu"" (very pointed), which is a description of its shape. In context_2, ""nez"" is mentioned in relation to its functions, such as breathing and smelling. Both contexts refer to the same basic concept of ""nose"" as a part of the body.
+
+Therefore, the probability that ""nez"" has the same meaning in both contexts is very high, close to 100%."
+98ba7878-c421-4c5b-8ee6-6c78e8fe2246,fr,29,NA,NA,NA,NA,29,0,NA,NA,Le moniteur est l’écran de l’ordinateur.,Le moniteur est l’écran de l’ordinateur.,NA,NA,pending,6563051946650490817,1.0,reference word
+903c1302-8783-4b7e-91b5-aa70547d84f9,fr,29,NA,NA,NA,NA,29,1,NA,NA,Le moniteur de ski était très bienveillant avec les enfants.,Le moniteur de ski était très bienveillant avec les enfants.,NA,NA,pending,8672335319768121114,0.0,"The word ""moniteur"" in French can have multiple meanings depending on the context. In context_1, ""moniteur"" refers to a ""monitor"" or ""screen"" of a computer. In context_2, ""moniteur"" refers to an ""instructor"" or ""coach,"" specifically a ski instructor.
+
+Given these contexts, the probability that ""moniteur"" has the same meaning in both contexts is very low. The meanings are distinct: one is related to a piece of hardware (a screen), and the other is related to a person who teaches or instructs.
+
+Probability: 0%"
+13ec86ff-038a-4a4e-99fc-a25ca488aaf2,fr,28,NA,NA,NA,NA,28,0,NA,NA,La lutte gréco-romaine est un sport qui a son origine dans l’Antiquité.,La lutte gréco-romaine est un sport qui a son origine dans l’Antiquité.,NA,NA,pending,679517252472868271,1.0,reference word
+bfbda4d9-edb5-4b2e-b80e-59af54d6e71e,fr,28,NA,NA,NA,NA,28,1,NA,NA,La lutte contre la discrimination est très importante dans nos sociétés.,La lutte contre la discrimination est très importante dans nos sociétés.,NA,NA,pending,-8611914159484196223,0.05,"The word ""lutte"" in French can have different meanings based on the context. In context_1, ""lutte"" refers to ""wrestling,"" specifically ""gréco-romaine"" wrestling, which is a sport. In context_2, ""lutte"" refers to ""struggle"" or ""fight"" against discrimination, which is a metaphorical or social struggle.
+
+Given these contexts, the probability that ""lutte"" has the same meaning in both contexts is very low. The meanings are distinct: one is a physical sport, and the other is a metaphorical or social effort. Therefore, the probability that they have the same meaning is approximately 5%."
+c8de8a97-17c7-4bde-92ed-777128ba1eea,fr,27,NA,NA,NA,NA,27,0,NA,NA,Au coin de la rue il y a un kiosque qui vend des journaux et des fleurs.,Au coin de la rue il y a un kiosque qui vend des journaux et des fleurs.,NA,NA,pending,5499440282734411490,1.0,reference word
+f8035115-b9c5-4e30-be42-f1862e107ab4,fr,27,NA,NA,NA,NA,27,1,NA,NA,Un kiosque est un pavillon de jardin généralement ouvert de tous les côtés.,Un kiosque est un pavillon de jardin généralement ouvert de tous les côtés.,NA,NA,pending,606366253761715124,0.1,"The probability that the words in the given contexts have the same meaning is low. 
+
+In context_1, ""kiosque"" refers to a small stand or booth where items like newspapers and flowers are sold. This is a common usage in French for a small retail outlet.
+
+In context_2, ""kiosque"" refers to a garden pavilion, which is typically an open-sided structure used for relaxation or as a decorative feature in a garden. This is a more architectural or ornamental usage.
+
+Given these distinct meanings, the probability that ""kiosque"" has the same meaning in both contexts is low, likely around 10%."
+7b2fb449-401f-4cad-9a34-4e05167d61af,fr,26,NA,NA,NA,NA,26,0,NA,NA,"Pour faire un jogging, on n’a besoin que de bonnes chaussures de course.","Pour faire un jogging, on n’a besoin que de bonnes chaussures de course.",NA,NA,pending,6305983106285216010,1.0,reference word
+e6eaea29-3b10-45a7-894e-eb06208254e4,fr,26,NA,NA,NA,NA,26,1,NA,NA,"Mets ton jogging et viens courir avec moi, au parc !","Mets ton jogging et viens courir avec moi, au parc !",NA,NA,pending,1412909077312519644,0.1,"The word ""jogging"" in both contexts is used in French, but it can have different meanings based on the context. 
+
+In context_1, ""jogging"" refers to the activity of running or jogging as a form of exercise. The sentence translates to ""To go jogging, you only need good running shoes.""
+
+In context_2, ""jogging"" refers to a tracksuit or sportswear. The sentence translates to ""Put on your tracksuit and come run with me in the park!""
+
+Given these contexts, the probability that ""jogging"" has the same meaning in both contexts is low. The word is used to refer to an activity in the first context and an item of clothing in the second context. Therefore, the probability that they have the same meaning is approximately 10%."
+7f507ea3-2d05-476f-b4ca-dde7dc736f4b,fr,25,NA,NA,NA,NA,25,0,NA,NA,"L’héroïne du film Titanic a tout essayé pour sauver Jack, le héros.","L’héroïne du film Titanic a tout essayé pour sauver Jack, le héros.",NA,NA,pending,-2464992949928868287,1.0,reference word
+4c7b909d-95f7-453c-adff-89a33a3fc970,fr,25,NA,NA,NA,NA,25,1,NA,NA,L’héroïne est une drogue qui provient du pavot.,L’héroïne est une drogue qui provient du pavot.,NA,NA,pending,4042647806173130138,0.01,"The probability that the words ""héroïne"" in the given contexts have the same meaning is very low. In context_1, ""héroïne"" refers to the female protagonist or main character of the film ""Titanic."" In context_2, ""héroïne"" refers to the drug derived from the poppy plant. These are two distinct meanings: one is related to a character in a story, and the other is a narcotic substance. Therefore, the probability that they have the same meaning is close to 0%."
+21b26de2-ce1f-421a-8f38-bf63f8af1147,fr,24,NA,NA,NA,NA,24,0,NA,NA,Il est huit heures du matin.,Il est huit heures du matin.,NA,NA,pending,-2287266296624788354,1.0,reference word
+251fec39-5d17-45b9-a45c-7261e5d04148,fr,24,NA,NA,NA,NA,24,0,NA,NA,Il est huit heures du matin.,Il est huit heures du matin.,NA,NA,pending,-2287266296624788354,1.0,"The words provided are ""NA"" for both word_1 and word_2, and the contexts are identical: ""Il est huit heures du matin."" Since the words themselves are not specified, we cannot directly compare them. However, given that the contexts are exactly the same, if the words were the same in both contexts, the probability that they have the same meaning would be very high. Without specific words to compare, we cannot provide a definitive probability, but the identical context suggests a high likelihood of the same meaning if the words were the same."
+3c507cb3-8df5-4947-9c3e-dcf60ca52f04,fr,24,NA,NA,NA,NA,24,1,NA,NA,"Je viens de boire un café. Dans une heure, je vais déjeuner.","Je viens de boire un café. Dans une heure, je vais déjeuner.",NA,NA,pending,-177982923507158057,0.0,"The words provided are ""NA"" in both contexts, which means there are no specific words to compare. However, based on the contexts given:
+
+- Context 1: ""Il est huit heures du matin."" translates to ""It is eight o'clock in the morning.""
+- Context 2: ""Je viens de boire un café. Dans une heure, je vais déjeuner."" translates to ""I just had a coffee. In an hour, I will have lunch.""
+
+These contexts are related to time and daily activities, but without specific words to compare, it's not possible to determine if they have the same meaning in a dictionary. Therefore, the probability that they have the same meaning is not applicable in this case."
+56217d46-a33c-4e4a-998f-29b49f22faec,fr,24,NA,NA,NA,NA,24,0,NA,NA,Il est huit heures du matin.,Il est huit heures du matin.,NA,NA,pending,-2287266296624788354,1.0,"The probability that the words have the same meaning in a dictionary is 100%. The contexts provided are identical, indicating that the words in question are the same and thus have the same meaning."
+618a46bd-7a9c-455e-a7b9-cde1a5ab68d8,fr,23,NA,NA,NA,NA,23,0,NA,NA,Notre garage peut contenir trois voitures.,Notre garage peut contenir trois voitures.,NA,NA,pending,-4039025366604310415,1.0,reference word
+9ffb6091-3fc6-4d9a-b2aa-0e14218c9a7f,fr,23,NA,NA,NA,NA,23,0,NA,NA,La voiture de Léa est encore en panne alors elle l'a laissée au garage.,La voiture de Léa est encore en panne alors elle l'a laissée au garage.,NA,NA,pending,-4039025366604310415,0.85,"The probability that the words ""garage"" in the two contexts have the same meaning is high. 
+
+In context_1, ""Notre garage peut contenir trois voitures,"" the word ""garage"" refers to a building or space designed to house vehicles, typically attached to or part of a house.
+
+In context_2, ""La voiture de Léa est encore en panne alors elle l'a laissée au garage,"" the word ""garage"" likely refers to a place where vehicles are repaired or serviced, or it could also mean a place where vehicles are stored.
+
+Both contexts involve the concept of a space related to vehicles, either for storage or repair. In many cases, a ""garage"" can serve both purposes, so the core meaning related to vehicles is consistent across both contexts.
+
+Therefore, the probability that ""garage"" has the same meaning in both contexts is high, around 80-90%."
+b97358fe-27c5-4aff-b968-8f48f8602bd6,fr,22,NA,NA,NA,NA,22,0,NA,NA,Il s'est coupé le doigt en cuisinant.,Il s'est coupé le doigt en cuisinant.,NA,NA,pending,5514865936620030114,1.0,reference word
+266e4a94-23b0-4aef-9008-a84b0f101a8a,fr,22,NA,NA,NA,NA,22,0,NA,NA,Il s'est coupé le doigt en cuisinant.,Il s'est coupé le doigt en cuisinant.,NA,NA,pending,5514865936620030114,1.0,"The probability that the words have the same meaning in a dictionary is 100%. The contexts provided are identical, indicating that the words in question are the same and thus have the same meaning."
+f8156ebf-af07-4f57-96a3-a61a23e4d646,fr,21,NA,NA,NA,NA,21,0,NA,NA,J'ai un créneau libre à 15h pour notre réunion.,J'ai un créneau libre à 15h pour notre réunion.,NA,NA,pending,766241609693456815,1.0,reference word
+6929308d-fda7-4ee4-bf2e-dad20193e0a6,fr,21,NA,NA,NA,NA,21,0,NA,NA,Est-ce que vous auriez un créneau cet après-midi pour discuter du projet ?,Est-ce que vous auriez un créneau cet après-midi pour discuter du projet ?,NA,NA,pending,766241609693456815,0.95,"The word ""créneau"" in both contexts refers to a time slot or an available period of time. In context_1, it is used to indicate a free time slot for a meeting at 3 PM. In context_2, it is used to inquire about an available time slot in the afternoon to discuss a project. 
+
+Given that both contexts use ""créneau"" to refer to an available period of time for scheduling purposes, the probability that they have the same meaning in a dictionary is very high.
+
+Probability: 95%"
+84485a9c-9eaa-4dbf-8e44-c25b5edbde47,fr,21,NA,NA,NA,NA,21,0,NA,NA,"Le créneau occupé par le journal TV est 19h30-20h00. Après ça, il y a un film.","Le créneau occupé par le journal TV est 19h30-20h00. Après ça, il y a un film.",NA,NA,pending,766241609693456815,0.9,"The word ""créneau"" in French can have multiple meanings depending on the context. In context_1, ""créneau"" refers to a time slot or a free period in a schedule, indicating availability for a meeting. In context_2, ""créneau"" refers to a time slot or a scheduled period occupied by a TV program, specifically the news broadcast.
+
+In both contexts, ""créneau"" is used to denote a specific period of time allocated for an event or activity. Therefore, the probability that ""créneau"" has the same meaning in both contexts is very high.
+
+Probability: 90%"
+1e88dd3c-1c59-4959-bc3a-a93f3cc1122e,fr,20,NA,NA,NA,NA,20,0,NA,NA,En dessert elle a pris une grande coupe de glace.,En dessert elle a pris une grande coupe de glace.,NA,NA,pending,-6245051952909867006,1.0,reference word
+b9d3340e-c707-4534-8bcf-34597f9b9397,fr,20,NA,NA,NA,NA,20,1,NA,NA,"L'équipe de foot française vient de gagner la coupe du monde, ils sont ravis.","L'équipe de foot française vient de gagner la coupe du monde, ils sont ravis.",NA,NA,pending,7308618091826988244,0.05,"The word ""coupe"" in French can have multiple meanings depending on the context. In context_1, ""coupe"" refers to a ""bowl"" or ""dish,"" specifically a large bowl of ice cream. In context_2, ""coupe"" refers to a ""cup"" or ""trophy,"" specifically the World Cup in the context of a football (soccer) team winning a championship.
+
+Given these contexts, the probability that ""coupe"" has the same meaning in both contexts is very low. The meanings are distinct: one is related to a type of dishware, and the other is related to a sports trophy.
+
+Probability: 5%"
+ee2153cc-d89c-44c6-8af5-c8ece4f8d775,fr,19,NA,NA,NA,NA,19,0,NA,NA,Il a reçu un coup sur la tête.,Il a reçu un coup sur la tête.,NA,NA,pending,1514429819033679057,1.0,reference word
+d573300c-3d02-48f7-a14a-9788af2561bf,fr,19,NA,NA,NA,NA,19,0,NA,NA,Il a reçu un coup sur la tête.,Il a reçu un coup sur la tête.,NA,NA,pending,1514429819033679057,1.0,"Given that both word_1 and word_2 are ""NA"" and the contexts provided are identical (""Il a reçu un coup sur la tête.""), the probability that they have the same meaning is 100%. The contexts are exactly the same, indicating that the words in question are used in the same way and thus have the same meaning."
+662f6f9f-b0c1-4a9f-aaa9-7c23c1e88d3f,fr,19,NA,NA,NA,NA,19,0,NA,NA,Sam et Dan se sont battus. Sam a donné un coup de poing à Dan.,Sam et Dan se sont battus. Sam a donné un coup de poing à Dan.,NA,NA,pending,1514429819033679057,0.85,"To determine the probability that the words in these contexts have the same meaning, we need to analyze the contexts provided:
+
+1. **Context 1**: ""Il a reçu un coup sur la tête."" - This implies that someone was hit on the head. The word ""coup"" here refers to a blow or a hit.
+
+2. **Context 2**: ""Sam et Dan se sont battus. Sam a donné un coup de poing à Dan."" - In this context, ""coup de poing"" specifically refers to a punch, which is a type of hit or blow delivered with a fist.
+
+Both contexts involve the concept of a physical impact or strike. The word ""coup"" in both contexts refers to a hit or blow, although the second context specifies it as a punch (""coup de poing""). Despite this specification, the core meaning of ""coup"" as a hit or strike is consistent in both contexts.
+
+Given this analysis, the probability that the words have the same meaning in a dictionary is high. The contexts both describe a physical action involving a hit or blow.
+
+**Probability: 85%**"
+c2275ef2-0f1e-400e-8ebe-de057b50f3a1,fr,18,NA,NA,NA,NA,18,0,NA,NA,Je fais partie d'un club de lecture qui se réunit chaque mois.,Je fais partie d'un club de lecture qui se réunit chaque mois.,NA,NA,pending,392349246479872582,1.0,reference word
+273472f0-ed66-4d14-8c9e-092cf570de7d,fr,18,NA,NA,NA,NA,18,0,NA,NA,Je suis membre d'un club de lecture.,Je suis membre d'un club de lecture.,NA,NA,pending,392349246479872582,0.95,"The words in question are ""fais partie"" in context_1 and ""suis membre"" in context_2. Both phrases are used to express the idea of belonging to or being a part of a book club. 
+
+- ""Fais partie de"" translates to ""am part of"" or ""belong to"" in English.
+- ""Suis membre de"" translates to ""am a member of"" in English.
+
+Both expressions convey the same meaning of being affiliated with or belonging to a group or organization, in this case, a book club. Therefore, the probability that they have the same meaning in a dictionary is very high.
+
+Probability: 95%"
+51017f8c-e943-4303-99a9-bbde43ab4708,fr,17,NA,NA,NA,NA,17,0,NA,NA,Il porte un chapeau rouge.,Il porte un chapeau rouge.,NA,NA,pending,8706805510042513792,1.0,reference word
+aa37c7c1-798f-4dc5-acab-78d910d31bca,fr,17,NA,NA,NA,NA,17,0,NA,NA,Il porte un chapeau rouge.,Il porte un chapeau rouge.,NA,NA,pending,8706805510042513792,1.0,"The words in both contexts are identical, ""porte,"" and the contexts are exactly the same: ""Il porte un chapeau rouge."" In French, ""porte"" is the third person singular form of the verb ""porter,"" which means ""to wear"" or ""to carry."" Given that the contexts are identical, the probability that the words have the same meaning is 100%."
+16679529-ac0a-483a-888e-eb166dca13e4,fr,16,NA,NA,NA,NA,16,0,NA,NA,Ma mère a accroché plusieurs cadres avec des photos dans son salon.,Ma mère a accroché plusieurs cadres avec des photos dans son salon.,NA,NA,pending,7643092337744616615,1.0,reference word
+762f023e-c847-466b-aca2-a3d1175e0a85,fr,16,NA,NA,NA,NA,16,1,NA,NA,Un cadre est une personne qui a des fonctions de direction dans une entreprise.,Un cadre est une personne qui a des fonctions de direction dans une entreprise.,NA,NA,pending,-4296010979862936576,0.01,"The probability that the words in the given contexts have the same meaning is very low, close to 0%.
+
+In context_1, ""cadres"" refers to frames, likely picture frames, as it mentions ""accroché plusieurs cadres avec des photos"" (hung several frames with photos).
+
+In context_2, ""cadre"" refers to a person in a managerial or executive position within a company, as it mentions ""une personne qui a des fonctions de direction dans une entreprise"" (a person who has managerial functions in a company).
+
+These are two distinct meanings of the word ""cadre"" in French, one referring to a physical object and the other to a professional role."
+f30a7c0f-2144-4de0-af33-b31b07d5f9e7,fr,15,NA,NA,NA,NA,15,0,NA,NA,Un cachet est un genre de médicament qu’on avale avec de l’eau.,Un cachet est un genre de médicament qu’on avale avec de l’eau.,NA,NA,pending,4629387171359674822,1.0,reference word
+85664995-6535-4e25-aa16-1804d94afea1,fr,15,NA,NA,NA,NA,15,1,NA,NA,"Après avoir travaillé dans un premier film, je vais recevoir un cachet de 2 500€.","Après avoir travaillé dans un premier film, je vais recevoir un cachet de 2 500€.",NA,NA,pending,-4662044240597389672,0.05,"The word ""cachet"" in French can have multiple meanings. In context_1, ""cachet"" refers to a type of medication, specifically a pill or tablet that is swallowed with water. In context_2, ""cachet"" refers to a payment or fee received for a performance or work, often used in the context of actors or artists receiving a fee for their participation in a film or event.
+
+Given these contexts, the probability that ""cachet"" has the same meaning in both contexts is very low, as they refer to entirely different concepts: one is related to medicine, and the other to financial compensation. Therefore, the probability that they have the same meaning is close to 0%."
+03b6e28a-de0f-4b86-8f52-5487c39bb349,fr,14,NA,NA,NA,NA,14,0,NA,NA,"Je travaille dans mon bureau, personne n’a le droit d’y entrer.","Je travaille dans mon bureau, personne n’a le droit d’y entrer.",NA,NA,pending,-2491302539618714802,1.0,reference word
+d2aff5a7-802d-44f5-a240-dc8781f43097,fr,14,NA,NA,NA,NA,14,1,NA,NA,J'ai mis mon ordinateur est sur le nouveau bureau.,J'ai mis mon ordinateur est sur le nouveau bureau.,NA,NA,pending,4016338216483283623,0.1,"To determine the probability that the words ""bureau"" in both contexts have the same meaning, we need to analyze the contexts provided:
+
+1. Context_1: ""Je travaille dans mon bureau, personne n’a le droit d’y entrer.""
+   - Here, ""bureau"" refers to an office or a workspace where the speaker works. It is a place or room designated for work.
+
+2. Context_2: ""J'ai mis mon ordinateur est sur le nouveau bureau.""
+   - In this context, ""bureau"" refers to a desk or a piece of furniture on which the speaker has placed their computer.
+
+The word ""bureau"" in French can mean both ""office"" (a place) and ""desk"" (a piece of furniture). In these contexts, the meanings are different: one is a location (office), and the other is an object (desk).
+
+Given these distinct meanings, the probability that ""bureau"" has the same meaning in both contexts is low.
+
+Probability: 10%"
+7ff9d6ee-af37-4eae-a9f7-377d5f119bb4,fr,14,NA,NA,NA,NA,14,0,NA,NA,Je travaille dans un bureau.,Je travaille dans un bureau.,NA,NA,pending,-2491302539618714802,0.85,"To determine the probability that the words ""bureau"" in both contexts have the same meaning, we need to analyze the contexts provided:
+
+1. Context 1: ""Je travaille dans mon bureau, personne n’a le droit d’y entrer."" 
+   - Here, ""bureau"" is likely referring to a personal office or workspace, as indicated by ""mon bureau"" (my office) and the fact that no one else is allowed to enter, suggesting a private space.
+
+2. Context 2: ""Je travaille dans un bureau.""
+   - In this context, ""bureau"" could refer to an office in a more general sense, possibly a workplace or a type of room where work is done. It is less specific than the first context.
+
+Both contexts involve working in a ""bureau,"" but the first context specifies it as a personal office, while the second is more general. Despite this difference, the core meaning of ""bureau"" as a place where work is done is consistent in both contexts.
+
+Given this analysis, the probability that ""bureau"" has the same meaning in both contexts is relatively high, as both refer to a workspace or office environment. However, the specificity of ""mon bureau"" in the first context introduces a slight nuance.
+
+Probability: 85%"
+9770c748-9f82-484f-8f5d-112c6f273753,fr,13,NA,NA,NA,NA,13,0,NA,NA,Le golfeur a perdu sa balle dans les buissons.,Le golfeur a perdu sa balle dans les buissons.,NA,NA,pending,-1879610840194807017,1.0,reference word
+82294955-1d81-4083-acf3-e5550fe5fba7,fr,13,NA,NA,NA,NA,13,1,NA,NA,La balle est partie et l'homme s'est retrouvé blessé.,La balle est partie et l'homme s'est retrouvé blessé.,NA,NA,pending,7275701821557680105,0.05,"To determine the probability that the words ""balle"" in the given contexts have the same meaning, we need to analyze the contexts:
+
+1. Context_1: ""Le golfeur a perdu sa balle dans les buissons."" - Here, ""balle"" refers to a golf ball, which is a small, hard ball used in the sport of golf.
+
+2. Context_2: ""La balle est partie et l'homme s'est retrouvé blessé."" - In this context, ""balle"" likely refers to a bullet, as it is associated with someone getting injured, which is a common scenario involving firearms.
+
+Given these analyses, the probability that ""balle"" has the same meaning in both contexts is very low. The first context refers to a sports ball, while the second context refers to a projectile from a firearm.
+
+Probability: 5%"
+1a8527e8-5c1f-4959-9dfb-0f28f849b239,fr,12,NA,NA,NA,NA,12,0,NA,NA,"Ma femme et moi, on divorce. On a chacun fait appel à un avocat.","Ma femme et moi, on divorce. On a chacun fait appel à un avocat.",NA,NA,pending,-5589298933331057851,1.0,reference word
+9f4756d3-9102-4190-b4a3-3b400428278b,fr,12,NA,NA,NA,NA,12,1,NA,NA,"L’avocat est un fruit vert, ni sucré ni salé, qui se mange dans les salades.","L’avocat est un fruit vert, ni sucré ni salé, qui se mange dans les salades.",NA,NA,pending,3566013728421429271,0.0,"The probability that the words in the given contexts have the same meaning is 0%. 
+
+In context_1, ""avocat"" refers to a lawyer, a professional who practices law. In context_2, ""avocat"" refers to an avocado, a fruit. These are two distinct meanings of the word ""avocat"" in French, and they do not overlap."
+1a0889a8-259f-4370-8dca-8a8ceaac4464,fr,11,NA,NA,NA,NA,11,0,NA,NA,Il a vingt ans.,Il a vingt ans.,NA,NA,pending,1686043249689996833,1.0,reference word
+92f43c55-91d8-447b-bcb6-2ae30d2d91a6,fr,11,NA,NA,NA,NA,11,1,NA,NA,"Le jour de mon anniversaire, j’ai un an de plus.","Le jour de mon anniversaire, j’ai un an de plus.",NA,NA,pending,-3207030779282699533,0.2,"The words provided are ""NA"" in both contexts, which suggests that the focus is on the phrases or sentences themselves rather than specific words. Let's analyze the meanings of the sentences:
+
+1. Context_1: ""Il a vingt ans."" translates to ""He is twenty years old."" This sentence indicates the age of a person.
+
+2. Context_2: ""Le jour de mon anniversaire, j’ai un an de plus."" translates to ""On my birthday, I am one year older."" This sentence describes the event of a birthday resulting in the person being one year older.
+
+Both contexts relate to the concept of age and the passage of time, specifically in terms of how old someone is. However, they describe different aspects: one is a statement of current age, and the other is about the annual increase in age due to a birthday.
+
+Given these analyses, the probability that the two contexts have the same meaning is low, as they describe different aspects of age. However, they are related in the broader sense of discussing age. Therefore, the probability that they have the same meaning is approximately 20%."
+38196a3e-41ea-4d3c-9768-493c7e9a9887,fr,10,NA,NA,NA,NA,10,0,NA,NA,Une alliance est une bague de mariage.,Une alliance est une bague de mariage.,NA,NA,pending,-5790021167906440232,1.0,reference word
+1296f619-79a4-4bea-9a87-69f38b68b5de,fr,10,NA,NA,NA,NA,10,1,NA,NA,"En temps de guerre, les Etats font des alliances pour s’aider et se soutenir entre eux.","En temps de guerre, les Etats font des alliances pour s’aider et se soutenir entre eux.",NA,NA,pending,3365291493846046890,0.05,"The word ""alliance"" in the given contexts has different meanings:
+
+1. In context_1, ""alliance"" refers to a wedding ring, which is a physical object symbolizing marriage.
+2. In context_2, ""alliance"" refers to a formal agreement or partnership between states, especially during wartime, to support each other.
+
+Given these distinct meanings, the probability that ""alliance"" has the same meaning in both contexts is very low. Therefore, the probability is approximately 0%."
+5ff33551-d01e-4fd7-b712-3e3ddf6d8bfd,fr,9,NA,NA,NA,NA,9,0,NA,NA,"C'est la dernière fois qu'il me pose un lapin, j'en ai marre de sortir pour rien.","C'est la dernière fois qu'il me pose un lapin, j'en ai marre de sortir pour rien.",NA,NA,pending,-6329035532045968610,1.0,reference word
+53fddfbe-0cbb-43e8-8f04-21376a546e64,fr,9,NA,NA,NA,NA,9,0,NA,NA,"Serge n'est pas venu au rendez-vous, il m'a posé un lapin.","Serge n'est pas venu au rendez-vous, il m'a posé un lapin.",NA,NA,pending,-6329035532045968610,0.95,"The phrase ""poser un lapin"" in both contexts is a French idiom meaning ""to stand someone up"" or ""to not show up for an appointment without notifying the other person."" Given that both contexts use this idiom in a similar way, the probability that they have the same meaning is very high.
+
+Probability: 95%"
+aaaedceb-2f60-454f-a3db-d5d9f44451be,fr,8,NA,NA,NA,NA,8,0,NA,NA,"Alors que je me dirigeais vers la plage, mon téléphone a sonné.","Alors que je me dirigeais vers la plage, mon téléphone a sonné.",NA,NA,pending,-4357254392600445524,1.0,reference word
+a934ff67-10eb-4d4f-9788-e7a349a33461,fr,8,NA,NA,NA,NA,8,1,NA,NA,Il veut absolument continuer la course alors qu'il est épuisé.,Il veut absolument continuer la course alors qu'il est épuisé.,NA,NA,pending,2150386363501552901,0.2,"The word ""alors que"" in both contexts is a conjunction used in French. In context_1, ""alors que"" is used to indicate a simultaneous action or event, meaning ""while"" or ""as"" in English. It describes the action of the phone ringing as the speaker was heading to the beach.
+
+In context_2, ""alors que"" is used to introduce a contrast or contradiction, meaning ""even though"" or ""although"" in English. It highlights the contrast between the desire to continue the race and the state of being exhausted.
+
+Given these different uses, the probability that ""alors que"" has the same meaning in both contexts is low. The word serves different functions: simultaneous action in the first context and contrast in the second. Therefore, the probability is around 20%."
+81ee896d-3332-43cf-8388-815e98e0ca4b,fr,7,NA,NA,NA,NA,7,0,NA,NA,Cette maison est belle.,Cette maison est belle.,NA,NA,pending,-8658761671569851223,1.0,reference word
+bac99458-7ddf-4780-9a2d-cf64402b16b5,fr,7,NA,NA,NA,NA,7,1,NA,NA,Ce livre est intéressant.,Ce livre est intéressant.,NA,NA,pending,-6549478298452220926,0.0,"The words ""belle"" (beautiful) and ""intéressant"" (interesting) in the given contexts have different meanings. ""Belle"" is used to describe the aesthetic or visual appeal of the house, while ""intéressant"" is used to describe the engaging or thought-provoking nature of the book. These adjectives serve different purposes and convey different qualities. Therefore, the probability that they have the same meaning in a dictionary is 0%."
+853858b4-c430-4868-833a-775219a89c6f,fr,7,NA,NA,NA,NA,7,0,NA,NA,"Ce matin, il faisait très beau, je suis partie au travail à pied.","Ce matin, il faisait très beau, je suis partie au travail à pied.",NA,NA,pending,-8658761671569851223,0.8,"The words in question are ""belle"" in context_1 and ""beau"" in context_2. Both words are adjectives in French and are related to the concept of beauty or pleasantness. 
+
+- In context_1, ""belle"" is used to describe a house, meaning ""beautiful"" or ""pretty.""
+- In context_2, ""beau"" is used to describe the weather, meaning ""nice"" or ""pleasant.""
+
+While both words are related to the concept of beauty or pleasantness, they are used in different contexts: one for describing an object (a house) and the other for describing the weather. Despite the different contexts, the core meaning related to aesthetic or pleasant quality is similar.
+
+Therefore, the probability that ""belle"" and ""beau"" have the same meaning in a dictionary is relatively high, as they both relate to the concept of beauty or pleasantness, albeit applied to different subjects.
+
+Probability: 80%"
+68834f32-d7cd-4c2e-bba1-a2dec5bdf07b,fr,6,NA,NA,NA,NA,6,0,NA,NA,Le verre est plein d'eau.,Le verre est plein d'eau.,NA,NA,pending,8892462213808366299,1.0,reference word
+79a6abaf-be30-40a2-93a0-b626cfd9a92f,fr,6,NA,NA,NA,NA,6,0,NA,NA,Le verre est plein d'eau.,Le verre est plein d'eau.,NA,NA,pending,8892462213808366299,1.0,"The probability that the words have the same meaning in a dictionary is 100%. The words are identical, and the context provided for both is exactly the same, indicating that they have the same meaning."
+39befb56-fa5c-42fb-9c62-1c26bfdfe053,fr,5,NA,NA,NA,NA,5,0,NA,NA,"Après deux heures de négociation, le directeur est mûr pour signer le contrat.","Après deux heures de négociation, le directeur est mûr pour signer le contrat.",NA,NA,pending,-1938534279422638232,1.0,reference word
+44d84a71-ace8-4f7d-8de7-7a0505b5bd9b,fr,5,NA,NA,NA,NA,5,1,NA,NA,"Quand les pommes sont mûres, elles tombent de l’arbre.","Quand les pommes sont mûres, elles tombent de l’arbre.",NA,NA,pending,4569106476679360193,0.1,"The word ""mûr"" in the first context refers to someone being ready or prepared to take an action, in this case, the director being ready to sign the contract. In the second context, ""mûres"" refers to the ripeness of apples, indicating that they are fully developed and ready to be picked or have naturally fallen from the tree.
+
+The meanings in these contexts are different: one is metaphorical, describing a state of readiness or preparedness in a person, while the other is literal, describing the physical ripeness of fruit. Therefore, the probability that ""mûr"" has the same meaning in both contexts is low.
+
+Probability: 10%."
+a9535e48-1dfb-4558-ac0f-c3ec9042042c,fr,4,NA,NA,NA,NA,4,0,NA,NA,"Mon fils est très grand, il mesure un mètre quatre-vingt dix.","Mon fils est très grand, il mesure un mètre quatre-vingt dix.",NA,NA,pending,-9050724406311989141,1.0,reference word
+68515181-9a4f-4b40-9fcf-5eca1f35fa00,fr,4,NA,NA,NA,NA,4,0,NA,NA,La maison est très grande.,La maison est très grande.,NA,NA,pending,-9050724406311989141,0.8,"The words in question are ""grand"" in the first context and ""grande"" in the second context. In French, ""grand"" and ""grande"" are the masculine and feminine forms of the adjective meaning ""big"" or ""large."" 
+
+In the first context, ""grand"" is used to describe a person's height, meaning ""tall."" In the second context, ""grande"" is used to describe the size of a house, meaning ""large"" or ""big.""
+
+While both words share a common root and can mean ""big"" or ""large,"" their specific meanings in these contexts are slightly different: ""tall"" for a person and ""large"" for a house. However, they are closely related in terms of their general sense of size.
+
+Given this analysis, the probability that they have the same meaning in a dictionary is relatively high, as they both relate to size, but not identical due to the contextual differences (tall vs. large). Therefore, I would estimate the probability at around 80%."
+0ccef131-71a9-4f27-b843-a0e407ef9b6a,fr,3,NA,NA,NA,NA,3,0,NA,NA,"Il fait frais ce matin, je vais prendre un gilet.","Il fait frais ce matin, je vais prendre un gilet.",NA,NA,pending,4007527961157362103,1.0,reference word
+3049b718-9326-4081-8df9-8d114b1ae016,fr,3,NA,NA,NA,NA,3,1,NA,NA,Les produits frais doivent être conservés au frigo.,Les produits frais doivent être conservés au frigo.,NA,NA,pending,6116811334274992400,0.05,"The word ""frais"" in French can have different meanings depending on the context. In context_1, ""frais"" refers to the weather being cool or chilly. In context_2, ""frais"" refers to products being fresh, as in not spoiled or recently made.
+
+Given these contexts, the probability that ""frais"" has the same meaning in both contexts is very low. The meanings are distinct: one relates to temperature and the other to freshness. Therefore, the probability that they have the same meaning is close to 0%."
+823db19e-1456-4a81-87c9-36328889e85e,fr,2,NA,NA,NA,NA,2,0,NA,NA,Il est très fort en mathématiques.,Il est très fort en mathématiques.,NA,NA,pending,-396110794154428462,1.0,reference word
+e0c0cec0-4965-429c-9210-fa647c9b9367,fr,2,NA,NA,NA,NA,2,1,NA,NA,"Il est très fort, il n’a peur de rien ni de personne.","Il est très fort, il n’a peur de rien ni de personne.",NA,NA,pending,6111529961947569963,0.2,"The word ""fort"" in French can have multiple meanings depending on the context. In context_1, ""fort"" means ""strong"" or ""good at"" in the sense of being skilled or proficient, specifically in mathematics. In context_2, ""fort"" means ""strong"" in the sense of being brave or fearless.
+
+Given these contexts, the probability that ""fort"" has the same meaning in both contexts is low. The meanings are related to strength, but they apply to different domains: intellectual strength in the first context and emotional or physical strength in the second.
+
+Probability: 20%"
+2b390b84-8b45-4b03-9654-436f47809ed7,fr,2,NA,NA,NA,NA,2,0,NA,NA,Il est très fort en mathématiques.,Il est très fort en mathématiques.,NA,NA,pending,-396110794154428462,1.0,"The probability that the words have the same meaning in a dictionary is 100%. The contexts provided are identical, which strongly suggests that the words in question are the same and therefore have the same meaning."
+f201fdef-c952-4fd9-bc71-4fea7b9bfe2e,fr,1,NA,NA,NA,NA,1,0,NA,NA,C'est la dernière fois que je te le dis.,C'est la dernière fois que je te le dis.,NA,NA,pending,2299317714078445917,1.0,reference word
+45d18942-47c9-4f9e-8b38-154fa0061c03,fr,1,NA,NA,NA,NA,1,1,NA,NA,Les dernières nouvelles sont inquiétantes.,Les dernières nouvelles sont inquiétantes.,NA,NA,pending,8806958470180444342,0.1,"The words in question are ""dernière"" in context_1 and ""dernières"" in context_2. In context_1, ""dernière"" is used in the phrase ""la dernière fois,"" which translates to ""the last time"" in English, indicating the final occurrence of an event. In context_2, ""dernières"" is used in the phrase ""les dernières nouvelles,"" which translates to ""the latest news"" in English, indicating the most recent updates or information.
+
+The meanings of ""dernière"" in these contexts are different: in context_1, it refers to the final instance, while in context_2, it refers to the most recent or current. Therefore, the probability that they have the same meaning in a dictionary is low.
+
+Probability: 10%"
+710fc8b5-9504-40ca-b2b0-b8f94d047709,fr,0,NA,NA,NA,NA,0,0,NA,NA,Les fruits et les légumes sont bons pour la santé.,Les fruits et les légumes sont bons pour la santé.,NA,NA,pending,-5980661192354460513,1.0,reference word
+0406aa47-7b50-419f-a8de-efa522141989,fr,0,NA,NA,NA,NA,0,0,NA,NA,C'est un bon livre.,C'est un bon livre.,NA,NA,pending,-5980661192354460513,0.95,"The words in question are ""bons"" in context_1 and ""bon"" in context_2. In context_1, ""bons"" is the plural form of ""bon"" and is used as an adjective to describe fruits and vegetables as being good for health. In context_2, ""bon"" is used as an adjective to describe a book as being good or of high quality.
+
+The word ""bon"" in both contexts is used as an adjective meaning ""good."" Despite the different contexts—health benefits in the first and quality in the second—the core meaning of ""bon"" as ""good"" remains consistent.
+
+Therefore, the probability that ""bons"" in context_1 and ""bon"" in context_2 have the same meaning in a dictionary is very high. I would estimate it to be around 90-95%."
+2a9aec1d-e8da-4b99-8a29-8a524caf8de9,fr,0,NA,NA,NA,NA,0,1,NA,NA,C'est un bon livre.,C'est un bon livre.,NA,NA,pending,526979563747537912,0.2,"The word ""bon"" in French can have different meanings based on the context. In the first context, ""Les fruits et les légumes sont bons pour la santé,"" ""bons"" means ""good"" in the sense of being beneficial or healthy. In the second context, ""C'est un bon livre,"" ""bon"" means ""good"" in the sense of being of high quality or enjoyable.
+
+While both uses of ""bon"" convey a positive attribute, the specific meanings differ: one is about health benefits, and the other is about quality or enjoyment. Therefore, the probability that ""bon"" has the same meaning in both contexts is low.
+
+Probability: 20%"
