@@ -8,8 +8,8 @@ Let's build state a of the art multi-lingual Word Sense Disambiguation model.
 ## Getting started
 
 Install with `pip install -e .`
-
-See the `example` folder for more info.
+Download the data with `git lfs fetch --all`
+See `example/data.ipynb`.
 
 ## Attribution and LICENSE
 - [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html)
