@@ -6,7 +6,10 @@ Let's build state a of the art multi-lingual Word Sense Disambiguation model.
 - [Kanban](https://github.com/orgs/linalgo/projects/5)
 
 ## Getting started
-See the `notebooks` folder.
+
+Install with `pip install -e .`
+
+See the `example` folder for more info.
 
 ## Attribution and LICENSE
 - [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html)
