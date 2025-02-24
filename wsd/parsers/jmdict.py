@@ -121,7 +121,7 @@ class Entry:
         return str(self.to_dict())
 
 
-class JMdictParser(object):
+class JMDictParser:
     """
     A JMDICT parser
     """
@@ -137,4 +137,4 @@ class JMdictParser(object):
         return entries
 
 
-__all__ = [JMdictParser]
+__all__ = ['JMDictParser']
