@@ -1,0 +1,25 @@
+[project]
+name = "wsd"
+version = "0.0.1"
+authors = [
+  { name="Arnaud Rachez", email="arnaud@linalgo.com" },
+  { name="Farid Taba", email="farid.t@gmail.com" },
+]
+description = "Multi-lingual Word Sense Disambiguation."
+readme = "README.md"
+requires-python = ">=3.8"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/linalgo/wsd"
+Issues = "https://github.com/linalgo/wsd/issues"
+
+[build-system]
+requires = ["setuptools >= 61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["wsd"]
