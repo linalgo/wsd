@@ -3,6 +3,7 @@ name = "wsd"
 version = "0.0.1"
 authors = [
   { name="Arnaud Rachez", email="arnaud@linalgo.com" },
+  { name="Farid Taba", email="farid.t@gmail.com" },
 ]
 description = "Multi-lingual Word Sense Disambiguation."
 readme = "README.md"
