@@ -1,12 +1,23 @@
-import zipfile 
+# pylint: disable=invalid-name, too-few-public-methods
+"""Parser for the XL-WSD dataset"""
 
+import zipfile
 import xml.etree.ElementTree as ET
 
 
 class XLWSDParser:
+    """Parser for the XL-WSD dataset"""
 
     @staticmethod
     def parse(lang):
+        """Parse the XL-WSD dataset.
+
+        Parameters
+        ----------
+        lang : str
+            The language to parse
+        """
+        # pylint: disable=consider-using-with, too-many-locals
         zf = zipfile.ZipFile('../data/xl-wsd-data.zip', 'r')
         base_dir = f'xl-wsd/training_datasets/semcor_{lang}'
         labels = f'{base_dir}/semcor_{lang}.gold.key.txt'
@@ -29,5 +40,6 @@ class XLWSDParser:
                     X.append([tok.text for tok in sentence])
                     y.append((lemma, pos, m.get(i.attrib['id'])))
         return X, y
+
 
 __all__ = ['XLWSDParser']
