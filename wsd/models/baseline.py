@@ -1,3 +1,4 @@
+"""A simple dictionary interface for JMDict."""
 from wsd.parsers import JMDictParser
 
 
@@ -12,7 +13,7 @@ class JMDict:
 
         Currently returns all entries that contain the text in either the kanji 
         or reading.
-        
+
         Parameters
         ----------
         text : str
@@ -27,13 +28,13 @@ class JMDict:
                 if r_ele.reb == text:
                     res.append(entry)
         return res
-    
+
     def feeling_lucky(self, text):
         """Return the first entry found.
 
         Currently returns the first entry that contains the text in either the
         kanji or reading.
-        
+
         Parameters
         ----------
         text : str
@@ -43,4 +44,4 @@ class JMDict:
         return entries[0] if entries else None
 
 
-__all__ = ['JMdict']
+__all__ = ['JMDict']
