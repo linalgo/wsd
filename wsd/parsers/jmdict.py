@@ -11,7 +11,7 @@ XML_NS = '{http://www.w3.org/XML/1998/namespace}'
 @dataclass
 class Kanji:
     """Kanji element"""
-    keb: str
+    keb: str = field(default_factory=str)
     ke_inf: List[str] = field(default_factory=list)
     ke_pri: List[str] = field(default_factory=list)
 
@@ -27,7 +27,7 @@ class Kanji:
 @dataclass
 class Reading:
     """Reading element"""
-    reb: str
+    reb: str = field(default_factory=str)
     re_nokanji: bool = False
     re_restr: List[str] = field(default_factory=list)
     re_inf: List[str] = field(default_factory=list)
@@ -47,8 +47,8 @@ class Reading:
 @dataclass
 class Gloss:
     """A gloss element"""
-    text: str
-    lang: str = None
+    text: str = field(default_factory=str)
+    lang: str = field(default_factory=str)
 
     @classmethod
     def from_node(cls, node):
@@ -69,7 +69,7 @@ class Sense:
     ant: List[str] = field(default_factory=list)
     field_: List[str] = field(default_factory=list)
     misc: List[str] = field(default_factory=list)
-    s_inf: str = None
+    s_inf: str = field(default_factory=str)
     lsource: List[str] = field(default_factory=list)
     dial: List[str] = field(default_factory=list)
     gloss: List[Gloss] = field(default_factory=list)
@@ -95,7 +95,7 @@ class Sense:
 @dataclass
 class Entry:
     """A dictionary entry"""
-    ent_seq: str
+    ent_seq: str = field(default_factory=str)
     k_ele: List[Kanji] = field(default_factory=list)
     r_ele: List[Reading] = field(default_factory=list)
     sense: List[Sense] = field(default_factory=list)

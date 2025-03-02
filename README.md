@@ -11,6 +11,10 @@ Let's build a state-of-the-art multi-lingual Word Sense Disambiguation model.
 - Download the data with `git lfs fetch --all`
 - See `examples/data.ipynb`.
 
+## Annotate new data
+
+Run `mesop wsd/annotate/app.py`
+
 ## Attribution and LICENSE
 - [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html)
 - [XL-WSD](https://sapienzanlp.github.io/xl-wsd/docs/data/)
