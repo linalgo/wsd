@@ -1,0 +1,28 @@
+Metadata-Version: 2.2
+Name: wsd
+Version: 0.0.1
+Summary: Multi-lingual Word Sense Disambiguation.
+Author-email: Arnaud Rachez <arnaud@linalgo.com>, Farid Taba <farid.t@gmail.com>
+Project-URL: Homepage, https://github.com/linalgo/wsd
+Project-URL: Issues, https://github.com/linalgo/wsd/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+
+# Word Sense Disambiguation
+
+Let's build a state-of-the-art multi-lingual Word Sense Disambiguation model.
+
+## Project resources
+- [Kanban](https://github.com/orgs/linalgo/projects/5)
+
+## Getting started
+
+- Install with `pip install -e .`
+- Download the data with `git lfs fetch --all`
+- See `examples/data.ipynb`.
+
+## Attribution and LICENSE
+- [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html)
+- [XL-WSD](https://sapienzanlp.github.io/xl-wsd/docs/data/)

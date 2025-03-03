@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+wsd/__init__.py
+wsd.egg-info/PKG-INFO
+wsd.egg-info/SOURCES.txt
+wsd.egg-info/dependency_links.txt
+wsd.egg-info/top_level.txt
