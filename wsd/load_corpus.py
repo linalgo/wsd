@@ -131,6 +131,25 @@ def dicts_to_corpus(dicts : list[dict],
 
 
 def load_corpus(lang, task_id, org_id, token):
+    """
+    Load Semcor corpus locally.
+
+    Parameters
+    ----------
+    lang : str
+        Language of the corpus.
+    task_id : str
+        Task id.
+    org_id : str
+        Organization id.
+    token : str
+        Linalgo token.
+
+    Returns
+    -------
+    Corpus
+        Corpus object.
+    """
     clusters = f'data/training_datasets/semcor_{lang}/semcor_{lang}.gold.key.txt'
     data = f'data/training_datasets/semcor_{lang}/semcor_{lang}.data.xml'
     dicts = xml_to_dicts(lang, clusters, data)
