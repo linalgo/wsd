@@ -133,7 +133,7 @@ def dicts_to_corpus(dicts : list[dict],
     return corpus
 
 
-def load_corpus(lang, task_id, org_id, token):
+def load_corpus(lang : str, task_id : str, org_id : str, token : str)->Corpus:
     """
     Load Semcor corpus locally.
 
