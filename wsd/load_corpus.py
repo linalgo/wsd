@@ -1,7 +1,10 @@
+"""The load_corpus module loads the Semcor corpus locally as a corpus object."""
+
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 import os
-from linalgo.annotate.models import Document, Target, SelectorFactory, Annotation, Corpus, AnnotatorFactory, Task
+from linalgo.annotate.models import Document, Target, SelectorFactory
+from linalgo.annotate.models import Annotation, Corpus, AnnotatorFactory, Task
 from collections import defaultdict
 from linalgo.hub.client import LinalgoClient
 from lineval.utils import Body
