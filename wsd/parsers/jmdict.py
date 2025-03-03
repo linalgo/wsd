@@ -14,6 +14,7 @@ class Kanji:
     keb: str = field(default_factory=str)
     ke_inf: List[str] = field(default_factory=list)
     ke_pri: List[str] = field(default_factory=list)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -32,6 +33,7 @@ class Reading:
     re_restr: List[str] = field(default_factory=list)
     re_inf: List[str] = field(default_factory=list)
     re_pri: List[str] = field(default_factory=list)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -49,6 +51,7 @@ class Gloss:
     """A gloss element"""
     text: str = field(default_factory=str)
     lang: str = field(default_factory=str)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -73,6 +76,7 @@ class Sense:
     lsource: List[str] = field(default_factory=list)
     dial: List[str] = field(default_factory=list)
     gloss: List[Gloss] = field(default_factory=list)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -90,6 +94,12 @@ class Sense:
         dial = [d.text for d in node.findall('dial')]
         gloss = [Gloss.from_node(g) for g in node.findall('gloss')]
         return cls(stagk, stagr, pos, xref, ant, field_, misc, s_inf, lsource, dial, gloss)
+    
+    @classmethod
+    def from_dict(cls, data):
+        data['field_'] = data.pop('field')
+        data['gloss'] = [Gloss(**g) for g in data.pop('glosses')]
+        return cls(**data)
 
 
 @dataclass
@@ -99,6 +109,7 @@ class Entry:
     k_ele: List[Kanji] = field(default_factory=list)
     r_ele: List[Reading] = field(default_factory=list)
     sense: List[Sense] = field(default_factory=list)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -106,8 +117,15 @@ class Entry:
         ent_seq = node.find('ent_seq').text
         k_ele = [Kanji.from_node(k) for k in node.iter('k_ele')]
         r_ele = [Reading.from_node(r) for r in node.iter('r_ele')]
-        sense = [Sense.from_node(s) for s in node.iter('sense')]
-        return cls(ent_seq, k_ele, r_ele, sense)
+        senses = [Sense.from_node(s) for s in node.iter('sense')]
+        return cls(ent_seq, k_ele, r_ele, senses)
+    
+    @classmethod
+    def from_dict(cls, data):
+        k_ele = [Kanji(**k) for k in data['kanjis']]
+        r_ele = [Reading(**r) for r in data['readings']]
+        senses = [Sense.from_dict(s) for s in data['senses']]
+        return cls(data['ent_seq'], k_ele, r_ele, senses)
 
 
 # pylint: disable=too-few-public-methods
@@ -126,4 +144,4 @@ class JMDictParser:
         return entries
 
 
-__all__ = ['JMDictParser']
+__all__ = ['JMDictParser', 'Entry', 'Kanji', 'Reading', 'Gloss', 'Sense']

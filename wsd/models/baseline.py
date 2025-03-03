@@ -9,8 +9,8 @@ data_dir = os.path.join(os.path.dirname(__file__), '../../data')
 class JMDict:
     """A simple dictionary interface for JMDict"""
 
-    def __init__(self):
-        jmdict_file = os.path.join(data_dir, 'JMdict_en.gz')
+    def __init__(self, dictionary = 'JMdict_en.gz'):
+        jmdict_file = os.path.join(data_dir, dictionary)
         self.entries = JMDictParser().parse(jmdict_file)
 
     def search(self, text: str) -> List[Entry]:

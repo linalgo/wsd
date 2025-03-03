@@ -1,4 +1,13 @@
+.idea
 .python-version
 .env
 **/*.pyc
-**/*.-egg-info
+wsd.egg-info/*
+
+wsd/annotate/lit/dist
+wsd/annotate/lit/node_modules
+*.xml
+*.iml
+.DS_Store
+wsd/annotate/lit/package-lock.json
+

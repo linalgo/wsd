@@ -1,1 +1,1 @@
-from .pop import linpop_component
+from .pop import *
