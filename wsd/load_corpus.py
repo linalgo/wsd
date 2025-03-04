@@ -3,7 +3,7 @@
 import xml.etree.ElementTree as ET
 from dotenv import load_dotenv
 import os
-from linalgo.annotate.models import Document, Target, SelectorFactory
+from linalgo.annotate.models import Document, Target, SelectorFactory, Entity
 from linalgo.annotate.models import Annotation, Corpus, AnnotatorFactory, Task
 from collections import defaultdict
 from linalgo.hub.client import LinalgoClient
@@ -97,6 +97,9 @@ def dicts_to_corpus(dicts : list[dict],
     gold_dict = client.get(url=url)
     gold = AnnotatorFactory.from_dict(gold_dict)
 
+    #getting the entities
+    entities = task.entities
+
     # group by pos/lemma
     grouped = defaultdict(list)
     for d in dicts:
@@ -109,26 +112,36 @@ def dicts_to_corpus(dicts : list[dict],
         doc = Document(content = contexts,
                        corpus=corpus
         )
+        doc_entities = []
+        doc_index = 0
         doc_annos = []
         offset = 0
         for d in lst:
+            # buliding the target
             d['startOffset'] += offset
             d['endOffset'] += offset
             offset += len(d['context']) + 2
             target = Target(source = doc,
                             selector = [SelectorFactory.factory(d)]
                             )
+            # buliding the entity
+            if d["meaning"] not in doc_entities:
+                entity = entities[doc_index]
+                doc_entities.append(d["meaning"])
+                doc_index += 1
+            else :
+                entity = doc_entities[doc_entities.index(d["meaning"])]
+            # buliding the annotation
             anno = Annotation(document=doc,
-                              entity=d['meaning'],
+                              entity=entity,
                               body=Body(text=d['lemma'], context=d['context']),
                               task=task,
                               annotator=gold,
                               target=target,
                               )
-
             doc_annos.append(anno)
         docs.append(doc)
-
+    client.add_documents(docs)
     corpus.documents = docs
     return corpus
 
@@ -163,6 +176,7 @@ def load_corpus(lang : str, task_id : str, org_id : str, token : str)->Corpus:
     corpus = Corpus(name=f'Semcor_{lang}',
                     description=f'The Semcor wsd corpus for {lang}',
                     organization=my_org)
+    client.create_corpus(corpus, my_org)
     corpus = dicts_to_corpus(dicts, client, corpus, task)
     return corpus
 
