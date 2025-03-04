@@ -1,3 +1,4 @@
+"""Mesopt wrapper for LIT components"""
 from dataclasses import dataclass
 from typing import Any, Callable, List, Dict
 
@@ -6,19 +7,21 @@ import mesop.labs as mel
 
 @dataclass
 class Token:
+    """Token dataclass"""
     text: str = ''
     lemma: str = ''
     pos: str = ''
 
 
 @mel.web_component(path="../lit/dist/linpop.js")
-def LinDoc(
+def lin_doc(
     *,
     tokens: List[Dict],
     cur: int,
     on_pop: Callable[[mel.WebEvent], Any],
     key: str | None = None,
 ):
+    """Wrapper for the LIT LinDoc component."""
     return mel.insert_web_component(
         name="lin-doc",
         key=key,
@@ -28,13 +31,14 @@ def LinDoc(
 
 
 @mel.web_component(path="../lit/dist/linpop.js")
-def LinEntry(
+def lin_entry(
     *,
     entry: Dict,
     selected: bool,
     on_chosen: Callable[[mel.WebEvent], Any],
     key: str | None = None
 ):
+    """Wrapper for the LIT LinEntry component."""
     return mel.insert_web_component(
         name="lin-entry",
         key=key,
@@ -43,4 +47,4 @@ def LinEntry(
     )
 
 
-__all__ = ["LinDoc", "LinEntry", "Token"]
+__all__ = ["lin_doc", "lin_entry", "Token"]

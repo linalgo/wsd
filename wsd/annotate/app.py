@@ -1,19 +1,19 @@
+"""Annotation UI for Japanese Word Sense Disambiguation."""
+# pylint: disable=unused-argument,no-member,bare-except,no-name-in-module
 import os
-from typing import List, Dict
+from typing import List
 from dataclasses import asdict, field
 
 import mesop as me
-from mesop.server.wsgi_app import create_app
 
 from fugashi import Tagger
 
 from linalgo.hub.client import LinalgoClient
-from linalgo.annotate.models import Annotation, Document, Target, Task
-from linalgo.annotate.serializers import AnnotationSerializer, DocumentSerializer
+from linalgo.annotate.models import Annotation, Target
 
 from wsd.parsers.jmdict import Entry
 from wsd.annotate.lindict import LinDictAPI
-from wsd.annotate import LinDoc, LinEntry, Token
+from wsd.annotate import lin_doc, lin_entry, Token
 
 
 LINHUB_TOKEN = os.getenv('LINHUB_TOKEN')
@@ -32,9 +32,10 @@ lindict = LinDictAPI()
 tagger = Tagger('-Owakati')
 
 
-
 @me.stateclass
 class State:
+    """Application state class."""
+    # pylint: disable=invalid-field-call,too-few-public-methods
     tokens: List[Token] = field(default_factory=list)
     entries: List[Entry] = field(default_factory=list)
     cur: int = 0
@@ -43,15 +44,18 @@ class State:
 
 
 def get_next_document():
+    """Get the next document for annotation."""
     try:
         linhub.document = linhub.get_next_document(LINHUB_TASK)
         return linhub.document
     except:
         state = me.state(State)
         state.done = True
+        return None
 
 
 def get_tokens():
+    """Tokenize the current document."""
     doc = linhub.document
     tokens = []
     for word in tagger(doc.content):
@@ -65,12 +69,14 @@ def get_tokens():
 
 
 def get_entries():
+    """Retrieve dictionary entries for the current token."""
     state = me.state(State)
     lemma = state.tokens[state.cur].lemma
     return lindict.search(lemma)
 
 
 def on_load(e):
+    """Prepare application state"""
     state = me.state(State)
     get_next_document()
     if linhub.document is not None:
@@ -116,6 +122,7 @@ footer = me.Style(
     ),
 )
 def app():
+    """Japanese Word Sense Disambiguation UI"""
     state = me.state(State)
 
     with me.box(style=header):
@@ -127,13 +134,13 @@ def app():
     else:
         with me.box(style=body):
             tokens = [asdict(t) for t in state.tokens]
-            LinDoc(tokens=tokens, on_pop=_on_pop, cur=state.cur)
+            lin_doc(tokens=tokens, on_pop=_on_pop, cur=state.cur)
 
         me.divider()
 
         with me.box(style=entries):
             for entry in state.entries:
-                LinEntry(
+                lin_entry(
                     entry=asdict(entry),
                     selected=state.selected == entry.ent_seq,
                     on_chosen=_on_chosen
@@ -193,8 +200,3 @@ def _next(event):
             state.entries = get_entries()
         except:
             state.done = True
-
-
-if __name__ == "__main__":
-    app = create_app(prod_mode=True)
-    app._flask_app.run(host="localhost", port=8080, use_reloader=True)

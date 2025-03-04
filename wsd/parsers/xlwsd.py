@@ -33,7 +33,7 @@ class XLWSDParser:
         current_dir = os.path.dirname(__file__)
         filepath = os.path.join(current_dir, '../../data/xl-wsd-data.zip')
         zf = zipfile.ZipFile(filepath, 'r')
-        
+
         base_dir = f'xl-wsd/training_datasets/semcor_{lang}'
         labels = f'{base_dir}/semcor_{lang}.gold.key.txt'
         corpus = f'{base_dir}/semcor_{lang}.data.xml'

@@ -1,11 +1,27 @@
+# pylint: disable=too-few-public-methods, missing-timeout
+"""A simple interface for the LinDict API"""
+from typing import List
 import requests
 
 from wsd.parsers import Entry
 
+
 class LinDictAPI:
     """A simple interface for the LinDict API"""
 
-    def search(self, query) -> Entry:
+    def search(self, query) -> List[Entry]:
+        """Search the dictionary using for the given query.
+
+        Parameters
+        ----------
+        query : str
+            The query string.
+
+        Return
+        ------
+        entries : List[Entry]
+            A list of entries.
+        """
         url = f"https://lindict.api.linalgo.com/v1/ja/search/?query={query}"
         response = requests.get(url)
         response.raise_for_status()
@@ -16,9 +32,3 @@ class LinDictAPI:
         for entry in data['results']:
             entries.append(Entry.from_dict(entry))
         return entries
-    
-if __name__ ==  "__main__":
-    lindict = LinDictAPI()
-    entries = lindict.search('馬酔木')
-    for entry in entries:
-        print(entry)

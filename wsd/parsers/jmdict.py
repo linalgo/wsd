@@ -94,9 +94,10 @@ class Sense:
         dial = [d.text for d in node.findall('dial')]
         gloss = [Gloss.from_node(g) for g in node.findall('gloss')]
         return cls(stagk, stagr, pos, xref, ant, field_, misc, s_inf, lsource, dial, gloss)
-    
+
     @classmethod
     def from_dict(cls, data):
+        """Create a Sense object from a dictionary"""
         data['field_'] = data.pop('field')
         data['gloss'] = [Gloss(**g) for g in data.pop('glosses')]
         return cls(**data)
@@ -119,9 +120,10 @@ class Entry:
         r_ele = [Reading.from_node(r) for r in node.iter('r_ele')]
         senses = [Sense.from_node(s) for s in node.iter('sense')]
         return cls(ent_seq, k_ele, r_ele, senses)
-    
+
     @classmethod
     def from_dict(cls, data):
+        """Create an Entry object from a dictionary"""
         k_ele = [Kanji(**k) for k in data['kanjis']]
         r_ele = [Reading(**r) for r in data['readings']]
         senses = [Sense.from_dict(s) for s in data['senses']]
