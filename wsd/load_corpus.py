@@ -140,6 +140,7 @@ def dicts_to_corpus(dicts : list[dict],
                               target=target,
                               )
             doc_annos.append(anno)
+
         docs.append(doc)
     client.add_documents(docs)
     corpus.documents = docs
