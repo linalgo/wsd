@@ -31,13 +31,14 @@ def LinDoc(
 def LinEntry(
     *,
     entry: Dict,
+    selected: bool,
     on_chosen: Callable[[mel.WebEvent], Any],
     key: str | None = None
 ):
     return mel.insert_web_component(
         name="lin-entry",
         key=key,
-        properties={"entry": entry},
+        properties={"entry": entry, "selected": selected},
         events={"chosenEvent": on_chosen},
     )
 

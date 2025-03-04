@@ -5,15 +5,13 @@ Let's build a state-of-the-art multi-lingual Word Sense Disambiguation model.
 ## Project resources
 - [Kanban](https://github.com/orgs/linalgo/projects/5)
 
-## Getting started
+## Installation
 
-- Install with `pip install -e .`
-- Download the data with `git lfs fetch --all`
-- See `examples/data.ipynb`.
+Run `make install`
 
 ## Annotate new data
 
-Run `mesop wsd/annotate/app.py`
+Run `make annotate`
 
 ## Attribution and LICENSE
 - [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html)

@@ -42,6 +42,7 @@ class LinDocElement extends LitElement {
 class LinEntryElement extends LitElement {
     static properties = {
         entry: { type: Object },
+        selected: { type: Boolean },
         chosenEvent: { type: String }
     }
     static styles = css`
@@ -52,8 +53,12 @@ class LinEntryElement extends LitElement {
             padding: 16px;
             box-shadow: 0 1px 3px rgba(0,0,0,0.12);
         }
+        .selected {
+            box-shadow: 0 4px 8px rgb(192, 203, 249);
+            background-color: lightgrey;
+        }
         .entry:hover {
-            box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+            box-shadow: 0 4px 8px rgb(192, 203, 249);
             cursor: pointer;
             background-color: lightgrey;
         }
@@ -73,7 +78,7 @@ class LinEntryElement extends LitElement {
 
     render() {
         return html`
-        <div class="entry" @click="${this._onChosen}">
+        <div class="entry ${this.selected ? 'selected' : ''}" @click="${this._onChosen}">
             <div class="kanjis">
                 ${this.entry.k_ele.map((kanji) => html`
                     <div class="kanji text-3xl font-bold underline">
