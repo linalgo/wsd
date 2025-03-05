@@ -7,11 +7,18 @@ Let's build a state-of-the-art multi-lingual Word Sense Disambiguation model.
 
 ## Installation
 
-Run `make install`
+Run `make install`.
 
 ## Annotate new data
 
-Run `make annotate`
+### Requirements
+
+- [Install NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- Get a developper token from [Linhub](https://hub.linalgo.com) and add it to the `.env` file as `LINHUB_TOKEN`.
+
+### Start annotation server
+Then, run `make annotate`. The annotation interface will be available at 
+`https://localhost:32123/`.
 
 ## Attribution and LICENSE
 - [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html)

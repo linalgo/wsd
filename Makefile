@@ -2,7 +2,7 @@
 
 install:
 	pip install -e .
-	python -m python -m unidic download
+	python -m unidic download
 	git lfs fetch --all
 	cd wsd/annotate/lit && npm install
 
