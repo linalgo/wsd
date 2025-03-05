@@ -117,7 +117,7 @@ footer = me.Style(
     on_load=on_load,
     security_policy=me.SecurityPolicy(
         allowed_script_srcs=[
-            "https://cdn.jsdelivr.net",
+            '://',
         ]
     ),
 )
