@@ -66,13 +66,13 @@ def xml_to_dicts(lang: str, clusters: str, data: str)->list[dict]:
     return dicts
 
 
-def dicts_to_corpus(dicts : list[dict],
+def add_dicts_to_corpus(dicts : list[dict],
                     client: LinalgoClient,
                     corpus: Corpus,
                     task : Task,
                     )->Corpus:
     """
-    Convert list of dictionaries to a corpus.
+    adds data from a list of dictionaries to a corpus.
 
     Parameters
     ----------
@@ -88,7 +88,7 @@ def dicts_to_corpus(dicts : list[dict],
     Returns
     -------
     Corpus
-        Corpus object with documents and annotations.
+        Corpus object with added documents and annotations.
 """
 
     #getting the gold annotator
@@ -107,6 +107,8 @@ def dicts_to_corpus(dicts : list[dict],
     items = grouped.items()
 
     docs = []
+    content_lengths = []
+    nchars = 0
     for g, lst in items:
         contexts= "\n".join(d["context"] for d in lst)
         doc = Document(content = contexts,
@@ -130,18 +132,27 @@ def dicts_to_corpus(dicts : list[dict],
                 doc_entities.append(d["meaning"])
                 doc_index += 1
             else :
-                entity = doc_entities[doc_entities.index(d["meaning"])]
+                entity = entities[doc_entities.index(d["meaning"])]
             # buliding the annotation
-            anno = Annotation(document=doc,
-                              entity=entity,
-                              body=Body(text=d['lemma'], context=d['context']),
-                              task=task,
-                              annotator=gold,
-                              target=target,
+            anno = Annotation(document = doc,
+                              entity = entity,
+                              body = d['lemma'],
+                              task = task,
+                              annotator = gold,
+                              target = target,
                               )
-            doc_annos.append(anno)
+            #limiting the number of annotations per document to 30
+            if len (doc_annos) < 30 :
+                doc_annos.append(anno)
 
-        docs.append(doc)
+        if len (doc_entities) > 1 and len(doc.content) < 100000 :
+            nchars += len(doc.content)
+            content_lengths.append(len(doc.content))
+            doc.annotations = set(doc_annos)
+            docs.append(doc)
+
+    print(f"Adding {len(docs)} documents")
+    print(f"Max content length: {max(content_lengths)}")
     client.add_documents(docs)
     corpus.documents = docs
     return corpus
@@ -174,11 +185,8 @@ def load_corpus(lang : str, task_id : str, org_id : str, token : str)->Corpus:
     client = LinalgoClient(token, url)
     my_org = client.get_organization(org_id)
     task = client.get_task(task_id)
-    corpus = Corpus(name=f'Semcor_{lang}',
-                    description=f'The Semcor wsd corpus for {lang}',
-                    organization=my_org)
-    client.create_corpus(corpus, my_org)
-    corpus = dicts_to_corpus(dicts, client, corpus, task)
+    corpus = task.corpora[0]
+    corpus = add_dicts_to_corpus(dicts, client, corpus, task)
     return corpus
 
 if __name__ == "__main__":
