@@ -1,0 +1,3 @@
+fugashi[unidic]
+linalgo @ git+https://github.com/linalgo/linalgo-sdk.git@master
+mesop

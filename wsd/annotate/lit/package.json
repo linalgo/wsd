@@ -1,0 +1,30 @@
+{
+  "name": "linpop",
+  "type": "module",
+  "version": "0.0.0",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/linpop.umd.js",
+  "module": "./dist/linpop.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/linpop.es.js",
+      "require": "./dist/linpop.umd.js"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:watch": "vite build --watch",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.9",
+    "lit": "^3.2.1",
+    "tailwindcss": "^4.0.9"
+  },
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
+}

@@ -11,9 +11,10 @@ XML_NS = '{http://www.w3.org/XML/1998/namespace}'
 @dataclass
 class Kanji:
     """Kanji element"""
-    keb: str
+    keb: str = field(default_factory=str)
     ke_inf: List[str] = field(default_factory=list)
     ke_pri: List[str] = field(default_factory=list)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -27,11 +28,12 @@ class Kanji:
 @dataclass
 class Reading:
     """Reading element"""
-    reb: str
+    reb: str = field(default_factory=str)
     re_nokanji: bool = False
     re_restr: List[str] = field(default_factory=list)
     re_inf: List[str] = field(default_factory=list)
     re_pri: List[str] = field(default_factory=list)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -47,8 +49,9 @@ class Reading:
 @dataclass
 class Gloss:
     """A gloss element"""
-    text: str
-    lang: str = None
+    text: str = field(default_factory=str)
+    lang: str = field(default_factory=str)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -69,10 +72,11 @@ class Sense:
     ant: List[str] = field(default_factory=list)
     field_: List[str] = field(default_factory=list)
     misc: List[str] = field(default_factory=list)
-    s_inf: str = None
+    s_inf: str = field(default_factory=str)
     lsource: List[str] = field(default_factory=list)
     dial: List[str] = field(default_factory=list)
     gloss: List[Gloss] = field(default_factory=list)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -91,14 +95,22 @@ class Sense:
         gloss = [Gloss.from_node(g) for g in node.findall('gloss')]
         return cls(stagk, stagr, pos, xref, ant, field_, misc, s_inf, lsource, dial, gloss)
 
+    @classmethod
+    def from_dict(cls, data):
+        """Create a Sense object from a dictionary"""
+        data['field_'] = data.pop('field')
+        data['gloss'] = [Gloss(**g) for g in data.pop('glosses')]
+        return cls(**data)
+
 
 @dataclass
 class Entry:
     """A dictionary entry"""
-    ent_seq: str
+    ent_seq: str = field(default_factory=str)
     k_ele: List[Kanji] = field(default_factory=list)
     r_ele: List[Reading] = field(default_factory=list)
     sense: List[Sense] = field(default_factory=list)
+    id: int = field(default_factory=int)
 
     @classmethod
     def from_node(cls, node):
@@ -106,8 +118,16 @@ class Entry:
         ent_seq = node.find('ent_seq').text
         k_ele = [Kanji.from_node(k) for k in node.iter('k_ele')]
         r_ele = [Reading.from_node(r) for r in node.iter('r_ele')]
-        sense = [Sense.from_node(s) for s in node.iter('sense')]
-        return cls(ent_seq, k_ele, r_ele, sense)
+        senses = [Sense.from_node(s) for s in node.iter('sense')]
+        return cls(ent_seq, k_ele, r_ele, senses)
+
+    @classmethod
+    def from_dict(cls, data):
+        """Create an Entry object from a dictionary"""
+        k_ele = [Kanji(**k) for k in data['kanjis']]
+        r_ele = [Reading(**r) for r in data['readings']]
+        senses = [Sense.from_dict(s) for s in data['senses']]
+        return cls(data['ent_seq'], k_ele, r_ele, senses)
 
 
 # pylint: disable=too-few-public-methods
@@ -126,4 +146,4 @@ class JMDictParser:
         return entries
 
 
-__all__ = ['JMDictParser']
+__all__ = ['JMDictParser', 'Entry', 'Kanji', 'Reading', 'Gloss', 'Sense']

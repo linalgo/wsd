@@ -1,14 +1,19 @@
 """A simple dictionary interface for JMDict."""
+import os
+from typing import List
 from wsd.parsers import JMDictParser
+from wsd.parsers.jmdict import Entry
 
+data_dir = os.path.join(os.path.dirname(__file__), '../../data')
 
 class JMDict:
     """A simple dictionary interface for JMDict"""
 
-    def __init__(self):
-        self.entries = JMDictParser().parse('../data/JMdict_en.gz')
+    def __init__(self, dictionary = 'JMdict_en.gz'):
+        jmdict_file = os.path.join(data_dir, dictionary)
+        self.entries = JMDictParser().parse(jmdict_file)
 
-    def search(self, text):
+    def search(self, text: str) -> List[Entry]:
         """Search for an entry by text.
 
         Currently returns all entries that contain the text in either the kanji 
@@ -18,6 +23,11 @@ class JMDict:
         ----------
         text : str
             The text to search for
+        
+        Returns
+        -------
+        List[Entry]
+            A list of entries that contain the query.
         """
         res = []
         for entry in self.entries:
@@ -29,7 +39,7 @@ class JMDict:
                     res.append(entry)
         return res
 
-    def feeling_lucky(self, text):
+    def feeling_lucky(self, text: str) -> Entry:
         """Return the first entry found.
 
         Currently returns the first entry that contains the text in either the
@@ -39,6 +49,11 @@ class JMDict:
         ----------
         text : str
             The text to search for
+        
+        Returns
+        -------
+        Entry
+            The first entry that contains the query.
         """
         entries = self.search(text)
         return entries[0] if entries else None
