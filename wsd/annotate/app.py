@@ -180,7 +180,7 @@ def _on_chosen(event):
 
 def _complete_document(event=None):
     linhub.create_annotations(linhub.annotations.values())
-    linhub.annotation = {}
+    linhub.annotations = {}
     linhub.complete_document(linhub.document, linhub.task)
     state = me.state(State)
     try:
