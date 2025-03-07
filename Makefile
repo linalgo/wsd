@@ -11,3 +11,6 @@ npm-build:
 
 annotate: npm-build
 	mesop wsd/annotate/app.py
+
+dataset:
+	gcloud auth application-default login

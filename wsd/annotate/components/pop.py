@@ -4,13 +4,7 @@ from typing import Any, Callable, List, Dict
 
 import mesop.labs as mel
 
-
-@dataclass
-class Token:
-    """Token dataclass"""
-    text: str = ''
-    lemma: str = ''
-    pos: str = ''
+from wsd.models import Token
 
 
 @mel.web_component(path="../lit/dist/linpop.js")
