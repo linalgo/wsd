@@ -54,13 +54,16 @@ class LinEntryElement extends LitElement {
             box-shadow: 0 1px 3px rgba(0,0,0,0.12);
         }
         .selected {
-            box-shadow: 0 4px 8px rgb(192, 203, 249);
-            background-color: lightgrey;
+            box-shadow: 0 4px 8px rgb(124, 149, 249);
+            background-color:  rgb(124, 149, 249);
         }
         .entry:hover {
             box-shadow: 0 4px 8px rgb(192, 203, 249);
             cursor: pointer;
             background-color: lightgrey;
+            &.selected {
+                background-color:  rgb(124, 149, 249);
+            }
         }
         .kanjis {
             display: flex;

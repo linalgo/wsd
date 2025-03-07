@@ -108,18 +108,13 @@ footer = me.Style(
     width='100%',
     text_align='center',
     justify_content='center',
-    padding=me.Padding.all(24)
+    padding=me.Padding.all(24),
 )
 
 
 @me.page(
     path="/",
-    on_load=on_load,
-    security_policy=me.SecurityPolicy(
-        allowed_script_srcs=[
-            '://',
-        ]
-    ),
+    on_load=on_load
 )
 def app():
     """Japanese Word Sense Disambiguation UI"""
@@ -152,7 +147,6 @@ def app():
                 label,
                 on_click=_next,
                 type="flat",
-                disabled=state.selected is None
             )
 
 
@@ -184,19 +178,26 @@ def _on_chosen(event):
     linhub.annotations[state.cur] = annotation
 
 
+def _complete_document(event=None):
+    linhub.create_annotations(linhub.annotations.values())
+    linhub.annotation = {}
+    linhub.complete_document(linhub.document, linhub.task)
+    state = me.state(State)
+    try:
+        linhub.document = linhub.get_next_document(linhub.task.id)
+        state.cur = 0
+        state.selected = None
+        state.tokens = get_tokens()
+    except Exception as e:
+        print(e)
+        state.done = True
+
+
 def _next(event):
     state = me.state(State)
-    state.cur += 1
-    if state.cur < len(state.tokens):
-        state.entries = get_entries()
+    if state.cur == len(state.tokens) - 1:
+        _complete_document()
     else:
-        linhub.create_annotations(linhub.annotations.values())
-        linhub.complete_document(linhub.document, linhub.task)
-        try:
-            linhub.document = linhub.get_next_document(linhub.task)
-            state.tokens = get_tokens()
-            state.cur = 0
-            state.selected = None
-            state.entries = get_entries()
-        except:
-            state.done = True
+        state.cur += 1
+        state.selected = None
+    state.entries = get_entries()
