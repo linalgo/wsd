@@ -188,8 +188,7 @@ def _complete_document(event=None):
         state.cur = 0
         state.selected = None
         state.tokens = get_tokens()
-    except Exception as e:
-        print(e)
+    except:
         state.done = True
 
 
