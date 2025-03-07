@@ -1,5 +1,4 @@
 """Mesopt wrapper for LIT components"""
-from dataclasses import dataclass
 from typing import Any, Callable, List, Dict
 
 import mesop.labs as mel
