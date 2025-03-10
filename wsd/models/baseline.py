@@ -1,17 +1,54 @@
 """A simple dictionary interface for JMDict."""
 import os
+from dataclasses import dataclass
 from typing import List
+
+from fugashi import Tagger  # pylint: disable=no-name-in-module
+
 from wsd.parsers import JMDictParser
 from wsd.parsers.jmdict import Entry
 
+
+@dataclass
+class Token:
+    """Token dataclass"""
+    text: str = ''
+    lemma: str = ''
+    pos: str = ''
+
+
 data_dir = os.path.join(os.path.dirname(__file__), '../../data')
+
 
 class JMDict:
     """A simple dictionary interface for JMDict"""
 
-    def __init__(self, dictionary = 'JMdict_en.gz'):
+    def __init__(self, dictionary='JMdict_en.gz'):
         jmdict_file = os.path.join(data_dir, dictionary)
         self.entries = JMDictParser().parse(jmdict_file)
+
+    def predict(self, sentence):
+        """Predict the `ent_seq` for each token in a sentence.
+
+        Parameters
+        ----------
+        sentence : str
+            The sentence to parse and query with the dictionary
+
+        Returns
+        -------
+        preds : List[int]
+            A list of predicted `ent_seq`.
+        """
+
+        tagger = Tagger('-Owakati')
+
+        preds = []
+        for word in tagger(sentence):
+            entry = self.feeling_lucky(word.feature.lemma)
+            ent_seq = entry.ent_seq if entry else None
+            preds.append(ent_seq)
+        return preds
 
     def search(self, text: str) -> List[Entry]:
         """Search for an entry by text.
@@ -23,7 +60,7 @@ class JMDict:
         ----------
         text : str
             The text to search for
-        
+
         Returns
         -------
         List[Entry]
@@ -49,7 +86,7 @@ class JMDict:
         ----------
         text : str
             The text to search for
-        
+
         Returns
         -------
         Entry
@@ -59,4 +96,4 @@ class JMDict:
         return entries[0] if entries else None
 
 
-__all__ = ['JMDict']
+__all__ = ['JMDict', 'Token']
