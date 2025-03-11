@@ -8,7 +8,7 @@ env:
   RSBUILD:
     sh: if command -v rsbuild > /dev/null; then echo "true"; else echo "false"; fi
   PJ_DIR:
-    sh: pwd
+    sh: echo $PWD
   DEV: docker run --rm
     -v ${PWD}:/workspace
     --workdir /workspace
@@ -88,8 +88,7 @@ tasks:
     deps: [build.wheel]
     cmds:
       - docker compose build vanilla
-      - docker compose build sandbox
-      - docker compose build dev
+      - docker compose build
 
   install:
     cmds:

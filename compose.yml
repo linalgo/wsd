@@ -14,7 +14,7 @@ services:
     image: asia.gcr.io/linalgo/${PKG_NAME}
     <<: [ *default ]
     build:
-      context: .
+      context: ${PJ_DIR}
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
@@ -23,7 +23,7 @@ services:
     image: asia.gcr.io/linalgo/${PKG_NAME}:dev
     <<: [ *default, *dev ]
     build:
-      context: .
+      context: ${PJ_DIR}
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
