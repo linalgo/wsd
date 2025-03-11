@@ -23,6 +23,7 @@ dependencies = [
   "google-cloud-bigquery",
   "mesop",
   "pillow",
+  "numpy"
 ]
 
 [project.optional-dependencies]

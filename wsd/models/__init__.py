@@ -1,5 +1,5 @@
 """A collection of WSD models."""
 # from .baseline import *
-from .baseline import Token
+from .baseline import JMDict, Token
 
-__all__ = ["Token"]
+__all__ = ["Token", "JMDict"]
