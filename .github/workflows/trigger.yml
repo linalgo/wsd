@@ -25,6 +25,10 @@ jobs:
           # Install task
           sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
 
+          # Install pre-commit
+          pip install pre-commit=='3.8.0'
+          pre-commit install
+
           # Build
           task build
         shell: bash
