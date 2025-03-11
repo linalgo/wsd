@@ -1,3 +1,4 @@
+dist/legacy
 .idea
 .python-version
 .env
