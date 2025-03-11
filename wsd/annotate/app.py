@@ -44,7 +44,7 @@ def get_next_document():
     try:
         linhub.document = linhub.get_next_document(LINHUB_TASK)
         return linhub.document
-    except Exception:
+    except ValueError:
         state = me.state(State)
         state.done = True
         return None
@@ -184,7 +184,7 @@ def _complete_document(event=None):
         state.cur = 0
         state.selected = None
         state.tokens = get_tokens()
-    except Exception:
+    except ValueError:
         state.done = True
 
 
