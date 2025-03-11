@@ -1,0 +1,30 @@
+name: CI
+
+on:
+  push:
+    branches: ["master", "develop", "v*.*.*", "hotfix/*/*", "fix/*"]
+  pull_request:
+    branches: ["master"]
+
+jobs:
+  build_only:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    outputs:
+      output1: ${{steps.filter.outputs.workflows}}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Authenticate
+        run: |
+          # Authenticate
+          cp .env.template .env
+
+          # Remove the rc tag
+          sed -i -E 's/(version *= *")([0-9]+\.[0-9]+(\.[0-9]+)?)(rc[0-9]+)?(")/\1\2\5/' ./pyproject.toml
+
+          # Install task
+          sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+
+          # Authenticate
+          task build
+        shell: bash

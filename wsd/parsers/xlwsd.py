@@ -1,18 +1,18 @@
 # pylint: disable=invalid-name, too-few-public-methods
-"""Parser for the XL-WSD dataset"""
+"""Parser for the XL-WSD dataset."""
 import os
-import zipfile
 import xml.etree.ElementTree as ET
+import zipfile
 
 
 class XLWSDParser:
-    """Parser for the XL-WSD dataset"""
+    """Parser for the XL-WSD dataset."""
 
     @staticmethod
     def parse(lang):
         """Parse the XL-WSD dataset.
 
-        Returns a sequence to sequence dataset, where the input is a list of 
+        Returns a sequence to sequence dataset, where the input is a list of
         words and the output is a list of (lemma, pos, sense) tuples. Since only
         one token in the sentence is annotated, the other tokens are marked with
         'O'.

@@ -1,15 +1,15 @@
 # pylint: disable=too-few-public-methods, missing-timeout
-"""A simple interface for the LinDict API"""
-from typing import List
+"""A simple interface for the LinDict API."""
+
 import requests
 
 from wsd.parsers import Entry
 
 
 class LinDictAPI:
-    """A simple interface for the LinDict API"""
+    """A simple interface for the LinDict API."""
 
-    def search(self, query) -> List[Entry]:
+    def search(self, query) -> list[Entry]:
         """Search the dictionary using for the given query.
 
         Parameters

@@ -1,7 +1,6 @@
 """A simple dictionary interface for JMDict."""
 import os
 from dataclasses import dataclass
-from typing import List
 
 from fugashi import Tagger  # pylint: disable=no-name-in-module
 
@@ -11,7 +10,7 @@ from wsd.parsers.jmdict import Entry
 
 @dataclass
 class Token:
-    """Token dataclass"""
+    """Token dataclass."""
     text: str = ''
     lemma: str = ''
     pos: str = ''
@@ -21,7 +20,7 @@ data_dir = os.path.join(os.path.dirname(__file__), '../../data')
 
 
 class JMDict:
-    """A simple dictionary interface for JMDict"""
+    """A simple dictionary interface for JMDict."""
 
     def __init__(self, dictionary='JMdict_en.gz'):
         jmdict_file = os.path.join(data_dir, dictionary)
@@ -50,10 +49,10 @@ class JMDict:
             preds.append(ent_seq)
         return preds
 
-    def search(self, text: str) -> List[Entry]:
+    def search(self, text: str) -> list[Entry]:
         """Search for an entry by text.
 
-        Currently returns all entries that contain the text in either the kanji 
+        Currently returns all entries that contain the text in either the kanji
         or reading.
 
         Parameters

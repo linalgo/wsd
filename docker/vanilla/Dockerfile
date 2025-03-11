@@ -11,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     nano \
     npm \
+    pylint \
     sudo
 
 # Install vite
@@ -30,7 +31,7 @@ FROM vanilla as dev
 RUN apt-get update && apt-get install -y \
     git-lfs \
     glances \
-    pre-commit 
+    pre-commit
 
 # foo
 RUN adduser --disabled-password --gecos '' foo

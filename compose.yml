@@ -21,6 +21,7 @@ services:
 
   dev:
     image: asia.gcr.io/linalgo/${PKG_NAME}:dev
+    container_name: wsd-dev
     <<: [ *default, *dev ]
     build:
       context: ${PJ_DIR}
@@ -28,3 +29,5 @@ services:
       args:
         - PY_VER=310
         - EXTRA=dev
+    volumes:
+      - ${PJ_DIR}:/workspace
