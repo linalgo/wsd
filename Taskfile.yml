@@ -101,7 +101,7 @@ tasks:
       - cd wsd/annotate/lit && npm run build
 
   annotate:
-    deps: [npm-build]
+    # deps: [npm-build]
     cmds:
       - mesop wsd/annotate/app.py
 

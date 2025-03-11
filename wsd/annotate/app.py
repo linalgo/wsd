@@ -8,8 +8,9 @@ from fugashi import Tagger
 from linalgo.annotate.models import Annotation, Target
 from linalgo.hub.client import LinalgoClient
 
-from wsd.annotate import Token, lin_doc, lin_entry
+from wsd.annotate.components import lin_doc, lin_entry
 from wsd.annotate.lindict import LinDictAPI
+from wsd.models import Token
 from wsd.parsers.jmdict import Entry
 
 LINHUB_TOKEN = os.getenv('LINHUB_TOKEN')
