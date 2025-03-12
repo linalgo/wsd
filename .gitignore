@@ -1,4 +1,4 @@
 .python-version
 .env
 **/*.pyc
-**/*.-egg-info
+**/*.egg-info
