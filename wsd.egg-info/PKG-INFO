@@ -1,0 +1,42 @@
+Metadata-Version: 2.2
+Name: wsd
+Version: 0.0.1
+Summary: Multi-lingual Word Sense Disambiguation.
+Author-email: Arnaud Rachez <arnaud@linalgo.com>, Farid Taba <farid.t@gmail.com>, Jack Dryvers <j.dryvers@proton.me>
+Project-URL: Homepage, https://github.com/linalgo/wsd
+Project-URL: Issues, https://github.com/linalgo/wsd/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fugashi[unidic]
+Requires-Dist: linalgo@ git+https://github.com/linalgo/linalgo-sdk.git@master
+Requires-Dist: google-cloud-bigquery
+Requires-Dist: mesop
+
+# Word Sense Disambiguation
+
+Let's build a state-of-the-art multi-lingual Word Sense Disambiguation model.
+
+## Project resources
+- [Kanban](https://github.com/orgs/linalgo/projects/5)
+
+## Installation
+
+Run `make install`.
+
+## Annotate new data
+
+### Requirements
+
+- [Install NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+- Get a developper token from [Linhub](https://hub.linalgo.com) and add it to the `.env` file as `LINHUB_TOKEN`.
+
+### Start annotation server
+Then, run `make annotate`. The annotation interface will be available at 
+`https://localhost:32123/`.
+
+## Attribution and LICENSE
+- [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html)
+- [XL-WSD](https://sapienzanlp.github.io/xl-wsd/docs/data/)
