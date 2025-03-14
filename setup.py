@@ -3,7 +3,7 @@ import re
 
 from setuptools import find_packages, setup
 
-with open("pyproject.toml")  as file:
+with open("pyproject.toml", encoding="utf-8")  as file:
     setup(
         version=re.search(
             r'^version\s*=\s*"(.*?)"',  file.read(), re.M
