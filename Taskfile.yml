@@ -1,6 +1,8 @@
 version: "3"
 dotenv: [".env"]
 env:
+  OS_TYPE:
+    sh: uname
   BUILD:
     sh: LC_TIME=en_US.UTF-8 date
   VERSION:
@@ -57,11 +59,44 @@ tasks:
           echo "uv is already installed.";
         fi
 
+  add_build.mac:
+    cmds:
+      - sed -i '' 's/__version__ = ".*"/__version__ = "{{.VERSION}}"/' "${PKG_NAME}/__init__.py";
+      - sed -i '' 's/__build__ = ".*"/__build__ = "{{.BUILD}}"/' "${PKG_NAME}/__init__.py";
+  add_build.linux:
+    cmds:
+      - sed -i "s/__version__ = \".*\"/__version__ = \"{{.VERSION}}\"/" "${PKG_NAME}/__init__.py";
+      - sed -i "s/__build__ = \".*\"/__build__ = \"{{.BUILD}}\"/" "${PKG_NAME}/__init__.py";
+
   add_build:
     desc: "Update the version and build information in project files"
     cmds:
-      - sed -i "s/__version__ = \".*\"/__version__ = \"{{.VERSION}}\"/" ${PKG_NAME}/__init__.py
-      - sed -i "s/__build__ = \".*\"/__build__ = \"{{.BUILD}}\"/" ${PKG_NAME}/__init__.py
+      - echo {{.OS_TYPE}}
+      - |
+        case "{{.OS_TYPE}}" in
+            Darwin*)
+              task add_build.mac
+              ;;
+            Linux*)
+              task add_build.linux
+              ;;
+        esac
+
+    #Mac
+    # sed -i '' 's/__version__ = ".*"/__version__ = "{{.VERSION}}"/' "${PKG_NAME}/__init__.py"; \
+
+    #Not mac
+    # sed -i "s/__version__ = \".*\"/__version__ = \"{{.VERSION}}\"/" "${PKG_NAME}/__init__.py; \
+
+    # add_build:
+    # desc: "Update the version and build information in project files"
+    # cmds:
+    #   - sed -i "s/__version__ = \".*\"/__version__ = \"{{.VERSION}}\"/" ${PKG_NAME}/__init__.py
+    #   - sed -i '' 's/__version__ = ".*"/__version__ = \"{{.VERSION}}\"/' "${PKG_NAME}/__init__.py"
+
+      # - sed -i "s/__build__ = \".*\"/__build__ = \"{{.BUILD}}\"/" ${PKG_NAME}/__init__.py
+
+# sed -i '' "s/__version__ = \".*\"/__version__ = \"0.0.1rc0\"/" wsd/__init__.py
 
   # Build Tasks
   build:
