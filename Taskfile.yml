@@ -82,22 +82,6 @@ tasks:
               ;;
         esac
 
-    #Mac
-    # sed -i '' 's/__version__ = ".*"/__version__ = "{{.VERSION}}"/' "${PKG_NAME}/__init__.py"; \
-
-    #Not mac
-    # sed -i "s/__version__ = \".*\"/__version__ = \"{{.VERSION}}\"/" "${PKG_NAME}/__init__.py; \
-
-    # add_build:
-    # desc: "Update the version and build information in project files"
-    # cmds:
-    #   - sed -i "s/__version__ = \".*\"/__version__ = \"{{.VERSION}}\"/" ${PKG_NAME}/__init__.py
-    #   - sed -i '' 's/__version__ = ".*"/__version__ = \"{{.VERSION}}\"/' "${PKG_NAME}/__init__.py"
-
-      # - sed -i "s/__build__ = \".*\"/__build__ = \"{{.BUILD}}\"/" ${PKG_NAME}/__init__.py
-
-# sed -i '' "s/__version__ = \".*\"/__version__ = \"0.0.1rc0\"/" wsd/__init__.py
-
   # Build Tasks
   build:
     desc: "Tasks related to building the project"
