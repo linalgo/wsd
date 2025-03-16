@@ -10,6 +10,7 @@ from linalgo.hub.client import LinalgoClient
 
 from wsd.annotate import lin_doc, lin_entry
 from wsd.annotate.lindict import LinDictAPI
+from wsd.exceptions import NoDocumentsAvailableException
 from wsd.models import Token
 from wsd.parsers.jmdict import Entry
 
@@ -44,7 +45,7 @@ def get_next_document():
     try:
         linhub.document = linhub.get_next_document(LINHUB_TASK)
         return linhub.document
-    except ValueError:
+    except NoDocumentsAvailableException("No more documents to process."):
         state = me.state(State)
         state.done = True
         return None
