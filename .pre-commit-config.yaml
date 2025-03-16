@@ -73,3 +73,9 @@ repos:
     rev: 5.13.2
     hooks:
       - id: isort
+
+  # Add nbstripout to remove outputs before committing
+  - repo: https://github.com/kynan/nbstripout
+    rev: 0.8.1
+    hooks:
+      - id: nbstripout
