@@ -32,7 +32,6 @@ tagger = Tagger('-Owakati')
 @me.stateclass
 class State:
     """Application state class."""
-    # pylint: disable=invalid-field-call,too-few-public-methods
     tokens: list[Token] = field(default_factory=list)
     entries: list[Entry] = field(default_factory=list)
     cur: int = 0
@@ -72,7 +71,7 @@ def get_entries():
     return lindict.search(lemma)
 
 
-def on_load(e):
+def on_load():
     """Prepare application state."""
     state = me.state(State)
     get_next_document()

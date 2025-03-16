@@ -29,7 +29,6 @@ class XLWSDParser:
         y : List[Tuple[str, str, str]]
             The output sequences
         """
-        # pylint: disable=consider-using-with, too-many-locals
         current_dir = os.path.dirname(__file__)
         filepath = os.path.join(current_dir, '../../data/xl-wsd-data.zip')
         zf = zipfile.ZipFile(filepath, 'r')

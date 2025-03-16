@@ -110,15 +110,10 @@ tasks:
     cmds:
       - git lfs fetch --all
 
-  pylint:
-    cmds:
-      - $(which python) -m pylint $(git ls-files '*.py')
-
   build.wheel:
     desc: "Build the project wheel package"
     deps: [install_uv, add_build]
     cmds:
-      - task pylint
       - pre-commit run -a
       - "mkdir -p dist/legacy && mv dist/*.whl dist/legacy/ || true"
       - uv build --wheel

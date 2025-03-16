@@ -1,6 +1,13 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
+  - repo: https://github.com/pre-commit/mirrors-pylint
+    rev: v2.7.4  # Specify the version of pylint you want to use
+    hooks:
+      - id: pylint
+        args: [--disable=C0103,--disable=R0903,--disable=R0914,--disable=E0401]  # Disable the invalid-name warning globally
+
+
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v4.6.0
     hooks:
