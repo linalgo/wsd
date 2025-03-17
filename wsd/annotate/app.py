@@ -72,7 +72,7 @@ def get_entries():
     return lindict.search(lemma)
 
 
-def on_load():
+def on_load(e=None):
     """Prepare application state."""
     state = me.state(State)
     get_next_document()
