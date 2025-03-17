@@ -1,0 +1,33 @@
+x-default: &default
+  working_dir: /workspace
+  tty: true
+  restart: always
+
+x-dev: &dev
+  user: foo
+  entrypoint: bash
+  volumes:
+    - ./:/workspace
+
+services:
+  sandbox:
+    image: asia.gcr.io/linalgo/${PKG_NAME}
+    <<: [ *default ]
+    build:
+      context: ${PJ_DIR}
+      dockerfile: docker/sandbox/Dockerfile
+      args:
+        - PY_VER=310
+
+  dev:
+    image: asia.gcr.io/linalgo/${PKG_NAME}:dev
+    container_name: wsd-dev
+    <<: [ *default, *dev ]
+    build:
+      context: ${PJ_DIR}
+      dockerfile: docker/sandbox/Dockerfile
+      args:
+        - PY_VER=310
+        - EXTRA=dev
+    volumes:
+      - ${PJ_DIR}:/workspace

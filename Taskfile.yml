@@ -1,0 +1,130 @@
+version: "3"
+dotenv: [".env"]
+env:
+  OS_TYPE:
+    sh: uname
+  BUILD:
+    sh: LC_TIME=en_US.UTF-8 date
+  VERSION:
+    sh: grep 'version =' pyproject.toml | cut -d '"' -f 2
+  RSBUILD:
+    sh: if command -v rsbuild > /dev/null; then echo "true"; else echo "false"; fi
+  PJ_DIR:
+    sh: echo $PWD
+  DEV: docker run --rm
+    -v ${PWD}:/workspace
+    --workdir /workspace
+    --entrypoint bash
+    -i asia.gcr.io/linalgo/${PKG_NAME}:dev
+
+tasks:
+  # Utility Tasks
+  help:
+    desc: "Display help information for available tasks"
+    cmds:
+      - 'echo "Usage: task {build, push, clean, ...}"'
+      - 'echo "Please check README.md for instructions."'
+    silent: true
+
+  default:
+    desc: "Display the help message by default if no task specified"
+    cmds:
+      - task help
+
+  clean:
+    desc: "Clean the repository based on the availability of rsbuild"
+    cmds:
+      - 'if [ "{{.RSBUILD}}" = "true" ]; then task rsbuild_clean; else task missing; fi'
+
+  rsbuild_clean:
+    desc: "Run rsbuild clean and display a message indicating repository is cleaned"
+    cmds:
+      - rsbuild clean
+      - 'echo "repo cleaned"'
+
+  missing:
+    desc: "Display a message if rsbuild is not available"
+    cmds:
+      - 'echo "rsbuild is missing"'
+
+  install_uv:
+    desc: "Install the uv package if not already installed"
+    cmds:
+      - |
+        if ! which uv > /dev/null 2>&1; then
+          echo "Installing uv...";
+          curl -LsSf https://astral.sh/uv/install.sh | sh;
+          mv $HOME/.local/bin/uv /usr/local/bin/
+        else
+          echo "uv is already installed.";
+        fi
+
+  add_build.mac:
+    cmds:
+      - sed -i '' 's/__version__ = ".*"/__version__ = "{{.VERSION}}"/' "${PKG_NAME}/__init__.py";
+      - sed -i '' 's/__build__ = ".*"/__build__ = "{{.BUILD}}"/' "${PKG_NAME}/__init__.py";
+
+  add_build.linux:
+    cmds:
+      - sed -i "s/__version__ = \".*\"/__version__ = \"{{.VERSION}}\"/" "${PKG_NAME}/__init__.py";
+      - sed -i "s/__build__ = \".*\"/__build__ = \"{{.BUILD}}\"/" "${PKG_NAME}/__init__.py";
+
+  add_build:
+    desc: "Update the version and build information in project files"
+    cmds:
+      - echo {{.OS_TYPE}}
+      - |
+        case "{{.OS_TYPE}}" in
+            Darwin*)
+              task add_build.mac
+              ;;
+            Linux*)
+              task add_build.linux
+              ;;
+        esac
+
+  # Build Tasks
+  build:
+    desc: "Tasks related to building the project"
+    deps: [git_lfs, install_uv, add_build]
+    cmds:
+      - task build.docker
+
+  git_lfs:
+    desc: "Fetch large files"
+    cmds:
+      - if [ "$ALLOW_LFS" = "true" ]; then git lfs fetch --all; fi
+
+  build.wheel:
+    desc: "Build the project wheel package"
+    deps: [install_uv, add_build]
+    cmds:
+      - pre-commit run -a
+      - "mkdir -p dist/legacy && mv dist/*.whl dist/legacy/ || true"
+      - uv build --wheel
+      - task clean
+
+  build.docker:
+    desc: "Build the Docker image for the project"
+    deps: [build.wheel]
+    cmds:
+      - docker compose build vanilla
+      - docker compose build
+
+  install:
+    cmds:
+      - sudo python -m unidic download
+      - cd wsd/annotate/lit && npm install
+
+  npm-build:
+    cmds:
+      - cd wsd/annotate/lit && npm run build
+
+  annotate:
+    deps: [npm-build]
+    cmds:
+      - mesop wsd/annotate/app.py
+
+  dataset:
+    cmds:
+      - gcloud auth application-default login

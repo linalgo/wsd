@@ -1,20 +1,18 @@
 """Annotation UI for Japanese Word Sense Disambiguation."""
 # pylint: disable=unused-argument,no-member,bare-except,no-name-in-module
 import os
-from typing import List
 from dataclasses import asdict, field
 
 import mesop as me
-
 from fugashi import Tagger
-
-from linalgo.hub.client import LinalgoClient
 from linalgo.annotate.models import Annotation, Target
+from linalgo.hub.client import LinalgoClient
 
-from wsd.parsers.jmdict import Entry
+from wsd.annotate import lin_doc, lin_entry
 from wsd.annotate.lindict import LinDictAPI
-from wsd.annotate import lin_doc, lin_entry, Token
-
+from wsd.exceptions import NoDocumentsAvailableException
+from wsd.models import Token
+from wsd.parsers.jmdict import Entry
 
 LINHUB_TOKEN = os.getenv('LINHUB_TOKEN')
 LINHUB_URL = os.getenv('LINHUB_URL')
@@ -35,9 +33,8 @@ tagger = Tagger('-Owakati')
 @me.stateclass
 class State:
     """Application state class."""
-    # pylint: disable=invalid-field-call,too-few-public-methods
-    tokens: List[Token] = field(default_factory=list)
-    entries: List[Entry] = field(default_factory=list)
+    tokens: list[Token] = field(default_factory=list)
+    entries: list[Entry] = field(default_factory=list)
     cur: int = 0
     selected = None
     done = False
@@ -48,7 +45,7 @@ def get_next_document():
     try:
         linhub.document = linhub.get_next_document(LINHUB_TASK)
         return linhub.document
-    except:
+    except NoDocumentsAvailableException("No more documents to process."):
         state = me.state(State)
         state.done = True
         return None
@@ -75,8 +72,8 @@ def get_entries():
     return lindict.search(lemma)
 
 
-def on_load(e):
-    """Prepare application state"""
+def on_load(e=None):
+    """Prepare application state."""
     state = me.state(State)
     get_next_document()
     if linhub.document is not None:
@@ -117,7 +114,7 @@ footer = me.Style(
     on_load=on_load
 )
 def app():
-    """Japanese Word Sense Disambiguation UI"""
+    """Japanese Word Sense Disambiguation UI."""
     state = me.state(State)
 
     with me.box(style=header):
@@ -188,7 +185,7 @@ def _complete_document(event=None):
         state.cur = 0
         state.selected = None
         state.tokens = get_tokens()
-    except:
+    except ValueError:
         state.done = True
 
 

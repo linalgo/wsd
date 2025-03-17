@@ -1,5 +1,6 @@
-"""Mesopt wrapper for LIT components"""
-from typing import Any, Callable, List, Dict
+"""Mesopt wrapper for LIT components."""
+from collections.abc import Callable
+from typing import Any
 
 import mesop.labs as mel
 
@@ -9,7 +10,7 @@ from wsd.models import Token
 @mel.web_component(path="../lit/dist/linpop.js")
 def lin_doc(
     *,
-    tokens: List[Dict],
+    tokens: list[dict],
     cur: int,
     on_pop: Callable[[mel.WebEvent], Any],
     key: str | None = None,
@@ -26,7 +27,7 @@ def lin_doc(
 @mel.web_component(path="../lit/dist/linpop.js")
 def lin_entry(
     *,
-    entry: Dict,
+    entry: dict,
     selected: bool,
     on_chosen: Callable[[mel.WebEvent], Any],
     key: str | None = None
