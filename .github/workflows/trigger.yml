@@ -68,5 +68,5 @@ jobs:
           pre-commit install
 
           # Build
-          task build
+          task build.wheel
         shell: bash
