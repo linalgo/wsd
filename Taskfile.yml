@@ -56,7 +56,7 @@ tasks:
         if ! which uv > /dev/null 2>&1; then
           echo "Installing uv...";
           curl -LsSf https://astral.sh/uv/install.sh | sh;
-          mv $HOME/.local/bin/uv /usr/local/bin/
+          sudo mv $HOME/.local/bin/uv /usr/local/bin/
         else
           echo "uv is already installed.";
         fi
