@@ -71,6 +71,7 @@ jobs:
           task build.wheel
 
           # Install package
+          sudo mkdir /tmp/wheels
           sudo uv pip install $(ls /tmp/wheels | sed 's|^|/tmp/wheels/|') --system
 
         shell: bash
