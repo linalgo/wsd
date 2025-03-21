@@ -39,3 +39,34 @@ jobs:
           # Build
           task build
         shell: bash
+
+  build_mac:
+    if: github.event_name == 'push'
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build on macOS
+        run: |
+          # Copy envs
+          cp .env.example .env
+
+          # Remove the rc tag
+          sed -i -E 's/(version *= *")([0-9]+\.[0-9]+(\.[0-9]+)?)(rc[0-9]+)?(")/\1\2\5/' ./pyproject.toml
+
+          # Install task
+          sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+
+          # Install uv
+          task install_uv
+
+          # Set python version
+          uv venv --python=3.10
+          source .venv/bin/activate
+
+          # Install pre-commit
+          uv pip install pre-commit=='3.8.0'
+          pre-commit install
+
+          # Build
+          task build
+        shell: bash
