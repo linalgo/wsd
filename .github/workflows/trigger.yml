@@ -73,6 +73,6 @@ jobs:
           # Install package
           sudo mkdir /tmp/wheels
           sudo cp dist/*.whl /tmp/wheels/
-          sudo uv pip install $(ls /tmp/wheels | sed 's|^|/tmp/wheels/|') --system
+          sudo uv pip install $(ls /tmp/wheels | sed 's|^|/tmp/wheels/|') --system --break-system-packages
 
         shell: bash
