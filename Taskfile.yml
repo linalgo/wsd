@@ -11,6 +11,8 @@ env:
     sh: if command -v rsbuild > /dev/null; then echo "true"; else echo "false"; fi
   PJ_DIR:
     sh: echo $PWD
+  JMDICT: "https://drive.usercontent.google.com/download?id=1dlvguHuMjDmtpA4beu1WaVbDte5j4SLk&confirm=yy"
+  XLWSD: "https://drive.usercontent.google.com/download?id=1d75OUrM3dyAvYUsnBXle-Z1W0NHyKIBD&confirm=yy"
   DEV: docker run --rm
     -v ${PWD}:/workspace
     --workdir /workspace
@@ -63,7 +65,6 @@ tasks:
     cmds:
       - sed -i '' 's/__version__ = ".*"/__version__ = "{{.VERSION}}"/' "${PKG_NAME}/__init__.py";
       - sed -i '' 's/__build__ = ".*"/__build__ = "{{.BUILD}}"/' "${PKG_NAME}/__init__.py";
-
   add_build.linux:
     cmds:
       - sed -i "s/__version__ = \".*\"/__version__ = \"{{.VERSION}}\"/" "${PKG_NAME}/__init__.py";
@@ -86,14 +87,9 @@ tasks:
   # Build Tasks
   build:
     desc: "Tasks related to building the project"
-    deps: [git_lfs, install_uv, add_build]
+    deps: [install_uv, add_build, download]
     cmds:
       - task build.docker
-
-  git_lfs:
-    desc: "Fetch large files"
-    cmds:
-      - if [ "$ALLOW_LFS" = "true" ]; then git lfs fetch --all; fi
 
   build.wheel:
     desc: "Build the project wheel package"
@@ -124,6 +120,11 @@ tasks:
     deps: [npm-build]
     cmds:
       - mesop wsd/annotate/app.py
+
+  download:
+    cmds:
+      - curl -L "{{.JMDICT}}" -o {{.PJ_DIR}}/data/JMdict_en.gz
+      - curl -L "{{.XLWSD}}" -o {{.PJ_DIR}}/data/xl-wsd-data.zip
 
   dataset:
     cmds:
