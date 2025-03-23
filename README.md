@@ -82,8 +82,26 @@ To set up the project, follow these steps:
 6. Connect to the container:
 
    ```bash
-   docker exec -it wsd-dev
+   docker exec -it wsd-dev bash
    ```
+
+## Known issues
+
+1. The `task build` command fails on mac
+
+- If the build process fails on mac make this that these steps pass and try again:
+  ```
+  # Set python version
+  uv venv --python=3.10
+  source .venv/bin/activate
+
+  # Install pre-commit
+  uv pip install pre-commit=='3.8.0'
+  pre-commit install
+
+  # Build
+  task build.wheel
+  ```
 
 ## Annotate New Data
 
