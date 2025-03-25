@@ -3,7 +3,7 @@ name = "wsd"
 version = "0.0.1rc0"
 description = "Multi-lingual Word Sense Disambiguation."
 readme = "README.md"
-requires-python = ">=3.8"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 classifiers = [
   "Programming Language :: Python :: 3",
@@ -27,7 +27,7 @@ dependencies = [
 ]
 
 [project.optional-dependencies]
-dev = ["pytest", "pre-commit==3.8.0"]
+dev = ["pytest", "pre-commit"]
 
 [project.urls]
 Homepage = "https://github.com/linalgo/wsd"
