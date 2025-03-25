@@ -131,21 +131,8 @@ To set up the project, follow these steps:
 ### Requirements
 
 - Get a developer token from [Linhub](https://hub.linalgo.com) and add it to the `.env` file as `LINHUB_TOKEN`.
-- Get a developer token from [Linhub](https://hub.linalgo.com) and add it to the `.env` file as `LINHUB_TOKEN`.
 
 ### Start Annotation Server
-
-### Start Annotation Server
-
-After setting up, you can start the annotation interface by running:
-
-```bash
-task annotate
-```
-
-The annotation interface will be available at `https://localhost:32123/`.
-
-# Resources
 
 After setting up, you can start the annotation interface by running:
 
