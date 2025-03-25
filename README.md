@@ -94,32 +94,34 @@ To set up the project, follow these steps:
    cp .env.example .env
    ```
 
-3. **Install [pre-commit](https://pre-commit.com/)**:
+3. **Create the virtual environment with uv**:
+
+   ```bash
+   uv venv --python=3.10 && source .venv/bin/activate
+   ```
+
+4. **Install [pre-commit](https://pre-commit.com/)**:
 
    If `pre-commit` is not already installed, you can install it using the following command:
 
    ```bash
-    uv venv --python=3.10
-    source .venv/bin/activate
-
-    # Install pre-commit
     uv pip install pre-commit
     pre-commit run -a
    ```
 
-4. **Build the wheel**:
+5. **Build the wheel**:
 
    ```bash
    task build.wheel
    ```
 
-5. **Build docker image**:
+6. **Build docker image**:
 
    ```bash
    task build.docker
    ```
 
-6. **Access the Docker Container**:
+7. **Access the Docker Container**:
 
    ```bash
    docker compose up wsd-dev
