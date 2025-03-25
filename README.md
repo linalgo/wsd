@@ -103,7 +103,7 @@ To set up the project, follow these steps:
     source .venv/bin/activate
 
     # Install pre-commit
-    uv pip install pre-commit=='3.8.0'
+    uv pip install pre-commit
     pre-commit run -a
    ```
 
