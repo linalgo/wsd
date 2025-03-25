@@ -7,3 +7,5 @@ ARG EXTRA
 COPY dist/*.whl /tmp/wheels/
 RUN uv pip install $(ls /tmp/wheels | sed 's|^|/tmp/wheels/|')[$EXTRA] --system && \
     sudo rm /tmp/wheels/*.whl
+
+ENTRYPOINT [ "bash" ]

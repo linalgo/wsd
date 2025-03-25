@@ -13,6 +13,12 @@ env:
     sh: echo $PWD
   JMDICT: "https://drive.usercontent.google.com/download?id=1dlvguHuMjDmtpA4beu1WaVbDte5j4SLk&confirm=yy"
   XLWSD: "https://drive.usercontent.google.com/download?id=1d75OUrM3dyAvYUsnBXle-Z1W0NHyKIBD&confirm=yy"
+  VANILLA: docker run --rm
+    -v ${PWD}:/workspace
+    --workdir /workspace
+    --entrypoint bash
+    -i asia.gcr.io/linalgo/${PKG_NAME}:vanilla-py310 -c
+
   DEV: docker run --rm
     -v ${PWD}:/workspace
     --workdir /workspace
@@ -88,15 +94,16 @@ tasks:
   # Build Tasks
   build:
     desc: "Tasks related to building the project"
-    deps: [install_uv, add_build, download]
+    deps: [install_uv, add_build]
     cmds:
+      - if [ "{{.FORCE_DOWNLOAD}}" = "true" ]; then task download; fi
       - task build.docker
 
   build.wheel:
     desc: "Build the project wheel package"
     deps: [install_uv, add_build]
     cmds:
-      - pre-commit run -a
+      - if [ "{{.FORCE_PRE_COMMIT}}" = "true" ]; then pre-commit run -a; fi
       - "mkdir -p dist/legacy && mv dist/*.whl dist/legacy/ || true"
       - uv build --wheel
       - task clean
