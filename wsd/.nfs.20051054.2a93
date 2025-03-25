@@ -1,4 +1,4 @@
 """Init file containing version and build"""
 
 __version__ = "0.0.1rc0"
-__build__ = "Mon Mar 24 00:15:56 JST 2025"
+__build__ = "Mon Mar 24 00:24:46 JST 2025"

@@ -28,80 +28,103 @@ This repository consists of the following components:
 
 ## Prerequisites
 
-Before you begin, ensure you have met the following requirements:
+Before you begin, `deactivate your virtual environment if any` and  ensure you have met the following requirements:
 
 - [Git](https://git-scm.com)
-- Docker Desktop
+
+- [Python](https://www.python.org/downloads/)
+
+- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
+
+- [Docker Desktop](https://docs.docker.com/desktop/install/linux-install/)
+
   - [Install Docker Desktop on Mac](https://docs.docker.com/docker-for-mac/install/)
   - [Install Docker Desktop on Windows](https://docs.docker.com/desktop/install/windows-install/)
   - [Install Docker Desktop on Linux](https://docs.docker.com/desktop/install/linux-install/)
-- [Python](https://www.python.org/downloads/)
-- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
-- [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+  * Make sure the following command doesn't return an error:
+
+    ```bash
+    docker image ls
+    ```
+
 - [Task](https://taskfile.dev/)
+
+  - Install task
+
+    ```bash
+    sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
+    ```
+
+  - Make sure the following command doesn't return an error
+
+    ```bash
+    which task
+    ```
+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
+
+  - Install the `uv` package if not already installed:
+
+    ```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
+    sudo mv $HOME/.local/bin/uv /usr/local/bin/
+    ```
+
+  - Make sure the following command doesn't return an error
+
+    ```bash
+    which uv
+    ```
 
 ## Installation
 
 To set up the project, follow these steps:
 
-1. Clone the repository:
+1. **Clone the repository**:
 
    ```bash
    git clone git@github.com:linalgo/wsd.git
    cd wsd
    ```
 
-2. Install the `uv` package if not already installed:
+2. **Copy environment variables and update as needed**:
 
    ```bash
-   if ! which uv > /dev/null 2>&1; then
-     echo "Installing uv...";
-     curl -LsSf https://astral.sh/uv/install.sh | sh;
-     sudo mv $HOME/.local/bin/uv /usr/local/bin/
-   else
-     echo "uv is already installed.";
-   fi
+   cp .env.example .env
    ```
 
-3. Install pre-commit for the code formatting
+3. **Install [pre-commit](https://pre-commit.com/)**:
+
+   If `pre-commit` is not already installed, you can install it using the following command:
 
    ```bash
-   uv pip install pre-commit=='3.8.0'
-   pre-commit install
-   pre-commit run --all-files
+    uv venv --python=3.10
+    source .venv/bin/activate
+
+    # Install pre-commit
+    uv pip install pre-commit=='3.8.0'
+    pre-commit run -a
    ```
 
-4. Install `task` by following instructions [here](https://taskfile.dev/).
-
-5. Build and launch the dev container:
+4. **Build the wheel**:
 
    ```bash
-   task build && docker compose up dev -d
+   task build.wheel
    ```
 
-6. Connect to the container:
+5. **Build docker image**:
 
    ```bash
+   task build.docker
+   ```
+
+6. **Access the Docker Container**:
+
+   ```bash
+   docker compose up wsd-dev
    docker exec -it wsd-dev bash
    ```
-
-## Known issues
-
-1. The `task build` command fails on mac
-
-- If the build process fails on mac make this that these steps pass and try again:
-  ```
-  # Set python version
-  uv venv --python=3.10
-  source .venv/bin/activate
-
-  # Install pre-commit
-  uv pip install pre-commit=='3.8.0'
-  pre-commit install
-
-  # Build
-  task build.wheel
-  ```
 
 ## Annotate New Data
 
