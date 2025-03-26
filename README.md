@@ -158,5 +158,3 @@ The annotation interface will be available at `https://localhost:32123/`.
 - [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html)
 - [XL-WSD](https://sapienzanlp.github.io/xl-wsd/docs/data/)
 - [Kanban](https://github.com/orgs/linalgo/projects/5)
-- [Kanban](https://github.com/orgs/linalgo/projects/5)
-- [Kanban](https://github.com/orgs/linalgo/projects/5)
