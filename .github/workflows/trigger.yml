@@ -60,8 +60,7 @@ jobs:
           task install_uv
 
           # Set python version
-          uv venv --python=3.10
-          source .venv/bin/activate
+          uv venv --python=3.10 && source .venv/bin/activate
 
           # Install pre-commit
           uv pip install pre-commit
