@@ -124,7 +124,7 @@ To set up the project, follow these steps:
 7. **Access the Docker Container**:
 
    ```bash
-   docker compose up wsd-dev
+   docker compose up dev -d
    docker exec -it wsd-dev bash
    ```
 
