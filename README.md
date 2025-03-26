@@ -55,40 +55,7 @@ Before you begin, `deactivate your virtual environment if any` and  ensure you h
     docker image ls
     ```
 
-  * Make sure the following command doesn't return an error:
-
-    ```bash
-    docker image ls
-    ```
-
 - [Task](https://taskfile.dev/)
-
-  - Install task
-
-    ```bash
-    sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
-    ```
-
-  - Make sure the following command doesn't return an error
-
-    ```bash
-    which task
-    ```
-
-- [uv](https://docs.astral.sh/uv/getting-started/installation/)
-
-  - Install the `uv` package if not already installed:
-
-    ```bash
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    sudo mv $HOME/.local/bin/uv /usr/local/bin/
-    ```
-
-  - Make sure the following command doesn't return an error
-
-    ```bash
-    which uv
-    ```
 
   - Install task
 
@@ -121,88 +88,52 @@ Before you begin, `deactivate your virtual environment if any` and  ensure you h
 
 To set up the project, follow these steps:
 
-01. **Clone the repository**:
+1. **Clone the repository**:
 
-02. **Clone the repository**:
+   ```bash
+   git clone git@github.com:linalgo/wsd.git
+   cd wsd
+   ```
 
-    ```bash
-    git clone git@github.com:linalgo/wsd.git
-    cd wsd
-    ```
+2. **Copy environment variables and update as needed**:
 
-03. **Copy environment variables and update as needed**:
+   ```bash
+   cp .env.example .env
+   ```
 
-    ```bash
-    cp .env.example .env
-    ```
+3. **Create the virtual environment with uv**:
 
-04. **Create the virtual environment with uv**:
+   ```bash
+   uv venv --python=3.10 && source .venv/bin/activate
+   ```
 
-05. **Copy environment variables and update as needed**:
+4. **Install [pre-commit](https://pre-commit.com/)**:
 
-    ```bash
-    cp .env.example .env
-    ```
+   If `pre-commit` is not already installed, you can install it using the following command:
 
-06. **Create the virtual environment with uv**:
-
-    ```bash
-    uv venv --python=3.10 && source .venv/bin/activate
-    ```
-
-07. **Install [pre-commit](https://pre-commit.com/)**:
-
-    If `pre-commit` is not already installed, you can install it using the following command:
-    uv venv --python=3.10 && source .venv/bin/activate
-
-    ```
-
-    ```
-
-08. **Install [pre-commit](https://pre-commit.com/)**:
-
-    If `pre-commit` is not already installed, you can install it using the following command:
-
-    ```bash
-     uv pip install pre-commit
-     pre-commit run -a
-    ```
-
-09. **Build the wheel**:
-
-    ```bash
-    task build.wheel
-    ```
-
-10. **Build docker image**:
+   ```bash
     uv pip install pre-commit
     pre-commit run -a
+   ```
 
-    ```
+5. **Build the wheel**:
 
-    ```
+   ```bash
+   task build.wheel
+   ```
 
-11. **Build the wheel**:
+6. **Build docker image**:
 
-    ```bash
-    task build.wheel
-    ```
+   ```bash
+   task build.docker
+   ```
 
-12. **Build docker image**:
+7. **Access the Docker Container**:
 
-    ```bash
-    task build.docker
-    task build.docker
-    ```
-
-13. **Access the Docker Container**:
-
-14. **Access the Docker Container**:
-
-    ```bash
-    docker compose up dev -d
-    docker exec -it wsd-dev bash
-    ```
+   ```bash
+   docker compose up dev -d
+   docker exec -it wsd-dev bash
+   ```
 
 ## Annotate New Data
 
