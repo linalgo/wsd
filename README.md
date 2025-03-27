@@ -1,3 +1,7 @@
+![main](https://github.com/linalgo/wsd/actions/workflows/trigger.yml/badge.svg)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![PyPI - Version](https://img.shields.io/pypi/v/wsd)
+
 # Word Sense Disambiguation
 
 ## Installation
