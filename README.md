@@ -12,7 +12,7 @@ The easiest way to install `wsd` is to use pip:
 pip install wsd
 ```
 
-## Getting Started    
+## Getting Started
 
 Currently, only `JMDict` model is available.
 The model has not been trained yet and will currently returns all matching
@@ -56,7 +56,7 @@ To contribute more data:
 - Add your Linhub token to the `.env` file as `LINHUB_TOKEN`
 - Run the annotation interface with the following command: `task annotate`
 
-The annotation interface will be available at `https://localhost:32123/`.    
+The annotation interface will be available at `https://localhost:32123/`.
 
 ## Training a model from scratch
 
