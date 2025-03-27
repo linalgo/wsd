@@ -29,7 +29,7 @@ jmdict = JMDict()
 From there, you can use it to search all relevant entries in the dictionary:
 
 ```python
-for entry in jmdict.search('かんじ'):
+for entry in jmdict.search("かんじ"):
     print(entry)
 # Output:
 # Entry(ent_seq='1210280', ...
@@ -41,7 +41,7 @@ Alternatively, you can use the `predict` method to get the unique `ent_seq` of
 the best entry:
 
 ```python
-jmdict.search('かんじ')
+jmdict.search("かんじ")
 # Output:
 # '1210280'
 ```
