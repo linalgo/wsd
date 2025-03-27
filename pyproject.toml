@@ -24,7 +24,8 @@ dependencies = [
   "mesop",
   "numpy",
   "pillow",
-  "typer"
+  "rich",
+  "typer",
 ]
 
 [project.optional-dependencies]
