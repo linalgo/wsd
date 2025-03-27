@@ -1,32 +1,66 @@
-<h1 align="center">
-  <br>
-  Word Sense Disambiguation
-  </br>
-</h1>
+# Word Sense Disambiguation
 
-<p align="center">
-  <a href="#modules">Modules</a> •
-  <a href="#development">Development</a> •
-  <a href="#resources">Resources</a>
-</p>
+## Installation
 
-# Modules
+The easiest way to install `wsd` is to use pip:
 
-This repository consists of the following components:
+```
+pip install wsd
+```
 
-| Component        | Description                                                                   |
-| ---------------- | ----------------------------------------------------------------------------- |
-| **wsd**          | Contains the implementation of Word Sense Disambiguation models               |
-| **wsd.annotate** | Includes the annotation user interface and related logic                      |
-| **wsd.lindict**  | A simple interface for the LinDict API, used to search for dictionary entries |
-| **wsd.parsers**  | Contains parsers for various data sources, including JMDict and XL-WSD        |
-| **wsd.models**   | Contains data models such as Token and Entry used within the WSD framework    |
-| **wsd.configs**  | Contains all configurations for the annotation procedure                      |
-| **wsd.tests**    | Unit tests for the application                                                |
+## Getting Started    
 
-# Development
+Currently, only `JMDict` model is available.
+The model has not been trained yet and will currently returns all matching
+entries found in the [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html).
 
-## Prerequisites
+The `JMDict` model can be imported from the `wsd.models` module:
+
+```python
+from wsd.models import JMDict
+
+jmdict = JMDict()
+```
+
+From there, you can use it to search all relevant entries in the dictionary:
+
+```python
+for entry in jmdict.search('かんじ'):
+    print(entry)
+# Output:
+# Entry(ent_seq='1210280', ...
+# Entry(ent_seq='1211690', ...
+# ...
+```
+
+Alternatively, you can use the `predict` method to get the unique `ent_seq` of
+the best entry:
+
+```python
+jmdict.search('かんじ')
+# Output:
+# '1210280'
+```
+
+## Adding more data
+
+The training data for `JMDict` is sourced from the [WSD Data Annotation Project](https://hub.linalgo.com/project/823b4545-5c97-4a22-b5f9-1bf75e620e4e).
+
+To contribute more data:
+
+- Create an account on [Linhub](https://hub.linalgo.com)
+- Add your Linhub token to the `.env` file as `LINHUB_TOKEN`
+- Run the annotation interface with the following command: `task annotate`
+
+The annotation interface will be available at `https://localhost:32123/`.    
+
+## Training a model from scratch
+
+TODO: Add instructions.                               |
+
+## Build the docker image
+
+### Prerequisites
 
 Before you begin, `deactivate your virtual environment if any` and  ensure you have met the following requirements:
 Before you begin, `deactivate your virtual environment if any` and  ensure you have met the following requirements:
@@ -84,7 +118,7 @@ Before you begin, `deactivate your virtual environment if any` and  ensure you h
     which uv
     ```
 
-## Installation
+### Installation
 
 To set up the project, follow these steps:
 
@@ -134,24 +168,6 @@ To set up the project, follow these steps:
    docker compose up dev -d
    docker exec -it wsd-dev bash
    ```
-
-## Annotate New Data
-
-### Requirements
-
-- Get a developer token from [Linhub](https://hub.linalgo.com) and add it to the `.env` file as `LINHUB_TOKEN`.
-
-### Start Annotation Server
-
-After setting up, you can start the annotation interface by running:
-
-```bash
-task annotate
-```
-
-The annotation interface will be available at `https://localhost:32123/`.
-
-# Resources
 
 ## Attribution and LICENSE
 

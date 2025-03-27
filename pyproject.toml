@@ -19,7 +19,7 @@ authors = [
 
 dependencies = [
   "fugashi[unidic]",
-  "linalgo @ git+https://github.com/linalgo/linalgo.git@master",
+  "linalgo",
   "google-cloud-bigquery",
   "mesop",
   "pillow",
