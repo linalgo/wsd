@@ -12,6 +12,12 @@ The easiest way to install `wsd` is to use pip:
 pip install wsd
 ```
 
+You will also need the [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html) dictionary. You can use the following helper to download the file:
+
+```
+python -m wsd download jmdict
+```
+
 ## Getting Started
 
 Currently, only `JMDict` model is available.
