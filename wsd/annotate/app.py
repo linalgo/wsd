@@ -1,5 +1,6 @@
 """Annotation UI for Japanese Word Sense Disambiguation."""
 # pylint: disable=unused-argument,no-member,bare-except,no-name-in-module
+# pylint: disable=too-few-public-methods,invalid-field-call
 import os
 from dataclasses import asdict, field
 

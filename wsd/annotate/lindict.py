@@ -1,3 +1,4 @@
+# pylint: disable=too-few-public-methods
 """A simple interface for the LinDict API."""
 
 import requests
@@ -23,7 +24,7 @@ class LinDictAPI:
             A list of entries.
         """
         url = f"https://lindict.api.linalgo.com/v1/ja/search/?query={query}"
-        response = requests.get(url)
+        response = requests.get(url)  # pylint: disable=missing-timeout
         response.raise_for_status()
         if response.status_code != 200:
             return []
