@@ -94,7 +94,6 @@ class JMDict:
             start += len(token.surface)
         return doc
 
-    # pylint: disable=no-self-use
     def tokenize(self, sentence, form='all'):
         """Tokenize a sentence.
         Parameters
