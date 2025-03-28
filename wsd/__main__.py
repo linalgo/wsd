@@ -1,12 +1,11 @@
 """Command line utilities."""
 import os
+
 import requests
-
 import typer
-from rich.progress import Progress, BarColumn, TextColumn, DownloadColumn, \
-    TransferSpeedColumn, TimeRemainingColumn
 from rich.console import Console
-
+from rich.progress import (BarColumn, DownloadColumn, Progress, TextColumn,
+                           TimeRemainingColumn, TransferSpeedColumn)
 
 app = typer.Typer()
 console = Console()
