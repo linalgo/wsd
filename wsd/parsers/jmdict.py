@@ -128,6 +128,9 @@ class Entry:
         senses = [Sense.from_dict(s) for s in data['senses']]
         return cls(data['ent_seq'], k_ele, r_ele, senses)
 
+    def __hash__(self):
+        return int(self.ent_seq)
+
 
 # pylint: disable=too-few-public-methods
 class JMDictParser:

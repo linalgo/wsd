@@ -47,7 +47,7 @@ Alternatively, you can use the `predict` method to get the unique `ent_seq` of
 the best entry:
 
 ```python
-jmdict.search("かんじ")
+jmdict.predict("かんじ")
 # Output:
 # '1210280'
 ```
