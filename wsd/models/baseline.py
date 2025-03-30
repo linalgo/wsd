@@ -60,8 +60,8 @@ class JMDict:
         self.ranking_model = ranking_model
         self.index = defaultdict(set)
         self.annotator = annotator or Annotator(
-            id=uuid.uuid3(uuid.NAMESPACE_URL, 'jmdict').hex,
-            name='jmdict-v0',
+            id=uuid.uuid3(uuid.NAMESPACE_URL, 'jmdict-v3').hex,
+            name='jmdict-v3',
             model='MACHINE',
             entity=Entity(id=os.getenv('LINHUB_ENTITY')),
             task=Task(id=os.getenv('LINHUB_TASK'))
