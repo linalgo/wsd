@@ -2,7 +2,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![PyPI - Version](https://img.shields.io/pypi/v/wsd)
 
-# Word Sense Disambiguation
+# Practical Word Sense Disambiguation
+
+Fast, efficient, open source & open data Word Sense Disambiguation models for practial use.
 
 ## Installation
 
