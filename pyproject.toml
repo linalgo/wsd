@@ -20,7 +20,7 @@ authors = [
 dependencies = [
   "fugashi[unidic]",
   "google-cloud-bigquery",
-  "linalgo",
+  "linalgo==0.1.4",
   "mesop",
   "numpy",
   "pillow",
