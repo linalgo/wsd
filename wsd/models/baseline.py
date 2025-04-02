@@ -30,7 +30,7 @@ class RankingModel(ABC):
     """Base class for the ranking models"""
 
     @abstractmethod
-    def _rank(self, candidates: list[Entry], context: Any = None):
+    def _rank(self, candidates: list[Entry], context: Any):
         """Rank results based on the given context.
 
         Parameters
@@ -51,17 +51,15 @@ class RankingModel(ABC):
 class JMDict(RankingModel):
     """A simple dictionary interface for JMDict."""
 
-    entries = JMDictParser().parse(os.path.join(data_dir, 'JMdict_en.gz'))
+    entries = None
     indexed = False
 
     def __init__(
         self,
-        dictionary: str = None,
+        dictionary: str = 'JMdict_en.gz',
         annotator: Annotator = None
     ):
-        if dictionary is not None:
-            self.entries = JMDictParser.parse(dictionary)
-        self.index = defaultdict(set)
+        self._index(os.path.join(data_dir, dictionary))
         self.annotator = annotator or Annotator(
             id=uuid.uuid3(uuid.NAMESPACE_URL, 'jmdict-v3').hex,
             name='jmdict-v3',
@@ -69,12 +67,14 @@ class JMDict(RankingModel):
             entity=Entity(id=os.getenv('LINHUB_ENTITY')),
             task=Task(id=os.getenv('LINHUB_TASK'))
         )
-        self._index()
 
-    def _index(self):
+
+    def _index(self, filename):
         """Create an index to speed up lookups."""
         if self.indexed:
             return
+        self.index = defaultdict(set)
+        self.entries = JMDictParser.parse(filename)
         for entry in self.entries:
             self.index[entry.ent_seq] = entry
             for k_ele in entry.k_ele:
@@ -210,6 +210,8 @@ class JMDict(RankingModel):
         scores: List[float]
             The score of each candidate
         """
+        if len(candidates) < 1:
+            return [], []
         return candidates, [1] * len(candidates)
 
     def _lookup(self, text):
@@ -246,7 +248,8 @@ class JMDict(RankingModel):
         List[Entry]
             A list of entries that contain the query.
         """
-        return self._rank(self._lookup(text), context)
+        res, _ = self._rank(self._lookup(text), context)
+        return res
 
     def feeling_lucky(self, text: str, context=None) -> Entry:
         """Return the first entry found.

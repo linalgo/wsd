@@ -55,8 +55,8 @@ class JMDictWithBCRanking(JMDict):
         scores: List[float]
             The score of each candidate
         """
-        if len(candidates) == 0:
-            return []
+        if len(candidates) < 1:
+            return [], []
         f = []
         for candidate in candidates:
             f.append(self._create_features(candidate, context))
