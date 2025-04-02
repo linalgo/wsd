@@ -69,9 +69,7 @@ def read_dataset(filename: str) -> tuple[list[list[str]], list[list[str]]]:
     tree = ET.parse(filename)
     root = tree.getroot()
 
-    X: list[list[str]] = []
-    y: list[list[str]] = []
-
+    X, y = [], []
     for doc_element in root.findall("document"):
         doc_tokens: list[str] = []
         doc_labels: list[str] = []
