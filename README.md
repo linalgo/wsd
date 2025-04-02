@@ -2,7 +2,9 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![PyPI - Version](https://img.shields.io/pypi/v/wsd)
 
-# Word Sense Disambiguation
+# Practical Word Sense Disambiguation
+
+Fast, efficient, open source & open data Word Sense Disambiguation models for practial use.
 
 ## Installation
 
@@ -54,17 +56,15 @@ jmdict.predict("かんじ")
 
 ## Adding more data
 
-The training data for `JMDict` is sourced from the [WSD Data Annotation Project](https://hub.linalgo.com/project/823b4545-5c97-4a22-b5f9-1bf75e620e4e).
-
 To contribute more data:
 
 - Create an account on [Linhub](https://hub.linalgo.com)
-- Add your Linhub token to the `.env` file as `LINHUB_TOKEN`
-- Run the annotation interface with the following command: `task annotate`
+- Start reviewing entries using this [interface](https://hub.linalgo.com/interfaces/rank/ranking/a5040509-de9c-4757-8cb3-9087b5191a2e)
 
-The annotation interface will be available at `https://localhost:32123/`.
+The interface has been designed to work on mobile phones to make it easy to
+contribute whenever you have 5mn available.
 
-## Training a model from scratch
+## Training a model
 
 TODO: Add instructions.
 

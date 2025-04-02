@@ -1,12 +1,14 @@
 # pylint: disable=no-name-in-module,too-few-public-methods
 """A simple dictionary interface for JMDict."""
+import json
 import os
+import uuid
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from typing import Any
 
 from fugashi import Tagger
-from linalgo.annotate import Annotation, Document
+from linalgo.annotate import Annotation, Annotator, Document, Entity, Task
 
 from wsd.parsers import JMDictParser
 from wsd.parsers.jmdict import Entry
@@ -50,12 +52,21 @@ class JMDict:
     def __init__(
         self,
         dictionary: str = 'JMdict_en.gz',
-        ranking_model: RankingModel = None
+        ranking_model: RankingModel = None,
+        annotator: Annotator = None
     ):
         jmdict_file = os.path.join(data_dir, dictionary)
         self.entries = JMDictParser().parse(jmdict_file)
         self.ranking_model = ranking_model
         self.index = defaultdict(set)
+        self.annotator = annotator or Annotator(
+            id=uuid.uuid3(uuid.NAMESPACE_URL, 'jmdict-v3').hex,
+            name='jmdict-v3',
+            model='MACHINE',
+            entity=Entity(id=os.getenv('LINHUB_ENTITY')),
+            task=Task(id=os.getenv('LINHUB_TASK'))
+        )
+
         self._index()
 
     def _index(self):
@@ -67,32 +78,48 @@ class JMDict:
             for r_ele in entry.r_ele:
                 self.index[r_ele.reb].add(entry)
 
-    def annotate(self, doc: Document) -> Document:
-        """Annotate a document with entry definitions.
+    def annotate(
+        self,
+        documents: Document | list[Document],
+        feeling_lucky=False
+    ) -> Document:
+        """Annotate each token in a document with its (candidate) definitions.
 
         Parameters
         ----------
-        doc : Document
-            The document to annotate
+        doc : Document | List[Document]
+            The documents to annotate.
 
         Returns
         -------
-        Document
-            The annotated document
+        Document | List[Document]
+            The annotated documents.
         """
-        start = 0
-        for token in self.tokenize(doc.content):
-            entry = self.feeling_lucky(token.feature.lemma)
-            if entry is not None:
-                a = Annotation(
-                    document=doc,
-                    body=asdict(entry),
-                    start=start,
-                    end=start + len(token.surface)
+        if isinstance(documents, Document):
+            documents = [documents]
+        for doc in documents:
+            start = 0
+            for token in self.tokenize(doc.content):
+                if feeling_lucky:
+                    body = asdict(self.feeling_lucky(token.feture.lemma))
+                else:
+                    entries = self.search(token.feature.lemma)
+                    body = [asdict(entry) for entry in entries]
+                if body is not None:
+                    a = Annotation(
+                        document=doc,
+                        body=json.dumps(body),
+                        start=start,
+                        end=start + len(token.surface),
+                        annotator=self.annotator,
+                        entity=self.annotator.entity,
+                        task=self.annotator.task
                     )
-                doc.annotations.add(a)
-            start += len(token.surface)
-        return doc
+                    doc.annotations.add(a)
+                start += len(token.surface)
+        if len(documents) == 1:
+            return documents[0]
+        return documents
 
     def tokenize(self, sentence, form='all'):
         """Tokenize a sentence.
