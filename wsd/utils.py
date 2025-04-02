@@ -1,6 +1,5 @@
 import os
 import xml.etree.ElementTree as ET
-from typing import List, Tuple
 
 from fugashi import Tagger
 from linalgo.annotate import Filter, Pipeline, Sequence2SequenceTransformer
