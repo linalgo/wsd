@@ -39,7 +39,7 @@ class JMDictWithBCRanking(JMDict):
 
     # pylint: disable=signature-differs
     def _rank(self, candidates: list[Entry], context: Token):
-        """A base ranking function that does nothing.
+        """A basic ranking function using the score of the binary classifier.
 
         Parameters
         ----------
