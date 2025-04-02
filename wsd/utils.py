@@ -1,13 +1,16 @@
+# pylint: disable=invalid-name,consider-using-enumerate
+"""A collection of utils."""
 import os
 import xml.etree.ElementTree as ET
 
-from fugashi import Tagger
+from fugashi import Tagger  # pylint: disable=no-name-in-module
 from linalgo.annotate import Filter, Pipeline, Sequence2SequenceTransformer
 from linalgo.hub import BQClient
 
 tagger = Tagger('-Owakati')
 
 def tokenize(text):
+    """A simple tokenizer that also returns the start offset of tokens."""
     idx = 0
     for token in tagger(text):
         yield idx, token.surface
@@ -82,6 +85,7 @@ def read_dataset(filename: str) -> tuple[list[list[str]], list[list[str]]]:
 
 
 def accuracy(y_pred, y_true):
+    """Compute the accuracy between sequences."""
     c, N = 0, 0
     for i in range(len(y_true)):
         for j in range(len(y_true[i])):

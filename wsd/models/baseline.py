@@ -30,12 +30,12 @@ class RankingModel(ABC):
     """Base class for the ranking models"""
 
     @abstractmethod
-    def _rank(self, results: list[Entry], context: Any = None):
+    def _rank(self, candidates: list[Entry], context: Any = None):
         """Rank results based on the given context.
 
         Parameters
         ----------
-        results : List[Entry]
+        candidates : List[Entry]
             A list of entries to rank
         context : any
             The context to use for ranking
@@ -175,19 +175,6 @@ class JMDict(RankingModel):
             preds.append(pred)
         return preds
 
-    def predict_proba(self, sentences):
-        if not hasattr(sentences, '__len__'):
-            sentences = [sentences]
-        preds = []
-        for sentence in sentences:
-            pred = []
-            for token in self.tokenize(sentence):
-                entry = self.feeling_lucky(token.lemma, context=token)
-                ent_seq = entry.ent_seq if entry else None
-                pred.append(ent_seq)
-            preds.append(pred)
-        return preds
-
     def get(self, ent_seq: str) -> Entry:
         """Get an entry by its `ent_seq`.
 
@@ -207,8 +194,23 @@ class JMDict(RankingModel):
         return None
 
     def _rank(self, candidates, context=None):
-        """A base ranking function that does nothing."""
-        return candidates
+        """A base ranking function that does nothing.
+
+        Parameters
+        ----------
+        candidates: List[Entry]
+            The candidates to rank
+        context : Any
+            A contet to inform the ranking
+
+        Returns
+        -------
+        candidates: List[Entry]
+            The ranked candidates
+        scores: List[float]
+            The score of each candidate
+        """
+        return candidates, [1] * len(candidates)
 
     def _lookup(self, text):
         """Lookup an entry by text.
