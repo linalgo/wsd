@@ -1,0 +1,91 @@
+import os
+import xml.etree.ElementTree as ET
+from typing import List, Tuple
+
+from fugashi import Tagger
+from linalgo.annotate import Filter, Pipeline, Sequence2SequenceTransformer
+from linalgo.hub import BQClient
+
+tagger = Tagger('-Owakati')
+
+def tokenize(text):
+    idx = 0
+    for token in tagger(text):
+        yield idx, token.surface
+        idx += len(token.surface)
+
+
+def retrieve_dataset():
+    """Retrieve the dataset from BigQuery"""
+    client = BQClient(os.getenv('LINHUB_TASK'), project='linalgo-infra')
+    task = client.get_task()
+
+    pipeline = Pipeline([
+        Filter(exclude_annotation_fn=lambda a: a.annotator.model == 'MACHINE'),
+        Filter(include_document_fn=lambda d: len(d.annotations) > 0),
+        Sequence2SequenceTransformer(tokenize_fn=tokenize)
+    ])
+    X, y = pipeline.transform(task)
+    return X, y
+
+
+def save_dataset(X, y):
+    """Save the dataset to the local disk."""
+    root = ET.Element("root")
+
+    for xx, yy in zip(X, y):
+        doc = ET.SubElement(root, "document")
+        content = tagger(''.join(xx))
+        for token, ent_seq in zip(content, yy):
+            ET.SubElement(
+                doc,
+                "token",
+                lemma=token.feature.lemma or token.surface,
+                pos=token.pos,
+                ent_seq=ent_seq
+            ).text = token.surface
+    tree = ET.ElementTree(root)
+    ET.indent(tree, space="\t", level=0)
+    tree.write("dataset.xml", encoding='utf-8')
+
+
+def read_dataset(filename: str) -> tuple[list[list[str]], list[list[str]]]:
+    """Reads the dataset from an XML file.
+
+    Parameters
+    ----------
+    filename : str
+        The path to the XML file.
+
+    Returns
+    -------
+    Tuple[List[List[str]], List[List[str]]]
+        A tuple containing two lists:
+        - X: A list of documents, where each document is a list of tokens (strings).
+        - y: A list of labels, where each label is a list of ent_seq (strings).
+    """
+    tree = ET.parse(filename)
+    root = tree.getroot()
+
+    X: list[list[str]] = []
+    y: list[list[str]] = []
+
+    for doc_element in root.findall("document"):
+        doc_tokens: list[str] = []
+        doc_labels: list[str] = []
+        for token_element in doc_element.findall("token"):
+            doc_tokens.append(token_element.text)
+            doc_labels.append(token_element.get("ent_seq"))
+        X.append(doc_tokens)
+        y.append(doc_labels)
+
+    return X, y
+
+
+def accuracy(y_pred, y_true):
+    c, N = 0, 0
+    for i in range(len(y_true)):
+        for j in range(len(y_true[i])):
+            N += 1
+            c += y_pred[i][j] == y_true[i][j]
+    return c / N
