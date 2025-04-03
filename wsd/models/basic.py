@@ -7,7 +7,7 @@ from wsd.models.baseline import JMDict, Token
 from wsd.parsers import Entry
 
 
-class JMDictWithBCRanking(JMDict):
+class JMDictWithPointWiseRanking(JMDict):
     """A dictionary with the ranking function based on Binary Classification."""
 
     def __init__(self, ranking_model=None, **kwargs):
@@ -82,4 +82,4 @@ class JMDictWithBCRanking(JMDict):
         return features
 
 
-__all__ = ['JMDictWithBCRanking']
+__all__ = ['JMDictWithPointWiseRanking']
