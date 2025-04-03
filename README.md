@@ -66,7 +66,36 @@ contribute whenever you have 5mn available.
 
 ## Training a model
 
-TODO: Add instructions.
+First, you will need some data to train on. Currently, only the Japanese dataset
+is available. You can download it with:
+
+```shell
+python -m wsd download dataset
+```
+
+Once the data is available locally. You can read it and train a model.
+
+```python
+import os
+
+from sklearn.linear_model import LogisticRegression
+
+from wsd.models import JMDict, JMDictWithBCRanking
+from wsd.utils import read_dataset, accuracy
+
+basedir = os.getenv('PJ_DIR')
+X, y = read_dataset(f'{basedir}/data/dataset.xml')
+X = [''.join(x) for x in X]  # The baseline model already has a tokenizer.
+
+model = LogisticRegression(C=10, penalty='l1', solver='liblinear')
+jmdict_basic = JMDictWithBCRanking(ranking_model=model)
+data = jmdict_basic.fit(X_train, y_train)
+basic_preds = jmdict_basic.predict(X_test)
+
+print(f"basic = {accuracy(basic_preds, y_test):.2%}")
+# Output:
+# basic	 = 63.87%
+```
 
 ## Build using Docker
 
