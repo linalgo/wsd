@@ -80,7 +80,7 @@ import os
 
 from sklearn.linear_model import LogisticRegression
 
-from wsd.models import JMDictWithBCRanking
+from wsd.models import JMDictWithPointWiseRanking
 from wsd.utils import read_dataset
 
 basedir = os.getenv("PJ_DIR")
@@ -88,7 +88,7 @@ X, y = read_dataset(f"{basedir}/data/dataset.xml")
 X = ["".join(x) for x in X]  # The baseline model already has a tokenizer.
 
 model = LogisticRegression(C=10, penalty="l1", solver="liblinear")
-jmdict = JMDictWithBCRanking(ranking_model=model)
+jmdict = JMDictWithPointWiseRanking(ranking_model=model)
 jmdict.fit(X, y)
 jmdict.search("感じ")
 
