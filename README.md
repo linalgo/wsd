@@ -80,7 +80,7 @@ import os
 
 from sklearn.linear_model import LogisticRegression
 
-from wsd.models import JMDict, JMDictWithBCRanking
+from wsd.models import JMDictWithBCRanking
 from wsd.utils import read_dataset, accuracy
 
 basedir = os.getenv("PJ_DIR")
