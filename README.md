@@ -81,20 +81,21 @@ import os
 from sklearn.linear_model import LogisticRegression
 
 from wsd.models import JMDictWithBCRanking
-from wsd.utils import read_dataset, accuracy
+from wsd.utils import read_dataset
 
 basedir = os.getenv("PJ_DIR")
 X, y = read_dataset(f"{basedir}/data/dataset.xml")
 X = ["".join(x) for x in X]  # The baseline model already has a tokenizer.
 
 model = LogisticRegression(C=10, penalty="l1", solver="liblinear")
-jmdict_basic = JMDictWithBCRanking(ranking_model=model)
-data = jmdict_basic.fit(X_train, y_train)
-basic_preds = jmdict_basic.predict(X_test)
+jmdict = JMDictWithBCRanking(ranking_model=model)
+jmdict.fit(X, y)
+jmdict.search('感じ')
 
-print(f"basic = {accuracy(basic_preds, y_test):.2%}")
 # Output:
-# basic	 = 63.87%
+# Entry(ent_seq='1210280', ...
+# Entry(ent_seq='1211690', ...
+# ...
 ```
 
 ## Build using Docker
