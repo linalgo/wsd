@@ -90,7 +90,7 @@ X = ["".join(x) for x in X]  # The baseline model already has a tokenizer.
 model = LogisticRegression(C=10, penalty="l1", solver="liblinear")
 jmdict = JMDictWithBCRanking(ranking_model=model)
 jmdict.fit(X, y)
-jmdict.search('感じ')
+jmdict.search("感じ")
 
 # Output:
 # Entry(ent_seq='1210280', ...
