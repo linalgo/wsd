@@ -68,7 +68,6 @@ class JMDict(RankingModel):
             task=Task(id=os.getenv('LINHUB_TASK'))
         )
 
-
     def _index(self, filename):
         """Create an index to speed up lookups."""
         if self.indexed:
@@ -87,7 +86,7 @@ class JMDict(RankingModel):
         self,
         documents: Document | list[Document],
         feeling_lucky=False
-    ) -> Document:
+    ) -> list[Document]:
         """Annotate each token in a document with its (candidate) definitions.
 
         Parameters
@@ -126,7 +125,7 @@ class JMDict(RankingModel):
             return documents[0]
         return documents
 
-    def tokenize(self, sentence):
+    def tokenize(self, sentence) -> list[Token]:
         """Tokenize a sentence.
         Parameters
         ----------
@@ -150,7 +149,7 @@ class JMDict(RankingModel):
             )
         return tokens
 
-    def predict(self, sentences):
+    def predict(self, sentences: list[str]) -> list[str]:
         """Predict the `ent_seq` for each token in a sentence.
 
         Parameters
@@ -160,7 +159,7 @@ class JMDict(RankingModel):
 
         Returns
         -------
-        preds : List[int]
+        preds : List[str]
             A list of predicted `ent_seq`.
         """
         if not hasattr(sentences, '__len__'):
@@ -193,7 +192,7 @@ class JMDict(RankingModel):
                 return entry
         return None
 
-    def _rank(self, candidates, context=None):
+    def _rank(self, candidates, context=None) -> tuple[list[Entry], list[float]]:
         """A base ranking function that does nothing.
 
         Parameters
@@ -214,7 +213,7 @@ class JMDict(RankingModel):
             return [], []
         return candidates, [1] * len(candidates)
 
-    def _lookup(self, text):
+    def _lookup(self, text) -> list[Entry]:
         """Lookup an entry by text.
 
         Currently returns all entries that contain the text in either the kanji

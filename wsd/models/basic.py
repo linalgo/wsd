@@ -17,7 +17,7 @@ class JMDictWithBCRanking(JMDict):
         if self.model is None:
             self.model = LogisticRegression()
 
-    def _preprocess(self, X, y):
+    def _preprocess(self, X: list[str], y: list[str]):
         """Create features for each candidate"""
         flat_X, flat_y = [], []
         for doc, labels in zip(X, y):
@@ -27,7 +27,7 @@ class JMDictWithBCRanking(JMDict):
                 for candidate in candidates:
                     feat = self._create_features(candidate, token)
                     flat_X.append(feat)
-                    flat_y.append(label)
+                    flat_y.append(label == candidate.ent_seq)
         return flat_X, flat_y
 
     def fit(self, X: list[list[Token]], y):
@@ -71,6 +71,7 @@ class JMDictWithBCRanking(JMDict):
         features = {
             'ke_pri': {p for k in candidate.k_ele for p in k.ke_pri},
             're_pri': {p for r in candidate.r_ele for p in r.re_pri},
+            'sense.length': len(candidate.sense),
         }
         keb = {k.keb for k in candidate.k_ele}
         reb = {r.reb for r in candidate.r_ele}
