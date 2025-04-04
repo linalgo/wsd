@@ -9,6 +9,7 @@ from linalgo.hub import BQClient
 
 tagger = Tagger('-Owakati')
 
+
 def tokenize(text):
     """A simple tokenizer that also returns the start offset of tokens."""
     idx = 0
@@ -51,7 +52,7 @@ def save_dataset(X, y):
     tree.write("dataset.xml", encoding='utf-8')
 
 
-def read_dataset(filename: str) -> tuple[list[list[str]], list[list[str]]]:
+def load_dataset(filename: str) -> tuple[list[list[str]], list[list[str]]]:
     """Reads the dataset from an XML file.
 
     Parameters
@@ -75,7 +76,10 @@ def read_dataset(filename: str) -> tuple[list[list[str]], list[list[str]]]:
         doc_labels: list[str] = []
         for token_element in doc_element.findall("token"):
             doc_tokens.append(token_element.text)
-            doc_labels.append(token_element.get("ent_seq"))
+            ent_seq = token_element.get("ent_seq")
+            if ent_seq == '':
+                ent_seq = None
+            doc_labels.append(ent_seq)
         X.append(doc_tokens)
         y.append(doc_labels)
 
@@ -90,3 +94,8 @@ def accuracy(y_pred, y_true):
             N += 1
             c += y_pred[i][j] == y_true[i][j]
     return c / N
+
+
+__all__ = [
+    'tokenize', 'retrieve_dataset', 'save_dataset', 'load_dataset', 'accuracy'
+]

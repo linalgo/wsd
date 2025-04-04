@@ -81,10 +81,10 @@ import os
 from sklearn.linear_model import LogisticRegression
 
 from wsd.models import JMDictWithPointWiseRanking
-from wsd.utils import read_dataset
+from wsd.utils import load_dataset
 
 basedir = os.getenv("PJ_DIR")
-X, y = read_dataset(f"{basedir}/data/dataset.xml")
+X, y = load_dataset(f"{basedir}/data/dataset.xml")
 X = ["".join(x) for x in X]  # The baseline model already has a tokenizer.
 
 model = LogisticRegression(C=10, penalty="l1", solver="liblinear")
