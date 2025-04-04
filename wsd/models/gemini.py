@@ -1,12 +1,12 @@
 """Using Gemini to rank definitions"""
 import json
 import os
+
 from google import genai
 from google.genai import types
 
-from wsd.parsers import Entry
 from wsd.models.baseline import JMDict, Token
-
+from wsd.parsers import Entry
 
 SYSTEM = """You are a Japanese dictionary ranking system.
 When given several candidate definitions for a Japanese word in the context of
