@@ -8,6 +8,7 @@ from collections import defaultdict
 from dataclasses import asdict, dataclass
 from typing import Any
 
+import tqdm
 from fugashi import Tagger
 from linalgo.annotate import Annotation, Annotator, Document, Entity, Task
 
@@ -165,10 +166,11 @@ class JMDict(RankingModel):
         if not hasattr(sentences, '__len__'):
             sentences = [sentences]
         preds = []
-        for sentence in sentences:
+        for sentence in tqdm.tqdm(sentences):
             pred = []
             for token in self.tokenize(sentence):
-                entry = self.feeling_lucky(token.lemma, context=token)
+                context = {'sentence': sentence, 'token': token}
+                entry = self.feeling_lucky(token.lemma, context)
                 ent_seq = entry.ent_seq if entry else None
                 pred.append(ent_seq)
             preds.append(pred)

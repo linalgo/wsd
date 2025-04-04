@@ -18,7 +18,27 @@ class JMDictWithPointWiseRanking(JMDict):
             self.model = LogisticRegression()
 
     def _preprocess(self, X: list[str], y: list[str]):
-        """Create features for each candidate"""
+        """Create features for each candidate
+
+        In the PointWise Binary Classification, the preprocessing just creates
+        a dataset that has one row per candidate, with the label for the
+        classification indicating whether the candidate is the best definition
+        or not.
+
+        Parameters
+        ----------
+        X : list[str]
+            A list of sentences to tokenize and 'featurize'.
+        y : list[str]
+            The list of labels for each tokens in the X sentences.
+
+        Returns
+        -------
+        flat_X : list[dict]
+            A list of features. One per candidate per token for each sentence.
+        flat_y : list[bool]
+            Indicates whether the candidate is the best definition or not.
+        """
         flat_X, flat_y = [], []
         for doc, labels in zip(X, y):
             tokens = self.tokenize(doc)
@@ -30,22 +50,26 @@ class JMDictWithPointWiseRanking(JMDict):
                     flat_y.append(label == candidate.ent_seq)
         return flat_X, flat_y
 
-    def fit(self, X: list[list[Token]], y):
-        """Flatten the data and fit a binary classifier."""
+    def fit(self, X: list[list[Token]], y: list[list[str]]):
+        """Flatten the data and fit a binary classifier.
+
+        Note: During the fitting process, a dataset is created with one row per
+        candidate. This means that `flat_X` contains many more rows than `X`.
+        """
         flat_X, flat_y = self._preprocess(X, y)
         vec_X = self.vec.fit_transform(flat_X)
         self.model.fit(vec_X, flat_y)
         return self
 
     # pylint: disable=signature-differs
-    def _rank(self, candidates: list[Entry], context: Token):
+    def _rank(self, candidates: list[Entry], context):
         """A basic ranking function using the score of the binary classifier.
 
         Parameters
         ----------
         candidates: List[Entry]
             The candidates to rank
-        context : Token
+        context : Any
             A contet to inform the ranking
 
         Returns
@@ -59,7 +83,7 @@ class JMDictWithPointWiseRanking(JMDict):
             return [], []
         f = []
         for candidate in candidates:
-            f.append(self._create_features(candidate, context))
+            f.append(self._create_features(candidate, context['token']))
         X = self.vec.transform(f)
         preds = self.model.predict_proba(X)
         res = sorted(candidates, key=lambda c: -preds[candidates.index(c)][1])
