@@ -69,6 +69,12 @@ def download_file_from_google_drive(file_id, destination):
 
 
 @app.command()
+def test():
+    """Just a test"""
+    print('OK.')
+
+
+@app.command()
 def download(name: str):
     """Download a file.
 
