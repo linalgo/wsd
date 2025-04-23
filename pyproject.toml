@@ -19,12 +19,13 @@ authors = [
 
 dependencies = [
   "fugashi[unidic]",
-  "google-cloud-bigquery",
+  "google-genai",
   "linalgo==0.1.4",
   "mesop",
   "numpy",
   "pillow",
   "rich",
+  "scikit-learn",
   "typer",
 ]
 

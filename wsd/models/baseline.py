@@ -3,10 +3,12 @@
 import json
 import os
 import uuid
+from abc import ABC, abstractmethod
 from collections import defaultdict
 from dataclasses import asdict, dataclass
 from typing import Any
 
+import tqdm
 from fugashi import Tagger
 from linalgo.annotate import Annotation, Annotator, Document, Entity, Task
 
@@ -25,15 +27,16 @@ class Token:
 data_dir = os.path.join(os.path.dirname(__file__), '../../data')
 
 
-class RankingModel:
+class RankingModel(ABC):
     """Base class for the ranking models"""
 
-    def rank(self, results: list[Entry], context: Any = None):
+    @abstractmethod
+    def _rank(self, candidates: list[Entry], context: Any):
         """Rank results based on the given context.
 
         Parameters
         ----------
-        results : List[Entry]
+        candidates : List[Entry]
             A list of entries to rank
         context : any
             The context to use for ranking
@@ -46,19 +49,18 @@ class RankingModel:
         raise NotImplementedError
 
 
-class JMDict:
+class JMDict(RankingModel):
     """A simple dictionary interface for JMDict."""
+
+    entries = None
+    indexed = False
 
     def __init__(
         self,
         dictionary: str = 'JMdict_en.gz',
-        ranking_model: RankingModel = None,
         annotator: Annotator = None
     ):
-        jmdict_file = os.path.join(data_dir, dictionary)
-        self.entries = JMDictParser().parse(jmdict_file)
-        self.ranking_model = ranking_model
-        self.index = defaultdict(set)
+        self._index(os.path.join(data_dir, dictionary))
         self.annotator = annotator or Annotator(
             id=uuid.uuid3(uuid.NAMESPACE_URL, 'jmdict-v3').hex,
             name='jmdict-v3',
@@ -67,22 +69,25 @@ class JMDict:
             task=Task(id=os.getenv('LINHUB_TASK'))
         )
 
-        self._index()
-
-    def _index(self):
+    def _index(self, filename):
         """Create an index to speed up lookups."""
+        if self.indexed:
+            return
+        self.index = defaultdict(set)
+        self.entries = JMDictParser.parse(filename)
         for entry in self.entries:
             self.index[entry.ent_seq] = entry
             for k_ele in entry.k_ele:
                 self.index[k_ele.keb].add(entry)
             for r_ele in entry.r_ele:
                 self.index[r_ele.reb].add(entry)
+        self.indexed = True
 
     def annotate(
         self,
         documents: Document | list[Document],
         feeling_lucky=False
-    ) -> Document:
+    ) -> list[Document]:
         """Annotate each token in a document with its (candidate) definitions.
 
         Parameters
@@ -108,7 +113,7 @@ class JMDict:
                 if body is not None:
                     a = Annotation(
                         document=doc,
-                        body=json.dumps(body),
+                        body=json.dumps(body, ensure_ascii=False).encode('utf-8'),
                         start=start,
                         end=start + len(token.surface),
                         annotator=self.annotator,
@@ -121,14 +126,12 @@ class JMDict:
             return documents[0]
         return documents
 
-    def tokenize(self, sentence, form='all'):
+    def tokenize(self, sentence) -> list[Token]:
         """Tokenize a sentence.
         Parameters
         ----------
         sentence : str
             The sentence to tokenize
-        form : str, optional {'all', 'surface', 'lemma', 'pos'}, default 'all'
-            The type of token to return. By default 'surface'
 
         Returns
         -------
@@ -138,36 +141,39 @@ class JMDict:
         tagger = Tagger('-Owakati')
         tokens = []
         for token in tagger(sentence):
-            if form == 'all':
-                tokens.append(token)
-            elif form == 'lemma':
-                tokens.append(token.feature.lemma)
-            elif form == 'pos':
-                tokens.append(token.pos)
-            elif form == 'surface':
-                tokens.append(token.surface)
-            else:
-                raise ValueError(f'Invalid form: {form}')
+            tokens.append(
+                Token(
+                    text=token.surface,
+                    lemma=token.feature.lemma,
+                    pos=token.pos
+                )
+            )
         return tokens
 
-    def predict(self, sentence):
+    def predict(self, sentences: list[str]) -> list[str]:
         """Predict the `ent_seq` for each token in a sentence.
 
         Parameters
         ----------
-        sentence : str
-            The sentence to parse and query with the dictionary
+        sentences : Union[str, List[str]]
+            The sentences to parse and query with the dictionary
 
         Returns
         -------
-        preds : List[int]
+        preds : List[str]
             A list of predicted `ent_seq`.
         """
+        if not hasattr(sentences, '__len__'):
+            sentences = [sentences]
         preds = []
-        for token in self.tokenize(sentence, form='lemma'):
-            entry = self.feeling_lucky(token)
-            ent_seq = entry.ent_seq if entry else None
-            preds.append(ent_seq)
+        for sentence in tqdm.tqdm(sentences):
+            pred = []
+            for token in self.tokenize(sentence):
+                context = {'sentence': sentence, 'token': token}
+                entry = self.feeling_lucky(token.lemma, context)
+                ent_seq = entry.ent_seq if entry else None
+                pred.append(ent_seq)
+            preds.append(pred)
         return preds
 
     def get(self, ent_seq: str) -> Entry:
@@ -188,8 +194,29 @@ class JMDict:
                 return entry
         return None
 
-    def search(self, text: str) -> list[Entry]:
-        """Search for an entry by text.
+    def _rank(self, candidates, context=None) -> tuple[list[Entry], list[float]]:
+        """A base ranking function that does nothing.
+
+        Parameters
+        ----------
+        candidates: List[Entry]
+            The candidates to rank
+        context : Any
+            A contet to inform the ranking
+
+        Returns
+        -------
+        candidates: List[Entry]
+            The ranked candidates
+        scores: List[float]
+            The score of each candidate
+        """
+        if len(candidates) < 1:
+            return [], []
+        return candidates, [1] * len(candidates)
+
+    def _lookup(self, text) -> list[Entry]:
+        """Lookup an entry by text.
 
         Currently returns all entries that contain the text in either the kanji
         or reading.
@@ -204,12 +231,28 @@ class JMDict:
         List[Entry]
             A list of entries that contain the query.
         """
-        results = list(self.index[text])
-        if self.ranking_model is not None:
-            results = self.ranking_model.rank(results)
-        return results
+        return list(self.index[text])
 
-    def feeling_lucky(self, text: str) -> Entry:
+    def search(self, text: str, context=None) -> list[Entry]:
+        """Search for an entry by text and rank the results.
+
+        Currently returns all entries that contain the text in either the kanji
+        or reading.
+
+        Parameters
+        ----------
+        text : str
+            The text to search for
+
+        Returns
+        -------
+        List[Entry]
+            A list of entries that contain the query.
+        """
+        res, _ = self._rank(self._lookup(text), context)
+        return res
+
+    def feeling_lucky(self, text: str, context=None) -> Entry:
         """Return the first entry found.
 
         Currently returns the first entry that contains the text in either the
@@ -225,8 +268,8 @@ class JMDict:
         Entry
             The first entry that contains the query.
         """
-        entries = self.search(text)
+        entries = self.search(text, context)
         return entries[0] if entries else None
 
 
-__all__ = ['JMDict', 'Token']
+__all__ = ['JMDict', 'Token', 'RankingModel']

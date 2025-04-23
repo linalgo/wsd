@@ -69,6 +69,12 @@ def download_file_from_google_drive(file_id, destination):
 
 
 @app.command()
+def test():
+    """Just a test"""
+    print('OK.')
+
+
+@app.command()
 def download(name: str):
     """Download a file.
 
@@ -88,6 +94,10 @@ def download(name: str):
         case 'xlwsd':
             file_id = "1d75OUrM3dyAvYUsnBXle-Z1W0NHyKIBD"
             destination = os.path.join(data_dir, "xl-wsd-data.zip")
+            download_file_from_google_drive(file_id, destination)
+        case 'dataset':
+            file_id = "122f2J1ZWvQF04aGhErkr6Z7wxQt89-4j"
+            destination = os.path.join(data_dir, "dataset.xml")
             download_file_from_google_drive(file_id, destination)
         case _:
             print(f"Error: Unknown file name '{name}'.")
