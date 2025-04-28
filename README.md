@@ -11,7 +11,7 @@ Fast, efficient, open source & open data Word Sense Disambiguation models for pr
 The easiest way to install `wsd` is to use pip:
 
 ```
-pip install wsd
+pip install wsd[all]
 ```
 
 You will also need the [The JMDict Project](https://www.edrdg.org/jmdict/j_jmdict.html) dictionary. You can use the following helper to download the file:

@@ -3,31 +3,32 @@ x-default: &default
   tty: true
   restart: always
 
-x-dev: &dev
+x-mount_local: &mount_local
   user: foo
   entrypoint: bash
   volumes:
-    - ./:/workspace
+    - ${PJ_DIR}:/workspace
 
 services:
   sandbox:
     image: asia.gcr.io/linalgo/${PKG_NAME}
-    <<: [ *default ]
+    <<: [ *default, *mount_local ]
     build:
       context: ${PJ_DIR}
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
+        - EXTRA=all
+    volumes:
+      - ${PJ_DIR}:/workspace
 
   dev:
     image: asia.gcr.io/linalgo/${PKG_NAME}:dev
     container_name: wsd-dev
-    <<: [ *default, *dev ]
+    <<: [ *default, *mount_local ]
     build:
       context: ${PJ_DIR}
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
         - EXTRA=dev
-    volumes:
-      - ${PJ_DIR}:/workspace
