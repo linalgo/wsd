@@ -9,8 +9,6 @@ env:
     sh: grep 'version =' pyproject.toml | cut -d '"' -f 2
   RSBUILD:
     sh: if command -v rsbuild > /dev/null; then echo "true"; else echo "false"; fi
-  # PJ_DIR:
-  #   sh: echo $PWD
   JMDICT: "https://drive.usercontent.google.com/download?id=1dlvguHuMjDmtpA4beu1WaVbDte5j4SLk&confirm=yy"
   XLWSD: "https://drive.usercontent.google.com/download?id=1d75OUrM3dyAvYUsnBXle-Z1W0NHyKIBD&confirm=yy"
   VANILLA: docker run --rm
