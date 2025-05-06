@@ -10,6 +10,6 @@ COPY README.md ./README.md
 COPY wsd ./wsd
 
 # Install the library
-RUN pip install .[$EXTRA] --break-system-packages && rm -r pyproject.toml README.md .env wsd
+RUN pip install wsd[$EXTRA] --break-system-packages && rm -r pyproject.toml README.md .env wsd
 
 ENTRYPOINT [ "bash" ]

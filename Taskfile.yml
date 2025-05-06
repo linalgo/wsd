@@ -113,3 +113,9 @@ tasks:
   dataset:
     cmds:
       - gcloud auth application-default login
+
+  install.package:
+    cmds:
+      - pip install -U pre-commit --break-system-packages # Install pre-commit
+      - pre-commit install
+      - pip install -U wsd[all] --break-system-packages # Install the package

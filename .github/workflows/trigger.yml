@@ -25,12 +25,9 @@ jobs:
           # Install task
           sudo sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
 
-          # Install pre-commit
-          pip install pre-commit
-          pre-commit install
+          # Install the package
+          task install.package
 
-          # Build (docker + wsd[all])
-          task build
         shell: bash
 
   build_mac:
@@ -49,11 +46,7 @@ jobs:
           # Install task
           sh -c "$(curl --location https://taskfile.dev/install.sh)" -- -d -b /usr/local/bin
 
-          # Install pre-commit
-          pip install pre-commit
-          pre-commit install
-
-          # Build
-          pip install wsd[all] --break-system-packages
+          # Install the package
+          task install.package
 
         shell: bash

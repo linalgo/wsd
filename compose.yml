@@ -14,7 +14,7 @@ x-mount_local: &mount_local
 services:
   sandbox:
     image: asia.gcr.io/linalgo/${PKG_NAME}
-    <<: [ *default, *mount_local ]
+    <<: [ *default ]
     build:
       context: $PJ_DIR
       dockerfile: docker/sandbox/Dockerfile
@@ -25,7 +25,7 @@ services:
   dev:
     image: asia.gcr.io/linalgo/${PKG_NAME}:dev
     container_name: wsd-dev
-    <<: [ *default, *mount_local ]
+    <<: [ *default ]
     build:
       context: $PJ_DIR
       dockerfile: docker/sandbox/Dockerfile
