@@ -3,6 +3,8 @@ dotenv: [".env"]
 env:
   OS_TYPE:
     sh: uname
+  PJ_DIR:
+    sh: $PWD
   BUILD:
     sh: LC_TIME=en_US.UTF-8 date
   VERSION:
