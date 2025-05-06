@@ -5,16 +5,18 @@ x-default: &default
 
 x-mount_local: &mount_local
   user: foo
+  env_file:
+    - .env
   entrypoint: bash
   volumes:
-    - ./:/workspace
+    - $PJ_DIR:/workspace
 
 services:
   sandbox:
     image: asia.gcr.io/linalgo/${PKG_NAME}
     <<: [ *default, *mount_local ]
     build:
-      context: .
+      context: $PJ_DIR
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
@@ -25,7 +27,7 @@ services:
     container_name: wsd-dev
     <<: [ *default, *mount_local ]
     build:
-      context: .
+      context: $PJ_DIR
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
@@ -33,7 +35,7 @@ services:
   vanilla:
     image: asia.gcr.io/linalgo/${PKG_NAME}:vanilla-py310
     build:
-      context: .
+      context: $PJ_DIR
       dockerfile: docker/vanilla/Dockerfile
       args:
         - PY_TAG=3.10-slim
