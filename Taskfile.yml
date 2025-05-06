@@ -3,8 +3,6 @@ dotenv: [".env"]
 env:
   OS_TYPE:
     sh: uname
-  PJ_DIR:
-    sh: $PWD
   BUILD:
     sh: LC_TIME=en_US.UTF-8 date
   VERSION:
@@ -14,13 +12,13 @@ env:
   JMDICT: "https://drive.usercontent.google.com/download?id=1dlvguHuMjDmtpA4beu1WaVbDte5j4SLk&confirm=yy"
   XLWSD: "https://drive.usercontent.google.com/download?id=1d75OUrM3dyAvYUsnBXle-Z1W0NHyKIBD&confirm=yy"
   VANILLA: docker run --rm
-    -v ${PWD}:/workspace
+    -v ${PJ_DIR}:/workspace
     --workdir /workspace
     --entrypoint bash
     -i asia.gcr.io/linalgo/${PKG_NAME}:vanilla-py310 -c
 
   DEV: docker run --rm
-    -v ${PWD}:/workspace
+    -v ${PJ_DIR}:/workspace
     --workdir /workspace
     --entrypoint bash
     -i asia.gcr.io/linalgo/${PKG_NAME}:dev
