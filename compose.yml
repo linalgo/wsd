@@ -7,28 +7,34 @@ x-mount_local: &mount_local
   user: foo
   entrypoint: bash
   volumes:
-    - ${PJ_DIR}:/workspace
+    - ./:/workspace
 
 services:
   sandbox:
     image: asia.gcr.io/linalgo/${PKG_NAME}
     <<: [ *default, *mount_local ]
     build:
-      context: ${PJ_DIR}
+      context: .
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
         - EXTRA=all
-    volumes:
-      - ${PJ_DIR}:/workspace
 
   dev:
     image: asia.gcr.io/linalgo/${PKG_NAME}:dev
     container_name: wsd-dev
     <<: [ *default, *mount_local ]
     build:
-      context: ${PJ_DIR}
+      context: .
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
         - EXTRA=dev
+  vanilla:
+    image: asia.gcr.io/linalgo/${PKG_NAME}:vanilla-py310
+    build:
+      context: .
+      dockerfile: docker/vanilla/Dockerfile
+      args:
+        - PY_TAG=3.10-slim
+      target: dev
