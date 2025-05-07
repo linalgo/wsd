@@ -9,18 +9,16 @@ env:
     sh: grep 'version =' pyproject.toml | cut -d '"' -f 2
   RSBUILD:
     sh: if command -v rsbuild > /dev/null; then echo "true"; else echo "false"; fi
-  PJ_DIR:
-    sh: echo $PWD
   JMDICT: "https://drive.usercontent.google.com/download?id=1dlvguHuMjDmtpA4beu1WaVbDte5j4SLk&confirm=yy"
   XLWSD: "https://drive.usercontent.google.com/download?id=1d75OUrM3dyAvYUsnBXle-Z1W0NHyKIBD&confirm=yy"
   VANILLA: docker run --rm
-    -v ${PWD}:/workspace
+    -v ${PJ_DIR}:/workspace
     --workdir /workspace
     --entrypoint bash
     -i asia.gcr.io/linalgo/${PKG_NAME}:vanilla-py310 -c
 
   DEV: docker run --rm
-    -v ${PWD}:/workspace
+    -v ${PJ_DIR}:/workspace
     --workdir /workspace
     --entrypoint bash
     -i asia.gcr.io/linalgo/${PKG_NAME}:dev
@@ -55,18 +53,6 @@ tasks:
     cmds:
       - 'echo "rsbuild is missing"'
 
-  install_uv:
-    desc: "Install the uv package if not already installed"
-    cmds:
-      - |
-        if ! which uv > /dev/null 2>&1; then
-          echo "Installing uv...";
-          curl -LsSf https://astral.sh/uv/install.sh | sh;
-          sudo mv $HOME/.local/bin/uv /usr/local/bin/
-        else
-          echo "uv is already installed.";
-        fi
-
   add_build.mac:
     cmds:
       - sed -i '' 's/__version__ = ".*"/__version__ = "{{.VERSION}}"/' "${PKG_NAME}/__init__.py";
@@ -94,23 +80,13 @@ tasks:
   # Build Tasks
   build:
     desc: "Tasks related to building the project"
-    deps: [install_uv, add_build]
+    deps: [add_build]
     cmds:
       - if [ "{{.FORCE_DOWNLOAD}}" = "true" ]; then task download; fi
       - task build.docker
 
-  build.wheel:
-    desc: "Build the project wheel package"
-    deps: [install_uv, add_build]
-    cmds:
-      - if [ "{{.FORCE_PRE_COMMIT}}" = "true" ]; then pre-commit run -a; fi
-      - "mkdir -p dist/legacy && mv dist/*.whl dist/legacy/ || true"
-      - uv build --wheel
-      - task clean
-
   build.docker:
     desc: "Build the Docker image for the project"
-    deps: [build.wheel]
     cmds:
       - docker compose build vanilla
       - docker compose build
@@ -137,3 +113,9 @@ tasks:
   dataset:
     cmds:
       - gcloud auth application-default login
+
+  install.package:
+    cmds:
+      - pip install -U pre-commit --break-system-packages # Install pre-commit
+      - pre-commit install
+      - pip install -U wsd[all] --break-system-packages # Install the package

@@ -1,9 +1,0 @@
-services:
-  vanilla:
-    image: asia.gcr.io/linalgo/${PKG_NAME}:vanilla-py310
-    build:
-      context: ${PJ_DIR}
-      dockerfile: ./docker/vanilla/Dockerfile
-      args:
-        - PY_TAG=3.10-slim
-      target: dev

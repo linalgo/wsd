@@ -3,31 +3,40 @@ x-default: &default
   tty: true
   restart: always
 
-x-dev: &dev
+x-mount_local: &mount_local
   user: foo
+  env_file:
+    - .env
   entrypoint: bash
   volumes:
-    - ./:/workspace
+    - $PJ_DIR:/workspace
 
 services:
   sandbox:
     image: asia.gcr.io/linalgo/${PKG_NAME}
     <<: [ *default ]
     build:
-      context: ${PJ_DIR}
+      context: $PJ_DIR
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
+        - EXTRA=all
 
   dev:
     image: asia.gcr.io/linalgo/${PKG_NAME}:dev
     container_name: wsd-dev
-    <<: [ *default, *dev ]
+    <<: [ *default ]
     build:
-      context: ${PJ_DIR}
+      context: $PJ_DIR
       dockerfile: docker/sandbox/Dockerfile
       args:
         - PY_VER=310
         - EXTRA=dev
-    volumes:
-      - ${PJ_DIR}:/workspace
+  vanilla:
+    image: asia.gcr.io/linalgo/${PKG_NAME}:vanilla-py310
+    build:
+      context: $PJ_DIR
+      dockerfile: docker/vanilla/Dockerfile
+      args:
+        - PY_TAG=3.10-slim
+      target: dev

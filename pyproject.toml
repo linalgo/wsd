@@ -4,10 +4,9 @@ version = "0.0.1rc0"
 description = "Multi-lingual Word Sense Disambiguation."
 readme = "README.md"
 requires-python = ">=3.10"
-license = { text = "MIT" }
+license = "MIT"
 classifiers = [
   "Programming Language :: Python :: 3",
-  "License :: OSI Approved :: MIT License",
   "Operating System :: OS Independent",
 ]
 authors = [
@@ -31,6 +30,17 @@ dependencies = [
 
 [project.optional-dependencies]
 dev = ["pytest", "pre-commit"]
+all = [
+  "fugashi[unidic]",
+  "google-genai",
+  "linalgo==0.1.4",
+  "mesop",
+  "numpy",
+  "pillow",
+  "rich",
+  "scikit-learn",
+  "typer",
+]
 
 [project.urls]
 Homepage = "https://github.com/linalgo/wsd"

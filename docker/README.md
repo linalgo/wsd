@@ -43,21 +43,6 @@ Before you begin, `deactivate your virtual environment if any` and  ensure you h
     which task
     ```
 
-- [uv](https://docs.astral.sh/uv/getting-started/installation/)
-
-  - Install the `uv` package if not already installed:
-
-    ```bash
-    curl -LsSf https://astral.sh/uv/install.sh | sh
-    sudo mv $HOME/.local/bin/uv /usr/local/bin/
-    ```
-
-  - Make sure the following command doesn't return an error
-
-    ```bash
-    which uv
-    ```
-
 ## Installation
 
 To set up the project, follow these steps:
@@ -75,34 +60,22 @@ To set up the project, follow these steps:
    cp .env.example .env
    ```
 
-3. **Create the virtual environment with uv**:
-
-   ```bash
-   uv venv --python=3.10 && source .venv/bin/activate
-   ```
-
-4. **Install [pre-commit](https://pre-commit.com/)**:
+3. **Install [pre-commit](https://pre-commit.com/)**:
 
    If `pre-commit` is not already installed, you can install it using the following command:
 
    ```bash
-    uv pip install pre-commit
-    pre-commit run -a
+    pip install pre-commit
+    pre-commit install
    ```
 
-5. **Build the wheel**:
+4. **Build docker image**:
 
    ```bash
-   task build.wheel
+   task build
    ```
 
-6. **Build docker image**:
-
-   ```bash
-   task build.docker
-   ```
-
-7. **Access the Docker Container**:
+5. **Access the Docker Container**:
 
    ```bash
    docker compose up dev -d
