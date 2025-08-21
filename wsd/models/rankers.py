@@ -1,23 +1,67 @@
-# pylint: disable=invalid-name
-"""A basic dictionary with ranking based on a binary classifier."""
+"""A collection of rankers for WSD."""
+
+from abc import ABC
+from dataclasses import dataclass
+
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.linear_model import LogisticRegression
 
-from wsd.models.baseline import JMDict, Token
-from wsd.parsers import Entry
+from wsd.parsers import Entry, Token
+from wsd.models.gemini import get_prompt, generate
 
 
-class JMDictWithPointWiseRanking(JMDict):
+class Ranker(ABC):
+    """A simple dictionary interface for JMDict."""
+
+    def rank(self, candidates, context=None) -> tuple[list[Entry], list[float]]:
+        """A base ranking function that does nothing.
+
+        Parameters
+        ----------
+        candidates: List[Entry]
+            The candidates to rank
+        context : Any
+            A contet to inform the ranking
+
+        Returns
+        -------
+        candidates: List[Entry]
+            The ranked candidates
+        scores: List[float]
+            The score of each candidate
+        """
+        if len(candidates) < 1:
+            return [], []
+        return candidates, [1] * len(candidates)
+
+
+class DummyRanker(Ranker):
+    """A simple dictionary interface for JMDict."""
+
+    def rank(self, candidates, context=None) -> tuple[list[Entry], list[float]]:
+        """A base ranking function that does nothing."""
+        return candidates, [1] * len(candidates)
+
+
+@dataclass
+class Candidate:
+    """A candidate for a point-wise ranking."""
+    entry: Entry
+    token: Token
+
+
+class PointWiseRanker(Ranker):
     """A dictionary with the ranking function based on Binary Classification."""
 
-    def __init__(self, ranking_model=None, **kwargs):
+    def __init__(self, ranking_model=None, tokenize_fn=None, **kwargs):
         super().__init__(**kwargs)
         self.vec = DictVectorizer()
         self.model = ranking_model
         if self.model is None:
             self.model = LogisticRegression()
+        self.tokenize = tokenize_fn
 
-    def _preprocess(self, X: list[str], y: list[str]):
+    def _preprocess(self, X: list[list[Candidate]], y: list[list[str]]):
         """Create features for each candidate
 
         In the PointWise Binary Classification, the preprocessing just creates
@@ -27,10 +71,10 @@ class JMDictWithPointWiseRanking(JMDict):
 
         Parameters
         ----------
-        X : list[str]
-            A list of sentences to tokenize and 'featurize'.
-        y : list[str]
-            The list of labels for each tokens in the X sentences.
+        X : list[list[Candidate]]
+            A list of tokenized sentences to 'featurize'.
+        y : list[list[str]]
+            The list of list of labels for each tokens in the X sentences.
 
         Returns
         -------
@@ -39,15 +83,14 @@ class JMDictWithPointWiseRanking(JMDict):
         flat_y : list[bool]
             Indicates whether the candidate is the best definition or not.
         """
-        flat_X, flat_y = [], []
-        for doc, labels in zip(X, y):
-            tokens = self.tokenize(doc)
-            for token, label in zip(tokens, labels):
-                candidates = self._lookup(token.lemma)
+        for sentence, labels in zip(X, y):
+            flat_X = []
+            flat_y = []
+            for candidates, label in zip(sentence, labels):
                 for candidate in candidates:
-                    feat = self._create_features(candidate, token)
+                    feat = self._create_features(candidate.entry, candidate.token)
                     flat_X.append(feat)
-                    flat_y.append(label == candidate.ent_seq)
+                    flat_y.append(label == candidate.entry.ent_seq)
         return flat_X, flat_y
 
     def fit(self, X: list[list[Token]], y: list[list[str]]):
@@ -62,7 +105,7 @@ class JMDictWithPointWiseRanking(JMDict):
         return self
 
     # pylint: disable=signature-differs
-    def _rank(self, candidates: list[Entry], context):
+    def rank(self, candidates: list[Entry], context):
         """A basic ranking function using the score of the binary classifier.
 
         Parameters
@@ -106,4 +149,25 @@ class JMDictWithPointWiseRanking(JMDict):
         return features
 
 
-__all__ = ['JMDictWithPointWiseRanking']
+class GeminiRanker(Ranker):
+    """A dictionary using Google's Gemini to rank candidate definitions."""
+
+    def __init__(self, model_name="gemini-2.5-pro-exp-03-25", **kwargs):
+        super().__init__(**kwargs)
+        self.model_name = model_name
+
+    # pylint: disable=signature-differs
+    def rank(self, candidates: list[Entry], context):
+        if len(candidates) < 1:
+            return [], []
+        prompt = get_prompt(context['sentence'], context['token'], candidates)
+        res = generate(prompt, model_name=self.model_name)
+        if 'answer' in res:
+            ans = max(0, min(res['answer'], len(candidates) - 1))
+            top = candidates.pop(ans)
+            candidates.insert(0, top)
+        scores = [1] + [0] * (len(candidates) - 1)
+        return candidates, scores
+
+
+__all__ = ['DummyRanker', 'Ranker', 'PointWiseRanker', 'GeminiRanker']

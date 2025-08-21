@@ -5,8 +5,7 @@ import os
 from google import genai
 from google.genai import types
 
-from wsd.models.baseline import JMDict, Token
-from wsd.parsers import Entry
+from wsd.parsers import Entry, Token
 
 SYSTEM = """You are a Japanese dictionary ranking system.
 When given several candidate definitions for a Japanese word in the context of
@@ -95,25 +94,5 @@ def generate(prompt, model_name):
     return json.loads(response.text)
 
 
-class JMDictGeminiRanking(JMDict):
-    """A dictionary using Google's Gemini to rank candidate definitions."""
 
-    def __init__(self, model_name="gemini-2.5-pro-exp-03-25", **kwargs):
-        super().__init__(**kwargs)
-        self.model_name = model_name
-
-    # pylint: disable=signature-differs
-    def _rank(self, candidates: list[Entry], context):
-        if len(candidates) < 1:
-            return [], []
-        prompt = get_prompt(context['sentence'], context['token'], candidates)
-        res = generate(prompt, model_name=self.model_name)
-        if 'answer' in res:
-            ans = max(0, min(res['answer'], len(candidates) - 1))
-            top = candidates.pop(ans)
-            candidates.insert(0, top)
-        scores = [1] + [0] * (len(candidates) - 1)
-        return candidates, scores
-
-
-__all__ = ['JMDictGeminiRanking']
+__all__ = ['GeminiRanker']

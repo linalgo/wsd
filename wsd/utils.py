@@ -7,6 +7,8 @@ from fugashi import Tagger  # pylint: disable=no-name-in-module
 from linalgo.annotate import Filter, Pipeline, Sequence2SequenceTransformer
 from linalgo.hub import BQClient
 
+from wsd.parsers.jmdict import Token
+
 tagger = Tagger('-Owakati')
 
 
@@ -72,10 +74,16 @@ def load_dataset(filename: str) -> tuple[list[list[str]], list[list[str]]]:
 
     X, y = [], []
     for doc_element in root.findall("document"):
-        doc_tokens: list[str] = []
+        doc_tokens: list[Token] = []
         doc_labels: list[str] = []
         for token_element in doc_element.findall("token"):
-            doc_tokens.append(token_element.text)
+            doc_tokens.append(
+                Token(
+                    text=token_element.text,
+                    lemma=token_element.get("lemma"),
+                    pos=token_element.get("pos")
+                )
+            )
             ent_seq = token_element.get("ent_seq")
             if ent_seq == '':
                 ent_seq = None
