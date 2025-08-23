@@ -94,5 +94,4 @@ def generate(prompt, model_name):
     return json.loads(response.text)
 
 
-
 __all__ = ['GeminiRanker']

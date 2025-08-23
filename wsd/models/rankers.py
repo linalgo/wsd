@@ -3,6 +3,7 @@
 from abc import ABC
 from dataclasses import dataclass
 
+import joblib
 from sklearn.feature_extraction import DictVectorizer
 from sklearn.linear_model import LogisticRegression
 
@@ -53,13 +54,12 @@ class Candidate:
 class PointWiseRanker(Ranker):
     """A dictionary with the ranking function based on Binary Classification."""
 
-    def __init__(self, ranking_model=None, tokenize_fn=None, **kwargs):
+    def __init__(self, ranking_model=None, **kwargs):
         super().__init__(**kwargs)
         self.vec = DictVectorizer()
         self.model = ranking_model
         if self.model is None:
             self.model = LogisticRegression()
-        self.tokenize = tokenize_fn
 
     def _preprocess(self, X: list[list[Candidate]], y: list[list[str]]):
         """Create features for each candidate
@@ -88,7 +88,8 @@ class PointWiseRanker(Ranker):
             flat_y = []
             for candidates, label in zip(sentence, labels):
                 for candidate in candidates:
-                    feat = self._create_features(candidate.entry, candidate.token)
+                    feat = self._create_features(
+                        candidate.entry, candidate.token)
                     flat_X.append(feat)
                     flat_y.append(label == candidate.entry.ent_seq)
         return flat_X, flat_y
@@ -147,6 +148,18 @@ class PointWiseRanker(Ranker):
         features['reb.text'] = token.text in reb
         features['reb.lemma'] = token.lemma in reb
         return features
+    
+    def save(self, path: str):
+        """Save the ranker to a file."""
+        joblib.dump({'vec': self.vec, 'model': self.model}, path)
+
+    @classmethod
+    def load(cls, path: str):
+        """Load the ranker from a file."""
+        d = joblib.load(path)
+        o = cls(ranking_model=d['model'])
+        o.vec = d['vec']
+        return o
 
 
 class GeminiRanker(Ranker):

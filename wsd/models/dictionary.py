@@ -3,9 +3,9 @@
 import json
 import os
 import uuid
-from dataclasses import asdict, dataclass
-from typing import Any
+from dataclasses import asdict
 
+import joblib
 import tqdm
 from fugashi import Tagger
 from linalgo.annotate import Annotation, Annotator, Document, Entity, Task
@@ -129,7 +129,7 @@ class Dictionary:
                 )
             )
         return tokens
-    
+
     def fit(self, X: list[list[str]], y: list[list[str]]):
         """Fit the ranker.
 
@@ -157,7 +157,7 @@ class Dictionary:
         self.ranker.fit(XX, y)
         return self
 
-    def predict(self, sentences: list[str|Token]) -> list[str]:
+    def predict(self, sentences: list[str | Token]) -> list[str]:
         """Predict the `ent_seq` for each token in a sentence.
 
         Parameters
@@ -199,7 +199,7 @@ class JMDict(Dictionary):
         if ranker == 'dummy':
             ranker = DummyRanker()
         elif ranker == 'pointwise':
-            ranker = PointWiseRanker(tokenize_fn=self.tokenize)
+            ranker = PointWiseRanker()
         elif ranker == 'gemini':
             ranker = GeminiRanker()
         elif isinstance(ranker, Ranker):
@@ -207,6 +207,16 @@ class JMDict(Dictionary):
         else:
             raise ValueError(f"Invalid ranker: {ranker}")
         super().__init__(retriever, ranker, *args, **kwargs)
+
+    def save(self, path: str):
+        """Save the dictionary to a file."""
+        joblib.dump({'retriever': self.retriever, 'ranker': self.ranker}, path)
+
+    @classmethod
+    def load(cls, path: str):
+        """Load the dictionary from a file."""
+        o = joblib.load(path)
+        return cls(retriever=o['retriever'], ranker=o['ranker'])
 
 
 __all__ = [
