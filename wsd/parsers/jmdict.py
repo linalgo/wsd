@@ -1,6 +1,7 @@
 # pylint: disable=not-callable
 """A parser for the JMdict dictionary."""
 import gzip
+import os
 import xml.etree.ElementTree as ET
 from dataclasses import dataclass, field
 
@@ -139,6 +140,9 @@ class JMDictParser:
     @classmethod
     def parse(cls, file_path):
         """Parse a JMdict file."""
+        if file_path is None:
+            file_path = os.path.join(
+                os.path.dirname(__file__), '../../data/JMdict_en.gz')
         entries = []
         with gzip.open(file_path, "rb") as f:  # pylint: disable=invalid-name
             tree = ET.parse(f)
@@ -148,4 +152,14 @@ class JMDictParser:
         return entries
 
 
-__all__ = ['JMDictParser', 'Entry', 'Kanji', 'Reading', 'Gloss', 'Sense']
+@dataclass
+class Token:
+    """Token dataclass."""
+    text: str = ''
+    lemma: str = ''
+    pos: str = ''
+
+
+__all__ = [
+    'JMDictParser', 'Entry', 'Kanji', 'Reading', 'Gloss', 'Sense', 'Token'
+]
