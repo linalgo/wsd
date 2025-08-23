@@ -83,10 +83,9 @@ class PointWiseRanker(Ranker):
         flat_y : list[bool]
             Indicates whether the candidate is the best definition or not.
         """
-        for sentence, labels in zip(X, y):
-            flat_X = []
-            flat_y = []
-            for candidates, label in zip(sentence, labels):
+        flat_X, flat_y = [], []
+        for doc, labels in zip(X, y):
+            for candidates, label in zip(doc, labels):
                 for candidate in candidates:
                     feat = self._create_features(
                         candidate.entry, candidate.token)

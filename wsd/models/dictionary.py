@@ -207,6 +207,24 @@ class JMDict(Dictionary):
         else:
             raise ValueError(f"Invalid ranker: {ranker}")
         super().__init__(retriever, ranker, *args, **kwargs)
+    
+    def get(self, ent_seq: str) -> Entry:
+        """Get an entry by its `ent_seq`.
+
+        Parameters
+        ----------
+        ent_seq : str
+            The `ent_seq` of the entry to get
+
+        Returns
+        -------
+        Entry
+            The entry with the given `ent_seq`.
+        """
+        for entry in self.retriever.entries:
+            if entry.ent_seq == ent_seq:
+                return entry
+        return None
 
     def save(self, path: str):
         """Save the dictionary to a file."""
